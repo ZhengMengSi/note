@@ -1,6 +1,19 @@
-// Object Literals
-// Creating Objects with new
-// Prototypes
-console.log(Object)
-console.log(Object.prototype)
+function inherit(p) {
+    if (p == null) throw TypeError();
+    if (Object.create)
+        return Object.create(p);
+    var t = typeof p;
+    if (t !== "object" && t !== "function") throw TypeError();
+    function f() {}
+    f.prototype = p;
+    return new f();
+}
+
+b = {
+    x: 1
+}
+
+a = inherit(b)
+a.x = 2
+console.log(a)
 
