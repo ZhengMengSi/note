@@ -9,11 +9,13 @@ function inherit(p) {
     return new f();
 }
 
-b = {
-    x: 1
+var o = {
+    x:1,
+    y:2,
+    z:3
 }
 
-a = inherit(b)
-a.x = 2
-console.log(a)
+
+console.log(o.propertyIsEnumerable('x'))
+
 
