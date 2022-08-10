@@ -1,0 +1,42 @@
+{
+  "headerInfo": {
+    "primaryKey": "Id",
+    "heads": [
+      {
+        "name": "Id",
+        "type": "int",
+        "isArray": false
+      },
+      {
+        "name": "StartTime",
+        "type": "string",
+        "isArray": false
+      },
+      {
+        "name": "EndTime",
+        "type": "string",
+        "isArray": false
+      },
+      {
+        "name": "QuestionnaireDrop",
+        "type": "int",
+        "isArray": false
+      },
+      {
+        "name": "Url",
+        "type": "string",
+        "isArray": false
+      }
+    ],
+    "count": 1
+  },
+  "data": [
+    {
+      "Id": 1001,
+      "StartTime": "2021-07-19 00:00:00",
+      "EndTime": "2021-08-03 23:59:59",
+      "QuestionnaireDrop": 200017,
+      "Url": "https://hdapi.37.com/?c=api&a=login_page&alias_info=sdkicon20201112&f=d202011/sdkicon20201112&page_id=bxjx-wj4&pg=26&sid={0}&role_id={1}"
+    }
+  ]
+}

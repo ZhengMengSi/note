@@ -1,21 +1,33 @@
-function inherit(p) {
-    if (p == null) throw TypeError();
-    if (Object.create)
-        return Object.create(p);
-    var t = typeof p;
-    if (t !== "object" && t !== "function") throw TypeError();
-    function f() {}
-    f.prototype = p;
-    return new f();
+let box = document.getElementById('box')
+
+const func = (entries, observer1) => {
+    console.log(entries)
+    console.log(observer1 === observer)
+
+    
+    entries.forEach(entry => {
+        //IntersectionObserverEntry类
+        console.log(entry)
+    })
 }
 
-var o = {
-    x:1,
-    y:2,
-    z:3
-}
+// IntersectionObserver类
+const observer = new IntersectionObserver(func)
+console.log(observer)
+observer.observe(box)
 
 
-console.log(o.propertyIsEnumerable('x'))
+
+
+
+
+
+
+
+
+
+
+
+
 
 
