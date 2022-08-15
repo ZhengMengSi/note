@@ -3,9 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	a := [...]int{0, 1, 2, 3, 4, 5}
-	reverse(a[:])
-	fmt.Println(a)
+	//a := [...]int{0, 1, 2, 3, 4, 5}
+	//reverse(a[:])
+	//fmt.Println(a)
 
 	s := []int{0, 1, 2, 3, 4, 5}
 	reverse(s[:2])
@@ -15,14 +15,14 @@ func main() {
 	reverse(s)
 	fmt.Println(s)
 
-	var y []int
-	fmt.Println(len(y), y, y == nil)
-	y = nil
-	fmt.Println(len(y), y, y == nil)
-	y = []int(nil)
-	fmt.Println(len(y), y, y == nil)
-	y = []int{}
-	fmt.Println(len(y), y, y == nil)
+	//var y []int
+	//fmt.Println(len(y), y, y == nil)
+	//y = nil
+	//fmt.Println(len(y), y, y == nil)
+	//y = []int(nil)
+	//fmt.Println(len(y), y, y == nil)
+	//y = []int{}
+	//fmt.Println(len(y), y, y == nil)
 }
 
 func reverse(s []int) {
