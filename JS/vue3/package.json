@@ -1,0 +1,12 @@
+{
+  "name": "vue3",
+  "version": "1.0.0",
+  "scripts": {},
+  "dependencies": {
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.0.3",
+    "vite": "^3.0.9"
+  }
+}
