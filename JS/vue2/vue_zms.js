@@ -866,9 +866,21 @@
                         }
                     }
                 }
+                if (!shallow) {
+                    this.observeArray(value);
+                }
             }
-            if (!shallow) {
-                this.observeArray(value);
+            else {
+                /**
+                 * Walk through all properties and convert them into
+                 * getter/setters. This method should only be called when
+                 * value type is Object.
+                 */
+                var keys = Object.keys(value);
+                for (var i = 0; i < keys.length; i++) {
+                    var key = keys[i];
+                    defineReactive(value, key, NO_INIITIAL_VALUE, undefined, shallow, mock);
+                }
             }
         }
 
@@ -883,17 +895,15 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+    // Define a reactive property on an Object.
+    function defineReactive(obj, key, val, customSetter, shallow, mock) {
+        var dep = new Dep();
+        var property = Object.getOwnPropertyDescriptor(obj, key);
+        if (property && property.configurable === false) {
+            return;
+        }
+        var getter = property && property.get;
+    }
 }));
 
 
