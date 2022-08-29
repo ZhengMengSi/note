@@ -64,7 +64,9 @@ func main() {
 	fmt.Printf("%s\n", endlessSummer)*/
 
 	var s []int
-	fmt.Printf("%d %d", len(s))
+	fmt.Printf("%d %v %v\n", len(s), s, nil)
+	s = nil
+	fmt.Printf("%d %v %v", len(s), s, nil)
 }
 
 func zero(ptr *[32]byte) {

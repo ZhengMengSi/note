@@ -893,8 +893,6 @@
         return Observer;
     }());
 
-
-
     // Define a reactive property on an Object.
     function defineReactive(obj, key, val, customSetter, shallow, mock) {
         var dep = new Dep();
@@ -903,6 +901,69 @@
             return;
         }
         var getter = property && property.get;
+        var setter = property
+        if ((!getter || setter) &&
+            (val === NO_INIITIAL_VALUE || arguments.length ===2)) {
+            val = obj[key];
+        }
+        var childOb = !shallow && observe(val, false, mock);
+        Object.defineProperty(obj, key, {
+            enumerable: true,
+            configurable: true,
+            get: function reactiveGetter() {
+                var value = getter ? getter.call(obj) : val;
+                if (Dep.target) {
+                    {
+                        dep.depend({
+                            target: obj,
+                            type: "get",
+                            key: key
+                        })
+                    }
+                    if (childOb) {
+                        childOb.dep.depend();
+                        if (isArray(value)) {
+                            dependArray(value);
+                        }
+                    }
+                }
+                return isRef(value) && !shallow ? value.value : value;
+            },
+            set: function reactiveSetter(newVal) {
+                var value = getter ? getter.call(obj) : val;
+                if (!hasChanged(value, newVal)) {
+                    return;
+                }
+                if (customSetter) {
+                    customSetter();
+                }
+                if (setter) {
+                    setter.call(obj, newVal);
+                }
+                else if (getter) {
+                    // #7981: for accessor properties without setter
+                    return;
+                }
+                else if (!shallow && isRef(value) && !isRef(newVal)) {
+                    value.value = newVal;
+                    return;
+                }
+                else {
+                    val = newVal;
+                }
+                childOb = !shallow && observe(newVal, false, mock);
+                {
+                    dep.notify({
+                        type: "set" /* TriggerOpTypes.SET */,
+                        target: obj,
+                        key: key,
+                        newValue: newVal,
+                        oldValue: value
+                    });
+                }
+            }
+        });
+        return dep;
     }
 }));
 
