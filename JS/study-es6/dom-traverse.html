@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="box">
+        <p>hello <b>world</b></p>
+        <ul>
+            <li>a</li>
+            <li>b</li>
+        </ul>
+    </div>
+
+<script>
+    function visitNode(n) {
+        if (n instanceof Comment) {
+            console.info('Comment node ---', n.textContent)
+        }
+        if (n instanceof Text) {
+            const t = n.textContent?.trim()
+            if (t) {
+                console.info('Text node ---', t);
+            }
+
+        }
+        if (n instanceof HTMLElement) {
+            console.info('Element node ---', `<${n.tagName.toLowerCase()}>`)
+        }
+    }
+
+    function depthFirstTraverse1(root) {
+        visitNode(root)
+
+        const childNodes = root.childNodes
+        if (childNodes.length) {
+            childNodes.forEach(child => {
+                depthFirstTraverse1(child)
+            })
+        }
+    }
+
+    function depthFirstTraverse2(root) {
+        const stack = []
+        stack.push(root)
+        while (stack.length > 0) {
+            const curNode = stack.pop()
+            visitNode(curNode)
+
+            const childNodes = curNode.childNodes
+            Array.from(childNodes).reverse().forEach(child => stack.push(child))
+        }
+    }
+
+    function breadthFirstTraverse(root) {
+        const queue = []
+        queue.unshift(root)
+        while (queue.length > 0) {
+            const curNode = queue.pop()
+            if (curNode == null) {
+                break
+            }
+            visitNode(curNode)
+
+            const childNodes = curNode.childNodes
+            // console.log(childNodes)
+            if (childNodes.length) {
+                childNodes.forEach(child => queue.unshift(child))
+            }
+        }
+    }
+
+    const box = document.getElementById('box')
+    depthFirstTraverse2(box)
+</script>
+</body>
+</html>

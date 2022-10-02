@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <button>get</button>
+        <button>post</button>
+        <button>put</button>
+        <button>delete</button>
+    </div>
+
+    <script src="axios.js"></script>
+    <script>
+        const btns = document.querySelectorAll('button');
+        btns[0].onclick = function () {
+            axios.request({
+                method: 'get',
+                url: 'http://localhost:3000/comments/1',
+            }).then(response => {
+                console.log(response)
+            })
+        }
+
+        btns[1].onclick = function () {
+            axios.post(
+                'http://localhost:3000/comments',
+                {
+                    "body": "comment2",
+                    "postId": 1
+                }
+            ).then(response => {
+                console.log(response)
+            })
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" id="input1">
+
+    <script>
+        function debounce(fn, delay = 100) {
+            let timer = 0
+
+            return function () {
+                if (timer) clearTimeout(timer)
+
+                timer = setTimeout(() => {
+                    console.log(this)
+                    fn.apply(this, arguments)
+                    timer = 0
+                }, delay);
+            }
+        }
+
+        const input1 = document.getElementById('input1')
+        // input1.addEventListener('keyup', debounce(function (e) {
+        //     console.log(this)
+        //     console.log(input1.value)
+        // }, 300))
+
+        input1.addEventListener('keyup', function (e) {
+            console.log(this)
+        })
+    </script>
+</body>
+</html>

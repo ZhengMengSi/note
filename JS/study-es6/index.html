@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>debounce</title>
+</head>
+<body>
+<p>debounce</p>
+搜索<input type="text" id="input1">
+
+<script>
+    function debounce(fn, delay = 200) {
+        let timer = 0
+
+        return function () {
+            if (timer) clearTimeout(timer)
+
+            timer = setTimeout(() => {
+                fn.apply(this, arguments)
+                timer = 0
+            }, delay)
+        };
+    }
+
+    const input1 = document.getElementById('input1')
+    input1.addEventListener('keyup', debounce(() => {
+        console.log('发起搜索', input1.value)
+    }, 300))
+</script>
+</body>
+</html>

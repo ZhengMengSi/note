@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    class LazyMan {
+        name = ''
+        tasks = []
+
+        constructor(name) {
+            this.name = name
+            setTimeout(() => {
+                this.next()
+            })
+        }
+
+        next() {
+            const task = this.tasks.shift()
+            if (task) {
+                task()
+            }
+        }
+
+        eat(food) {
+            const task = () => {
+                console.info(`${this.name} eat ${food}`)
+                this.next()
+            }
+            this.tasks.push(task)
+            return this
+        }
+
+        sleep(seconds) {
+            const task = () => {
+                console.info(`${this.name} 开始睡觉`)
+                setTimeout(() => {
+                    console.info(`${this.name} 已经睡完了 ${seconds}`)
+                    this.next()
+                }, seconds * 1000)
+            }
+            this.tasks.push(task)
+            return this
+        }
+    }
+
+    const me = new LazyMan('张梦思')
+    me.eat('苹果').eat('香蕉').sleep(2).eat('西瓜')
+</script>
+</body>
+</html>

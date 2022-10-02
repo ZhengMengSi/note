@@ -1,25 +1,25 @@
 package main
 
-import "fmt"
-
-type Person struct {
-	Name   string
-	Age    int
-	Scores [5]float64
-	ptr    *int
-	slice  []int
-	map1   map[string]string
-}
+import (
+	"fmt"
+	"unsafe"
+)
 
 func main() {
-	var p1 Person
-	fmt.Println(p1)
-
-	if p1.ptr == nil {
-		fmt.Println("指针为空")
+	type Cat struct {
+		Name string
+		Age int
+		Color string
 	}
 
-	if p1.map1 == nil {
+	var cat1 Cat
+	fmt.Printf("cat1的地址=%p\n", &cat1)
+	fmt.Printf("cat1.Name的地址=%p\n", &cat1.Name)
+	fmt.Printf("cat1.Name的大小=%d\n", unsafe.Sizeof(cat1.Name))
+	fmt.Printf("cat1.Name的地址=%p\n", &cat1.Age)
 
-	}
+	cat1.Name = "小白"
+	cat1.Age = 3
+	cat1.Color = "白色"
+	fmt.Println(cat1)
 }

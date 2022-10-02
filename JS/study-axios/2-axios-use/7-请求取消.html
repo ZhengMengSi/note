@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <button>get</button>
+        <button>post</button>
+        <button>put</button>
+        <button>delete</button>
+    </div>
+
+    <script src="axios.js"></script>
+    <script>
+        const btns = document.querySelectorAll('button');
+        let cancel = null;
+
+        axios.defaults.method = 'get';
+        axios.defaults.baseURL = 'http://localhost:3000';
+
+        btns[0].onclick = function () {
+            if (cancel !== null) {
+                cancel();
+            }
+            axios({
+                url: '/posts',
+                cancelToken: new axios.CancelToken(function (c) {
+                    cancel = c;
+                }),
+            }).then(response => {
+                console.log(response)
+                cancel = null;
+            });
+        }
+
+        btns[1].onclick = function () {
+            cancel();
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
