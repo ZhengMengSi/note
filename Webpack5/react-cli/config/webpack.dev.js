@@ -1,7 +1,7 @@
 const path = require('path');
 const EslintWebpackPlugin = require('eslint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 const getStyleLoaders = (pre) => {
     return [
@@ -72,7 +72,8 @@ module.exports = {
                 loader: 'babel-loader',
                 options: {
                     cacheDirectory: true,
-                    cacheCompression: false
+                    cacheCompression: false,
+                    plugins: ['react-refresh/babel'], // 激活js的HMR
                 }
             }
         ]
@@ -87,7 +88,8 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, '../public/index.html')
-        })
+        }),
+        new ReactRefreshWebpackPlugin(), // 激活js的HMR
     ],
     mode: 'development',
     devtool: 'cheap-module-source-map',
@@ -99,10 +101,15 @@ module.exports = {
             name: entrypoint => `runtime~${entrypoint.name}.js`,
         }
     },
+    // webpack解析模块加载选项
+    resolve: {
+        extensions: ['.jsx', '.js', '.json']
+    },
     devServer: {
         host: 'localhost',
         port: 3000,
         open: true,
-        hot: true
+        hot: true,
+        historyApiFallback: true,
     }
 }
