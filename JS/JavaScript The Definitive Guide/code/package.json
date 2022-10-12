@@ -1,9 +1,0 @@
-{
-  "name": "code",
-  "version": "1.0.0",
-  "scripts": {
-    "dev": "node standard-built-in-objects/Object.js"
-  },
-  "dependencies": {
-  }
-}

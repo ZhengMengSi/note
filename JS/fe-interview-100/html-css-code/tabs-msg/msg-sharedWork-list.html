@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+</head>
+<body>
+    <p>SharedWorker message - list page</p>
+
+    <script>
+        const worker = new SharedWorker('./worker.js')
+
+        worker.port.onmessage = e => console.info('list', e.data)
+    </script>
+</body>
+</html>

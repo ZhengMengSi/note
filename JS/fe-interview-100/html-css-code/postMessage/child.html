@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>child</title>
+</head>
+<body>
+    <p>
+        child page
+        <button id="btn1">发送消息</button>
+    </p>
+
+    <script>
+        const btn1 = document.getElementById('btn1')
+        btn1.addEventListener('click', () => {
+            console.info('child clicked')
+            window.parent.postMessage('world', '*')
+        })
+
+        window.addEventListener('message', event => {
+            console.info('origin', event.origin)
+            console.info('child received', event.data)
+        })
+    </script>
+</body>
+</html>
