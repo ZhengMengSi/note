@@ -1,20 +1,28 @@
 const express = require('express')
-const Vue = require('vue')
+const fs = require('fs')
+const path = require('path')
 
 const app = express()
 
-const renderer = require('vue-server-renderer').createRenderer()
-
-const page = new Vue({
-    template: '<div><h1>{{title}}</h1><div>hello, vue ssr!</div></div>',
-    data: {
-        title: 'jjj'
-    }
+const {createBundleRenderer} = require('vue-server-renderer')
+const serverBundle = require('../dist/server/vue-ssr-server-bundle.json')
+const clientManifest = require('../dist/client/vue-ssr-client-manifest.json')
+const renderer = createBundleRenderer(serverBundle, {
+    runInNewContext: false,
+    // template: fs.readFileSync(__dirname + '../public/index.temp.html', 'utf-8'),
+    template: fs.readFileSync(path.resolve(__dirname, '../public/index.temp.html'), 'utf-8'),
+    clientManifest
 })
 
-app.get('/', async (req, res) => {
+// app.use(express.static('../dist/client', {index: false}))
+app.use(express.static('../dist/client'))
+
+app.get('*', async (req, res) => {
     try {
-        const html = await renderer.renderToString(page)
+        const context = {
+            url: req.url,
+        }
+        const html = await renderer.renderToString(context)
         console.log(html);
         res.send(html)
     } catch (e) {
