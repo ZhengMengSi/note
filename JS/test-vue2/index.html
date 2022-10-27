@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./js/vue@2.7.13.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <base-checkbox v-model="lovingVue"></base-checkbox>
+  </div>
+
+  <script>
+    var vueChildComponentInstance = Vue.component('base-checkbox', {
+      name: 'base-checkbox',
+      model: {
+        prop: 'checked',
+        event: 'change'
+      },
+      props: {
+        checkedProp: Boolean
+      },
+      template: `
+        <input
+          type="checkbox"
+          value="fff"
+          v-bind:checked="checkedProp"
+          v-on:change="emitChange"
+        >
+      `,
+      methods: {
+        emitChange: function ($event) {
+          console.log($event.target.value)
+          this.$emit('change', $event.target.checked)
+        }
+      }
+    })
+
+    var vueParentInstance = new Vue({
+      el: '#app',
+      data: {
+        lovingVue: null,
+      },
+      watch: {
+        lovingVue: function (val, oldVal) {
+          console.log('new: %s, old: %s', val, oldVal)
+        },
+      },
+    })
+  </script>
+</body>
+
+</html>

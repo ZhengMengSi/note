@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <h1 v-on:click="fun1">jjjjj</h1>
+    <blog-post ref="blogPost" post-title="hello!"></blog-post>
+  </div>
+  
+
+  <script src="/js/vue@2.7.13.js"></script>
+  <script src="/js/event-bus.js"></script>
+  <script>
+    Vue.component('blog-post', {
+      // 在 JavaScript 中是 camelCase 的
+      props: ['postTitle'],
+      template: '<h3>{{ postTitle }}</h3>',
+      created: function () {
+        // console.log(this.$parent)
+      },
+      mounted: function () {
+        // console.log(this.$attrs)
+        EventBus.$on('msg', this.showMsg)
+      },
+      beforeDestory: function () {
+        EventBus.$off('msg', this.showMsg)
+      },
+      methods: {
+        showMsg: function (msg) {
+          console.log(msg)
+        }
+      }
+    })
+
+    new Vue({
+      el: '#app',
+      data: {
+        x: 5
+      },
+      mounted: function () {
+        // console.log(this.$refs.blogPost)
+        // console.log(this.$attrs)
+      },
+      methods: {
+        fun1: function () {
+          EventBus.$emit('msg', this.x)
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

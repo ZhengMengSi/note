@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script>
+    const {ref, onMounted} = Vue
+    const rootComponent = {
+      template: `
+        <ul>
+          <li v-for="(item,idx) in list" ref="itemRefs" @click="list[idx]=1">{{item}}</li>  
+        </ul>
+      `,
+      setup() {
+        const itemRefs = ref([])
+        const list = ref(['我', '爱','我','家'])
+
+        onMounted(() => {
+          console.log(itemRefs.value)
+        })
+
+        return {
+          list,
+          itemRefs
+        }
+      }
+    }
+    const app = Vue.createApp(rootComponent)
+    app.mount('#app')
+  </script>
+</body>
+</html>

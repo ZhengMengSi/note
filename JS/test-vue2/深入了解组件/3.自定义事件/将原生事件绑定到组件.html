@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <!-- <base-input v-on:focus.native="onFocus"></base-input> -->
+
+    
+    <div @keyup="a" style="width: 100px;height: 100px;background: red;">
+      <input type="text">
+    </div>
+  </div>
+
+  <script src="../../js/vue@2.7.13.js"></script>
+  <script>
+    var childComponentInstance = Vue.component('base-input', {
+      template: `
+        <input>
+      `,
+
+    })
+
+    var rootComponentInstance = new Vue({
+      el: '#app',
+      methods: {
+        onFocus: function ($event) {
+          console.log(111, $event.target)
+        },
+        a: function () {
+          console.log(222)
+        }
+      }
+    })
+  </script>
+</body>
+</html>
