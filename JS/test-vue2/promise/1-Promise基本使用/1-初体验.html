@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button>抽奖</button>
+
+  <script>
+    const btn = document.getElementsByTagName('button')[0]
+
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min
+    }
+
+    btn.addEventListener('click', () => {
+      // setTimeout(() => {
+      //   let i = getRandomInt(1,100)
+      //   if (i <= 30) {
+      //     alert('中将了200000万')
+      //   } else {
+      //     alert('再接再厉')
+      //   }
+      // }, 1000)
+
+      const p = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          let i = getRandomInt(1, 100)
+          if (i <= 30) {
+            resolve(i)
+          } else {
+            reject(i)
+          }
+        }, 1000)
+      })
+
+      p.then((i) => {
+        alert(`中将了200000万 ${i}`)
+      }, (i) => {
+        alert(`再接再厉 ${i}`)
+      })
+    })
+  </script>
+</body>
+
+</html>

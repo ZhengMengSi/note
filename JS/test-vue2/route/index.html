@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../js/vue@2.7.13.js"></script>
+  <script src="../js/vue-router@3.6.5.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <router-view></router-view>
+  </div>
+
+  <div id="com1">aaa</div>
+  <div id="com2">bbb</div>
+
+  <script>
+    const router = new VueRouter({
+      mode: 'history',
+      base: '/route',
+      routes: [
+        { path: '/index.html', alias: ['/'], component: { template: '<div>3</div>' } },
+        // { path: '/a', component: { template: '<div>1</div>' } },
+        // { path: '/b', component: { template: '<div>1</div>' } },
+        {
+          path: '/user/:id',
+          beforeEnter: function (to, from, next) {
+            console.log('路由独享的守卫 beforeEnter')
+            next()
+          },
+          component: {
+            template: '<div>{{$route.params.id}}</div>',
+            beforeCreate: function () {
+              console.log('beforeCreate')
+            },
+            beforeRouteEnter: function (to, from, next) {
+              console.log('user ----------- beforeRouteEnter')
+              next()
+            },
+            beforeRouteUpdate: function (to, from, next) {
+              console.log('user ----------- beforeRouteUpdate')
+              next()
+            },
+            beforeRouteLeave: function (to, from, next) {
+              console.log('user ----------- beforeRouteLeave')
+              next()
+            },
+            beforeUpdate: function () {
+              // console.log('beforeUpdate: ', this.$route.params.id)
+            },
+          }
+        },
+        {
+          path: '/list',
+          component: {
+            template: '<div>list</div>',
+            beforeRouteEnter: function (to, from, next) {
+              console.log('list ----------- beforeRouteEnter')
+              next()
+            },
+            beforeRouteUpdate: function (to, from, next) {
+              console.log('list ----------- beforeRouteUpdate')
+              next()
+            },
+            beforeRouteLeave: function (to, from, next) {
+              console.log('list ----------- beforeRouteLeave')
+              next()
+            },
+          }
+        }
+      ]
+    })
+
+    router.beforeEach((to, from, next) => {
+      // console.log(to)
+      console.log('全局beforeEach')
+      next()
+    })
+
+    const app = new Vue({
+      el: '#app',
+      router
+    })
+  </script>
+</body>
+
+</html>
