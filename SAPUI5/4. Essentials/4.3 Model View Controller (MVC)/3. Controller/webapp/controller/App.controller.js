@@ -1,17 +1,19 @@
 sap.ui.define([
     'sap/ui/core/mvc/Controller',
-    'sap/ui/core/mvc/OverrideExecution'
-], function (Controller, OverrideExecution) {
+    'sap/ui/core/mvc/OverrideExecution',
+    './App2.controller'
+], function (Controller, OverrideExecution, App2) {
     return Controller.extend('uu.controller.App', {
-        metadata: {
-            methods: {
-                publicMethod: {
-                    public: true,
-                    final: false,
-                    overrideExecution: OverrideExecution.After
-                }
+        App2: App2.override({
+            publicMethod: function () {
+                console.log('App publicMethod')
             }
-        },
+        }),
+        // metadata: {
+        //     methods: {
+        //         onMyHook: {public: true /*default*/, final: false /*default*/, overrideExecution: OverrideExecution.After},
+        //     }
+        // },
         onInit: function () {
             console.log('App onInit')
             this.counter = 0;
@@ -19,25 +21,27 @@ sap.ui.define([
             // console.log('Controller实例：', this)
             // console.log('实例方法byId：', this.byId('ttt'))
             // console.log('实例方法getMetadata：', this.getMetadata().getPublicMethods())
-            // this.publicMethod()
-            console.log(this.getMetadata())
+            this.App2.publicMethod()
         },
         onExit: function () {
             console.log('onExit')
         },
         onAfterRendering: function () {
-            console.log('onAfterRendering')
+            // console.log('onAfterRendering')
         },
         onBeforeRendering: function () {
-            console.log('onBeforeRendering')
+            // console.log('onBeforeRendering')
         },
         increaseCounter: function() {
             this.counter++;
         },
         // adding a public method, might be called from,
         // but not overridden by other controllers or controller extensions as well
-        publicMethod: function() {
-            console.log('App publicMethod')
+        // publicMethod: function() {
+        //     console.log('App publicMethod')
+        // },
+        onMyHook: function() {
+            console.log('App onMyHook')
         },
     })
 })
