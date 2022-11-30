@@ -1,0 +1,7 @@
+<mvc:View
+    controllerName="ii.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Text text="粗粗粗"/>
+
+</mvc:View>
