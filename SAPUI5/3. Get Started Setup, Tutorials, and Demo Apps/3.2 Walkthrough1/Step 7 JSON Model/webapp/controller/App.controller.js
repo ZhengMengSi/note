@@ -15,6 +15,7 @@ sap.ui.define([
             }
             var oModel = new JSONModel(oData);
             this.getView().setModel(oModel);
+            oModel.setProperty('/recipient/name', 'z')
         },
         onShowHello : function () {
             MessageToast.show('zms...iii')

@@ -1,3 +1,7 @@
+// 参考资料
+//
+// https://www.cnblogs.com/xiaoshiwang/p/15236633.html
+
 sap.ui.define([
     'sap/ui/core/mvc/Controller',
     'sap/ui/model/json/JSONModel',
@@ -22,8 +26,10 @@ sap.ui.define([
                 aFilter.push(new Filter('ProductName', FilterOperator.Contains, sQuery))
             }
 
-            var oList = this.byId('invoiceList')
-            var oBinding = oList.getBinding('items')
+            var oList = this.byId('invoiceList') // sap.ui.core.Element
+            console.log(oList)
+            var oBinding = oList.getBinding('items') // sap.ui.model.Binding | sap.ui.model.ClientListBinding
+            console.log(oBinding.constructor)
             oBinding.filter(aFilter)
         }
     })
