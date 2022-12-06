@@ -1,7 +1,0 @@
-specVersion: '2.6'
-metadata:
-  name: ui5-demo
-type: application
-framework:
-  name: SAPUI5
-  version: "1.108.0"
