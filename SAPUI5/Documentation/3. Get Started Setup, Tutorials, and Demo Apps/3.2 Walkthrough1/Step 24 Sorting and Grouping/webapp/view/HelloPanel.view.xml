@@ -26,5 +26,4 @@
                     class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
         </content>
     </Panel>
-
 </mvc:View>
