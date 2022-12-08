@@ -39,7 +39,9 @@ sap.ui.define([
             var oRouter = this.getOwnerComponent().getRouter();
             // console.log(oRouter) // EventProvider sap.m.routing.Router
             oRouter.navTo("detail", {
-                invoicePath: window.encodeURIComponent(oItem.getBindingContext("invoice").getPath().substr(1))
+                invoicePath: window.encodeURIComponent(
+                  oItem.getBindingContext("invoice").getPath().substr(1)
+                )
             });
         }
     })
