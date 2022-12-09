@@ -1,0 +1,14 @@
+<mvc:View
+    controllerName="sap.ui5.walkthrough.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Button 
+        text="{zmsi18n>showHelloBtnText}"
+        press=".onShowHello"/>
+    <Input 
+        id="myinput"
+        value="{/recipient/name}"
+        description="Hello {/recipient/name}"
+        valueLiveUpdate="true"
+        width="60%"/>
+</mvc:View>
