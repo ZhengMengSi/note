@@ -13,6 +13,7 @@
     <wt:ProductRating
       id="rating"
       class="sapUiSmallMarginBeginEnd"
+      value="2"
       change=".onRatingChange"/>
   </Page>
 </mvc:View>

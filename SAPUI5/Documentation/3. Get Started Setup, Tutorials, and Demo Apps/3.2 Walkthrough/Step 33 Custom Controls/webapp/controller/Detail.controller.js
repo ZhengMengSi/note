@@ -19,7 +19,7 @@ sap.ui.define([
     },
     _onObjectMatched: function (oEvent) {
       // EventProvider zms.controller.Detail
-      console.log(this)
+      // console.log(this)
       this.byId("rating").reset();
       this.getView().bindElement({
         path: "/" + window.decodeURIComponent(oEvent.getParameter("arguments").invoicePath),
@@ -37,7 +37,6 @@ sap.ui.define([
         oRouter.navTo("overview", {}, true);
       }
     },
-
     onRatingChange: function (oEvent) {
       var fValue = oEvent.getParameter("value");
       var oResourceBundle = this.getView().getModel("i18n").getResourceBundle();
