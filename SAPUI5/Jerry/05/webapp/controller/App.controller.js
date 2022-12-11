@@ -8,6 +8,9 @@ sap.ui.define([
 
     return Controller.extend('sap.ui5.walkthrough.controller.App', {
         onInit: function () {
+            // Element sap.ui.core.mvc.XMLView#__xmlview0
+            console.log(this.getView())
+
             var oData = {
                 recipient: {
                     name: '初探'
