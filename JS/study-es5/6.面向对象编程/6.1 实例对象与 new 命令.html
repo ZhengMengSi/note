@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var Vehicle = function (p) {
+      console.log(new.target)
+
+      // if (!(this instanceof Vehicle)) {
+      //   return new Vehicle(p);
+      // }
+
+      this.price = p;
+      return 1000
+    }
+
+    Vehicle()
+
+    function _new(constructor, params) {
+      var args = [].slice.call(arguments);
+      var constructor = args.shift();
+      var context = Object.create(constructor.prototype)
+      var result = constructor.apply(context, args)
+      return (typeof result === 'object' && result != null) ? result : context;
+    }
+
+  </script>
+</body>
+</html>
