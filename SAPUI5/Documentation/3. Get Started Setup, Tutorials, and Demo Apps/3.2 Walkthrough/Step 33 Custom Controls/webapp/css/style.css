@@ -10,3 +10,12 @@ html[dir="rtl"] .myAppDemoWT .myCustomButton.sapMBtn {
     display: inline-block;
     font-weight: bold;
 }
+
+.o {
+    width: 24rem !important;
+    height: 113px;
+}
+
+.v {
+    background: #F0F4F8;
+}

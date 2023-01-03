@@ -1,0 +1,17 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:mchart="sap.suite.ui.microchart"
+    controllerName="zms.App">
+    <Button text="jjjj" press="onPress"/>
+
+    <Text text="{zms>/list}"></Text>
+
+    <mchart:InteractiveDonutChart segments="{ path: 'zms>/list' }">
+        <mchart:InteractiveDonutChartSegment
+                label="{zms>label}"
+                value="1"
+                displayedValue="1"
+                color="Error"></mchart:InteractiveDonutChartSegment>
+    </mchart:InteractiveDonutChart>
+</mvc:View>

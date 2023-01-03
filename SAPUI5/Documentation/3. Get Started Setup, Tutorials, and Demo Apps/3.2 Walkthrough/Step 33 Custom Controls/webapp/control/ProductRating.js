@@ -24,8 +24,12 @@ sap.ui.define([
       }
     },
     init: function () {
+      console.log('-------------------- init')
+      console.log(this.getValue())
+
       this.setAggregation("_rating", new RatingIndicator({
-        value: this.getValue(),
+        // value: 1,
+        // value: this.getValue(),
         iconSize: "2rem",
         visualMode: "Half",
         liveChange: this._onRate.bind(this)
@@ -41,10 +45,14 @@ sap.ui.define([
       }).addStyleClass("sapUiTinyMarginTopBottom"));
     },
     setValue: function (fValue) {
+      console.log('-------------------- setValue')
+
       this.setProperty("value", fValue, true);
-      this.getAggregation("_rating").setValue(fValue);
+      // this.getAggregation("_rating").setValue(fValue);
     },
     reset: function () {
+      console.log('-------------------- 父元素调用')
+
       var oResourceBundle = this.getModel("i18n").getResourceBundle();
 
       this.setValue(0);
@@ -81,8 +89,8 @@ sap.ui.define([
       });
     },
     renderer: function (oRm, oControl) {
-      // console.log(oRm) // sap.ui.core.RenderManager
-      // console.log(oControl) // sap.ui.core.Control
+      console.log('-------------------- renderer')
+      console.log(oControl.getValue())
 
       oRm.openStart("div", oControl);
       oRm.class("myAppDemoWTProductRating");
