@@ -1,0 +1,12 @@
+<mvc:View
+    controllerName="zms.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <DateRangeSelection
+        id="DRS1"
+        delimiter="{path:'/delimiterDRS1'}"
+        dateValue="{path:'/dateValueDRS1'}"
+        secondDateValue="{path:'/secondDateValueDRS1'}"
+        displayFormat="{path:'/dateFormatDRS1'}"
+        change="handleChange"/>
+</mvc:View>

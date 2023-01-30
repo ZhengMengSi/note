@@ -1,0 +1,13 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:mchart="sap.suite.ui.microchart"
+    controllerName="tree.App">
+
+    <Tree
+            id="Tree"
+            items="{path: '/list'}">
+        <StandardTreeItem title="{text}"/>
+    </Tree>
+
+</mvc:View>

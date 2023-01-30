@@ -2,8 +2,7 @@
   controllerName="zms.controller.Detail"
   xmlns="sap.m"
   xmlns:mvc="sap.ui.core.mvc"
-  xmlns:wt="zms.control"
-  xmlns:microchart="sap.suite.ui.microchart">
+  xmlns:wt="zms.control">
   <Page
     title="{i18n>detailPageTitle}"
     showNavButton="true"
@@ -11,16 +10,6 @@
     <ObjectHeader
       intro="{invoice>ShipperName}"
       title="{invoice>ProductName}"/>
-
-    <HBox class="v">
-      <microchart:InteractiveDonutChart displayedSegments="2" class="o">
-        <microchart:segments>
-          <microchart:InteractiveDonutChartSegment label="已设置" value="40" displayedValue="40%" color="Error"/>
-          <microchart:InteractiveDonutChartSegment label="未设置" value="60" displayedValue="60%" color="Error"/>
-        </microchart:segments>
-      </microchart:InteractiveDonutChart>
-    </HBox>
-
 
     <wt:ProductRating
       id="rating"

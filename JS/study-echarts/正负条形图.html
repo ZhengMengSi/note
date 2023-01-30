@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>ECharts</title>
+  <!-- 引入刚刚下载的 ECharts 文件 -->
+  <script src="/SDK/echarts-5.4.1/echarts.js"></script>
+</head>
+<body>
+<!-- 为 ECharts 准备一个定义了宽高的 DOM -->
+
+<div id="main" style="width: 300px;height:500px;border: 1px solid #000000;"></div>
+<script type="text/javascript">
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+
+  // 指定图表的配置项和数据
+  /*var option = {
+    xAxis: [
+      {
+        type: 'value',
+        position: 'top',
+        axisLine: {
+          show: false,
+        },
+        axisLabel: {
+          show: false,
+        },
+        splitLine: {
+          show: false,
+        }
+      }
+    ],
+    yAxis: [
+      {
+        type: 'category',
+        axisTick: {
+          show: false
+        },
+        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+      }
+    ],
+    series: [
+      {
+        name: 'Income',
+        type: 'bar',
+        stack: 'Total',
+        data: [400, 302, 341, 374, 390, 450, 420]
+      },
+      {
+        name: 'Expenses',
+        type: 'bar',
+        stack: 'Total',
+        data: [-120, -132, -101, -134, -190, -230, -210]
+      }
+    ]
+  };*/
+
+  /*var option = {
+    "xAxis": {
+      type: 'value',
+      "position": "top",
+      "splitLine": {
+        "show": false
+      },
+      "axisLabel": {
+        formatter: function (value, index) {
+          if (index === 2) {
+            return '下限'
+          } else if (index === 4) {
+            return '上限'
+          } else {
+            return '';
+          }
+        },
+      },
+      min: function(value){
+        //最小值设置，其中-value.max * 1.05 乘以1.05 ，主要是使图的边界小于最小的值，给边界留空间
+        return ( Math.abs(value.min) < value.max ? -value.max * 1.05 : value.min *  1.05).toFixed(2);
+      },
+      max: function(value){
+        //最大值设置，其中-value.min * 1.05 乘以1.05 ，主要是使图的边界大于最大于值，给边界留空间
+        return ( Math.abs(value.min) < value.max ? value.max * 1.05 : -value.min * 1.05).toFixed(2);
+      },
+    },
+    "yAxis": {
+      "type": "category",
+      "axisTick": {
+        "show": false
+      },
+      "data": [
+        "银行存款1111111111",
+        "基本户",
+        "业务范围",
+        "成本中心"
+      ],
+      axisLabel: {
+        width: 90,
+        overflow: 'truncate',
+        interval: 0
+      },
+    },
+    grid: {
+      left: 100
+    },
+    "series": [
+      {
+        "type": "bar",
+        "stack": "Total",
+        "data": [
+          1011111,
+          9,
+          2,
+          2
+        ]
+      },
+      {
+        "type": "bar",
+        "stack": "Total",
+        "data": [
+          -10111,
+          -9,
+          -2,
+          -2
+        ]
+      }
+    ],
+  }*/
+  var option = {
+    "xAxis": {
+      "type": "value",
+      "position": "top",
+      "splitLine": {
+        "show": false
+      },
+      "axisLabel": {
+        formatter: function (value, index) {
+          if (index === 2) {
+            return '下限'
+          } else if (index === 4) {
+            return '上限'
+          } else {
+            return '';
+          }
+        },
+      },
+      min: function(value){
+        //最小值设置，其中-value.max * 1.05 乘以1.05 ，主要是使图的边界小于最小的值，给边界留空间
+        return ( Math.abs(value.min) < value.max ? -value.max * 1.05 : value.min *  1.05).toFixed(2);
+      },
+      max: function(value){
+        //最大值设置，其中-value.min * 1.05 乘以1.05 ，主要是使图的边界大于最大于值，给边界留空间
+        return ( Math.abs(value.min) < value.max ? value.max * 1.05 : -value.min * 1.05).toFixed(2);
+      },
+    },
+    "yAxis": {
+      "type": "category",
+      "axisTick": {
+        "show": false
+      },
+      "data": [
+        "银行存款",
+        "基本户",
+        "投资账户",
+        "交易性金融资产",
+        "成本",
+        "公允价值变动",
+        "应收账款",
+        "预付账款",
+        "应收股利",
+        "应收利息",
+        "其他应收款",
+        "其他应收款 - 外部",
+        "待摊费用",
+        "业务范围",
+        "成本中心",
+        "债务保障率(%)",
+        "经营活动现金净流量/总债务",
+        "经营活动现金净流量/销售收入(%)"
+      ],
+      "axisLabel": {
+        "width": 90,
+        "overflow": "truncate",
+        "interval": 0
+      }
+    },
+    "grid": {
+      "left": 100
+    },
+    "series": [
+      {
+        "type": "bar",
+        "stack": "Total",
+        "data": [
+          1000,
+          9,
+          1111,
+          1111,
+          -33333,
+          -55555,
+          -9999,
+          3333,
+          555,
+          66666,
+          333,
+          4,
+          55,
+          2,
+          2,
+          11,
+          2,
+          null
+        ]
+      },
+      {
+        "type": "bar",
+        "stack": "Total",
+        "data": [
+          10000,
+          9,
+          1111,
+          222222,
+          1111,
+          4444,
+          33333,
+          333,
+          5555,
+          666666,
+          3,
+          4,
+          55,
+          2,
+          2,
+          11,
+          2,
+          null
+        ]
+      }
+    ]
+  }
+
+  // var data = option.series[0]['data'].concat(option.series[1]['data']).sort((a,b) => a - b)
+  // option.xAxis.interval = (Math.abs(data[0]) + Math.abs(data[data.length - 1])) / 4
+
+
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>

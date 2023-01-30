@@ -17,17 +17,17 @@ sap.ui.define([
                         value: '21.5',
                         displayValue: '21.5',
                     },
-                    {
-                        label: 'Test Phase',
-                        value: '38.5',
-                        displayValue: '38.5',
-                    },
+                    // {
+                    //     label: 'Test Phase',
+                    //     value: '38.5',
+                    //     displayValue: '38.5',
+                    // },
                 ]
             });
             this.getView().setModel(oModel, 'zms');
         },
-        onPress: function () {
-            console.log(this)
+        press: function (oEvent) {
+            debugger
         }
     }
 

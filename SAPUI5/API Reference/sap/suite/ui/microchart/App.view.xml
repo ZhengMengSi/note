@@ -3,15 +3,21 @@
     xmlns="sap.m"
     xmlns:mchart="sap.suite.ui.microchart"
     controllerName="zms.App">
-    <Button text="jjjj" press="onPress"/>
 
     <Text text="{zms>/list}"></Text>
 
-    <mchart:InteractiveDonutChart segments="{ path: 'zms>/list' }">
-        <mchart:InteractiveDonutChartSegment
+    <VBox
+        width="300px"
+        height="300px">
+        <mchart:InteractiveDonutChart
+            selectionChanged="press"
+            segments="{ path: 'zms>/list' }">
+            <mchart:InteractiveDonutChartSegment
                 label="{zms>label}"
                 value="1"
                 displayedValue="1"
-                color="Error"></mchart:InteractiveDonutChartSegment>
-    </mchart:InteractiveDonutChart>
+                color="Error"/>
+        </mchart:InteractiveDonutChart>
+    </VBox>
+
 </mvc:View>

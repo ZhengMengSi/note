@@ -1,0 +1,12 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <HBox>
+        <HBox class="box1" height="100px">
+            <layoutData>
+                <FlexItemData growFactor="1" />
+            </layoutData>
+        </HBox>
+        <HBox class="box2" width="300px" height="100px"></HBox>
+    </HBox>
+</mvc:View>
