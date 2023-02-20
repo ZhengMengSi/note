@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box" style="width: 300px;height:500px;border: 1px solid #000000;"></div>
+
+<script src="SDK/echarts-5.4.1/echarts.js"></script>
+<script>
+    var echartsInstance = echarts.init(document.getElementById('box'))
+    echartsInstance.setOption({
+        xAxis: {
+            data: ['a','b','c','d','e','f','g']
+        },
+        yAxis: {},
+        series: [
+            {
+                data: [820, 932, 901, 934, 1290, 1330, 1320],
+                type: "line",
+                /*markArea: {
+                    label: {
+                        show: true,
+                        formatter: function () {
+                            return '{b|} {a|100万}';
+                        },
+                        rich: {
+                            a: {
+                                fontSize: 20,
+                            },
+                            b: {
+                                backgroundColor: {
+                                    image: 'https://echarts.apache.org/zh/images/logo.png?_v_=20200710_1'
+                                }
+                            }
+                        }
+                    },
+                    data: [
+                        /!*[
+                            {
+                                name: '平均值到最大值',
+                                type: 'average'
+                            },
+                            {
+                                type: 'max'
+                            }
+                        ],*!/
+                        /!*[
+                            {
+                                name: '两个坐标之间的标域',
+                                coord: [10, 20]
+                            },
+                            {
+                                coord: [20, 30]
+                            }
+                        ],*!/
+                        [
+                            {
+                                name: '600到y轴最大值',
+                                xAxis: 100,
+                                yAxis: 600
+                            },
+                            {
+                                xAxis: 200,
+                            }
+                        ],
+                        [
+                            {
+                                name: '600到y轴最大值',
+                                xAxis: 300,
+                                yAxis: 900,
+                                itemStyle: {
+                                    color: 'red'
+                                }
+                            },
+                            {
+                                xAxis: 500,
+                            }
+                        ],
+                        [
+                            {
+
+                            },
+                            {
+                                name: '500到y轴最小值',
+                                yAxis: 500
+                            }
+                        ],
+                        /!*[
+                            {
+                                name: '两个屏幕坐标之间的标域',
+                                x: 100,
+                                y: 100,
+                                itemStyle: {
+                                    shadowBlur: 10,
+                                    shadowOffsetY: -10
+                                }
+                            },
+                            {
+                                x: '90%',
+                                y: '10%'
+                            }
+                        ]*!/
+                    ],
+                }*/
+                markPoint: {
+                    data: [
+                        {
+                            coord: ['a', 820]
+                        }
+                    ],
+                    label: {
+                        formatter: function () {
+                            return 820 + '...';
+                        },
+                    }
+                }
+            }
+        ]
+    })
+</script>
+</body>
+</html>

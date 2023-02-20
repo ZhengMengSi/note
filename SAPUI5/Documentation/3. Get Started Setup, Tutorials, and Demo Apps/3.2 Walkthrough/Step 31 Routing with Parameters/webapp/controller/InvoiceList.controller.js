@@ -38,9 +38,9 @@ sap.ui.define([
             // console.log(this.getOwnerComponent()) // ManagedObject zms.Component#container-zms
             var oRouter = this.getOwnerComponent().getRouter();
             // console.log(oRouter) // EventProvider sap.m.routing.Router
-            debugger
+            var invoicePath = window.encodeURIComponent(oItem.getBindingContext("invoice").getPath().substr(1));
             oRouter.navTo("detail", {
-                invoicePath: window.encodeURIComponent(oItem.getBindingContext("invoice").getPath().substr(1))
+                invoicePath: invoicePath
             });
         }
     })

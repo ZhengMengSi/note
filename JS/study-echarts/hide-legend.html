@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>隐藏图例</title>
+</head>
+<body>
+    <div id="box" style="width: 500px;height: 500px;"></div>
+
+    <script src="/SDK/echarts-5.4.1/echarts.js"></script>
+    <script>
+        let dom = document.getElementById('box')
+        let ins = echarts.init(dom)
+        let opt = {
+            title: {
+                text: '隐藏图例'
+            },
+            legend: {
+
+            },
+            xAxis: {
+                data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+            },
+            yAxis: {},
+            series: [
+                {
+                    name: '日期',
+                    type: 'bar',
+                    data: [1,2,3,4,5,6,7]
+                }
+            ]
+        }
+        ins.setOption(opt)
+    </script>
+</body>
+</html>
