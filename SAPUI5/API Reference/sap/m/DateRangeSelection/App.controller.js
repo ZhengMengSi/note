@@ -11,7 +11,7 @@ sap.ui.define([
                 delimiterDRS1: "@",
                 dateValueDRS1: dateFrom,
                 secondDateValueDRS1: dateTo,
-                dateFormatDRS1: "yyyy/MM/dd"
+                dateFormatDRS1: "yyyy/MM"
             })
             this.getView().setModel(oModel);
         }

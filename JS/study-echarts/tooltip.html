@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box" style="width: 500px;height: 500px;"></div>
+
+<style>
+    .a {
+        padding: 100px;
+    }
+</style>
+<script src="/SDK/echarts-5.1.0/echarts.js"></script>
+<script>
+    var e = echarts.init(document.getElementById('box'))
+    e.setOption({
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross',
+                crossStyle: {
+                    color: "#999",
+                },
+            },
+            enterable: true,
+            formatter: function (params) {
+                debugger
+            }
+        },
+        xAxis: {
+            axisPointer: {
+                type: 'shadow'
+            },
+            data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
+        },
+        yAxis: [
+            {
+                type: 'value',
+                name: '销量',
+                yAxisIndex: 0,
+            },
+            {
+                type: 'value',
+                name: '库存',
+                yAxisIndex: 1,
+            },
+        ],
+        series: [
+            {
+                name: '销量',
+                type: 'bar',
+                data: [5, -20, 36, 10, 10, 20],
+            },
+            {
+                name: '库存',
+                type: 'bar',
+                data: [50, -200, 360, 100, 100, 200],
+                yAxisIndex: 1,
+            },
+        ]
+    })
+</script>
+</body>
+</html>

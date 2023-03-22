@@ -12,15 +12,23 @@
     var echartsInstance = echarts.init(document.getElementById('box'))
     echartsInstance.setOption({
         xAxis: {
-            data: ['a','b','c','d','e','f','g']
+            data: ['1月','2月','3月','4月','5月','6月','7月', '8月'],
+            // axisTick: {
+            //     alignWithLabel: true
+            // }
         },
         yAxis: {},
+        legend: {},
         series: [
             {
-                data: [820, 932, 901, 934, 1290, 1330, 1320],
+                name: '额度',
+                data: [
+                    ['1月', 111],
+                    ['3月', 111],
+                ],
                 type: "line",
-                /*markArea: {
-                    label: {
+                markArea: {
+                    /*label: {
                         show: true,
                         formatter: function () {
                             return '{b|} {a|100万}';
@@ -35,76 +43,19 @@
                                 }
                             }
                         }
-                    },
+                    },*/
                     data: [
-                        /!*[
-                            {
-                                name: '平均值到最大值',
-                                type: 'average'
-                            },
-                            {
-                                type: 'max'
-                            }
-                        ],*!/
-                        /!*[
-                            {
-                                name: '两个坐标之间的标域',
-                                coord: [10, 20]
-                            },
-                            {
-                                coord: [20, 30]
-                            }
-                        ],*!/
                         [
                             {
-                                name: '600到y轴最大值',
-                                xAxis: 100,
-                                yAxis: 600
+                                coord: ['4月', 'min']
                             },
                             {
-                                xAxis: 200,
+                                coord: ['5月', 'max']
                             }
                         ],
-                        [
-                            {
-                                name: '600到y轴最大值',
-                                xAxis: 300,
-                                yAxis: 900,
-                                itemStyle: {
-                                    color: 'red'
-                                }
-                            },
-                            {
-                                xAxis: 500,
-                            }
-                        ],
-                        [
-                            {
-
-                            },
-                            {
-                                name: '500到y轴最小值',
-                                yAxis: 500
-                            }
-                        ],
-                        /!*[
-                            {
-                                name: '两个屏幕坐标之间的标域',
-                                x: 100,
-                                y: 100,
-                                itemStyle: {
-                                    shadowBlur: 10,
-                                    shadowOffsetY: -10
-                                }
-                            },
-                            {
-                                x: '90%',
-                                y: '10%'
-                            }
-                        ]*!/
                     ],
-                }*/
-                markPoint: {
+                },
+                /*markPoint: {
                     data: [
                         {
                             coord: ['a', 820]
@@ -115,10 +66,26 @@
                             return 820 + '...';
                         },
                     }
-                }
+                }*/
             }
         ]
     })
+
+    echartsInstance.on('legendselectchanged', function (params) {
+        console.log('legendselectchanged:', params)
+    });
+
+    echartsInstance.on('legendselected', function (params) {
+        console.log('legendselected:', params)
+    });
+
+    setTimeout(function () {
+        echartsInstance.dispatchAction({
+            type: 'legendSelect',
+            name: '额度',
+        })
+    }, 5000)
+
 </script>
 </body>
 </html>

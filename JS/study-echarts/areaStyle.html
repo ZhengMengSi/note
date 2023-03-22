@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/SDK/echarts-5.4.1/echarts.js"></script>
+</head>
+<body>
+<div id="main" style="width: 600px;height:400px;"></div>
+
+<script>
+    var myChart = echarts.init(document.getElementById('main'))
+    var data = [5, 9, 11, 16,18, 19, 20, 23,25, 29, 31, 36,45, 49, 51, 56];
+    var data1 = data.map(item => item + 10)
+    var data2 = data.map(item => item - 10)
+    data[2] = 30
+    var opt = {
+        legend: {
+            data: ['x' , 'y']
+        },
+        xAxis: {
+            type: 'category',
+            data: ['Mon', 'Tus1', 'Wes1', 'Ths','Mon', 'Tus', 'Wes', 'Ths','Mon', 'Tus', 'Wes', 'Ths','Mon', 'Tus', 'Wes', 'Ths',]
+        },
+        yAxis: {},
+        series: [
+            {
+                name: 'x',
+                type: 'line',
+                data: data1,
+                itemStyle: {
+                    opacity: 0
+                },
+                lineStyle: {
+                    width: 0
+                },
+                areaStyle: {
+                    origin: 'end',
+                    color: {
+                        type: 'linear',
+                        x: 0,
+                        y: 0,
+                        x2: 0,
+                        y2: 1,
+                        colorStops: [
+                            {
+                            offset: 0, color: '#BB0000' // 0% 处的颜色
+                        }, {
+                            offset: 1, color: '#E9730C' // 100% 处的颜色
+                        }],
+                        global: false // 缺省为 false
+                    }
+                }
+            },
+            {
+                name: 'y',
+                type: 'line',
+                data: data,
+                label: {
+
+                },
+                markPoint: {
+                    label: {
+                        formatter: '30'
+                    },
+                    data: [
+                        {
+                            name: '某个坐标',
+                            coord: ['Wes1', 30]
+                        }
+                    ]
+                }
+            },
+            {
+                name: 'x',
+                type: 'line',
+                data: data2,
+                itemStyle: {
+                    color: 'red',
+                    borderWidth: 0,
+                    opacity: 0
+                },
+                lineStyle: {
+                    width: 0
+                },
+                areaStyle: {
+                    origin: 'start',
+
+                    color: {
+                        type: 'linear',
+                        x: 0,
+                        y: 0,
+                        x2: 0,
+                        y2: 1,
+                        colorStops: [
+                            {
+                                offset: 0, color: '#E9730C' // 0% 处的颜色
+                            }, {
+                                offset: 1, color: '#BB0000' // 100% 处的颜色
+                            }],
+                        global: false // 缺省为 false
+                    }
+                }
+            },
+        ]
+    }
+
+    var opt1 = {
+        "tooltip": {
+            "trigger": "axis",
+            "axisPointer": {
+                "type": "cross",
+                "crossStyle": {
+                    "color": "#999"
+                }
+            },
+            "enterable": true,
+            "extraCssText": "padding:0;border-color:#d9e3ed",
+            "className": "trendToopTip"
+        },
+        "legend": {
+            "left": "40",
+            "bottom": "10",
+            "data": [
+                {
+                    "name": "当期发生额"
+                },
+                {
+                    "name": "期末余额"
+                },
+                {
+                    "name": "环比"
+                },
+                {
+                    "name": "同比"
+                }
+            ],
+            "type": "scroll"
+        },
+        "grid": {
+            "left": "100",
+            "right": "100"
+        },
+        "toolbox": {
+            "feature": {
+                "magicType": {
+                    "show": true,
+                    "type": [
+                        "line",
+                        "bar"
+                    ]
+                },
+                "restore": {
+                    "show": true
+                },
+                "saveAsImage": {
+                    "show": true
+                }
+            }
+        },
+        "xAxis": [
+            {
+                "type": "category",
+                "data": [
+                    "2020/4",
+                    "2020/5",
+                    "2020/6",
+                    "2020/7",
+                    "2020/8",
+                    "2020/9",
+                    "2020/10",
+                    "2020/11",
+                    "2020/12",
+                    "2021/1",
+                    "2021/2",
+                    "2021/3"
+                ],
+                "axisPointer": {
+                    "type": "shadow"
+                }
+            }
+        ],
+        "yAxis": [
+            {
+                "type": "value",
+                "yAxisIndex": 0,
+                "name": "当期发生额",
+                "axisLabel": {},
+                "max": 2640000,
+                "min": -1320000,
+                "interval": 660000
+            },
+            {
+                "type": "value",
+                "yAxisIndex": 1,
+                "name": "期末余额",
+                "position": "right",
+                "axisLabel": {},
+                "max": 2480000,
+                "min": -1240000,
+                "interval": 620000,
+                "show": true
+            },
+            {
+                "type": "value",
+                "min": -1040,
+                "max": 2080,
+                "interval": 520,
+                "show": false
+            }
+        ],
+        "series": [
+            {
+                "name": "当期发生额",
+                "type": "bar",
+                "data": [
+                    [
+                        "2020/4",
+                        -544122.57,
+                        -544122.57
+                    ],
+                    [
+                        "2020/5",
+                        -274582.57,
+                        -274582.57
+                    ],
+                    [
+                        "2020/6",
+                        756862.69,
+                        756862.69
+                    ],
+                    [
+                        "2020/7",
+                        -299067.97,
+                        -299067.97
+                    ],
+                    [
+                        "2020/8",
+                        -247681.99,
+                        -247681.99
+                    ],
+                    [
+                        "2020/9",
+                        509709.18,
+                        509709.18
+                    ],
+                    [
+                        "2020/10",
+                        611217.65,
+                        611217.65
+                    ],
+                    [
+                        "2020/11",
+                        -1307496.26,
+                        -1307496.26
+                    ],
+                    [
+                        "2020/12",
+                        2352979.17,
+                        2352979.17
+                    ],
+                    [
+                        "2021/1",
+                        -968668.52,
+                        -968668.52
+                    ],
+                    [
+                        "2021/2",
+                        -253720.91,
+                        -253720.91
+                    ],
+                    [
+                        "2021/3",
+                        -248726.25,
+                        -248726.25
+                    ]
+                ],
+                "stack": "all",
+                "symbol": "emptyCircle",
+                "label": {
+                    "show": true
+                },
+                "labelLayout": {
+                    "hideOverlap": true
+                },
+                "yAxisIndex": 0,
+                "itemStyle": {
+                    "color": "#aaaaaa",
+                    "opacity": 0.4
+                }
+            },
+            {
+                "name": "期末余额",
+                "type": "line",
+                "data": [
+                    [
+                        "2020/4",
+                        365015.6,
+                        365015.6
+                    ],
+                    [
+                        "2020/5",
+                        90433.03,
+                        90433.03
+                    ],
+                    [
+                        "2020/6",
+                        847295.72,
+                        847295.72
+                    ],
+                    [
+                        "2020/7",
+                        548227.75,
+                        548227.75
+                    ],
+                    [
+                        "2020/8",
+                        300545.76,
+                        300545.76
+                    ],
+                    [
+                        "2020/9",
+                        810254.94,
+                        810254.94
+                    ],
+                    [
+                        "2020/10",
+                        1421472.59,
+                        1421472.59
+                    ],
+                    [
+                        "2020/11",
+                        113976.33,
+                        113976.33
+                    ],
+                    [
+                        "2020/12",
+                        2466955.5,
+                        2466955.5
+                    ],
+                    [
+                        "2021/1",
+                        1498286.98,
+                        1498286.98
+                    ],
+                    [
+                        "2021/2",
+                        1244566.07,
+                        1244566.07
+                    ],
+                    [
+                        "2021/3",
+                        995839.82,
+                        995839.82
+                    ]
+                ],
+                "stack": "总量",
+                "symbol": "emptyCircle",
+                "itemStyle": {
+                    "color": "rgb(52, 56, 61)"
+                },
+                "lineStyle": {
+                    "width": 2,
+                    "color": "rgb(52, 56, 61)",
+                    "type": "dotted"
+                },
+                "label": {
+                    "show": true
+                },
+                "labelLayout": {
+                    "hideOverlap": true
+                },
+                "yAxisIndex": 1
+            },
+            {
+                "id": "chainRatio",
+                "name": "环比",
+                "type": "line",
+                "data": [
+                    [
+                        "2020/4",
+                        -59.85
+                    ],
+                    [
+                        "2020/5",
+                        -75.22
+                    ],
+                    [
+                        "2020/6",
+                        836.93
+                    ],
+                    [
+                        "2020/7",
+                        -35.3
+                    ],
+                    [
+                        "2020/8",
+                        -45.18
+                    ],
+                    [
+                        "2020/9",
+                        169.59
+                    ],
+                    [
+                        "2020/10",
+                        75.44
+                    ],
+                    [
+                        "2020/11",
+                        -91.98
+                    ],
+                    [
+                        "2020/12",
+                        2064.45
+                    ],
+                    [
+                        "2021/1",
+                        -39.27
+                    ],
+                    [
+                        "2021/2",
+                        -16.93
+                    ],
+                    [
+                        "2021/3",
+                        -19.98
+                    ]
+                ],
+                "symbol": "circle",
+                "lineStyle": {
+                    "color": "rgb(0, 128, 128)",
+                    "width": 1
+                },
+                "itemStyle": {
+                    "color": "rgb(0, 128, 128)"
+                },
+                "label": {
+                    "show": true
+                },
+                "labelLayout": {
+                    "hideOverlap": true
+                },
+                "yAxisIndex": 2
+            },
+            {
+                "name": "环比预警值",
+                "type": "line",
+                "data": [
+                    [
+                        "2020/4",
+                        1000051.99,
+                        1000051.99
+                    ],
+                    [
+                        "2020/5",
+                        401517.16,
+                        401517.16
+                    ],
+                    [
+                        "2020/6",
+                        99476.33,
+                        99476.33
+                    ],
+                    [
+                        "2020/7",
+                        932025.29,
+                        932025.29
+                    ],
+                    [
+                        "2020/8",
+                        603050.53,
+                        603050.53
+                    ],
+                    [
+                        "2020/9",
+                        330600.34,
+                        330600.34
+                    ],
+                    [
+                        "2020/10",
+                        891280.43,
+                        891280.43
+                    ],
+                    [
+                        "2020/11",
+                        1563619.85,
+                        1563619.85
+                    ],
+                    [
+                        "2020/12",
+                        125373.96,
+                        125373.96
+                    ],
+                    [
+                        "2021/1",
+                        2713651.05,
+                        2713651.05
+                    ],
+                    [
+                        "2021/2",
+                        1648115.68,
+                        1648115.68
+                    ],
+                    [
+                        "2021/3",
+                        1369022.68,
+                        1369022.68
+                    ]
+                ],
+
+                "stack": "总量",
+                "symbol": "emptyCircle",
+                "itemStyle": {
+                    "color": "rgb(52, 56, 61)"
+                },
+                "lineStyle": {
+                    "width": 2,
+                    "color": "rgb(52, 56, 61)",
+                    "type": "dotted"
+                },
+                "label": {
+                    "show": true
+                },
+                "labelLayout": {
+                    "hideOverlap": true
+                },
+                "yAxisIndex": 2,
+
+                // "itemStyle": {
+                //     "opacity": 0
+                // },
+                // "lineStyle": {
+                //     "width": 0
+                // },
+                // "areaStyle": {
+                //     "origin": "end",
+                //     "color": {
+                //         "type": "linear",
+                //         "x": 0,
+                //         "y": 0,
+                //         "x2": 0,
+                //         "y2": 1,
+                //         "colorStops": [
+                //             {
+                //                 "offset": 0,
+                //                 "color": "#BB0000"
+                //             },
+                //             {
+                //                 "offset": 1,
+                //                 "color": "#E9730C"
+                //             }
+                //         ],
+                //         "global": false
+                //     }
+                // },
+                // "yAxisIndex": 2
+            }
+        ]
+    }
+    myChart.setOption(opt1)
+</script>
+</body>
+</html>

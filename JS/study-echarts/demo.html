@@ -15,34 +15,1160 @@
 
   // 指定图表的配置项和数据
   var option = {
-    title: {
-      text: 'ECharts 入门示例'
+    "tooltip": {
+      "trigger": "axis",
+      "axisPointer": {
+        "type": "cross",
+        "crossStyle": {
+          "color": "#999"
+        }
+      },
+      "enterable": true,
+      "extraCssText": "padding:0;border-color:#d9e3ed",
+      "className": "trendToopTip"
     },
-    tooltip: {},
-    // legend: {
-    //   data: ['销量']
-    // },
-    xAxis: {
-      type: 'value',
-      data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
+    "legend": {
+      "left": "40",
+      "bottom": "10",
+      "type": "scroll",
+      "selected": {
+        "当期发生额": false,
+        "截止余额": true,
+        "环比": true,
+        "同比": false
+      },
+      "data": [
+        {
+          "name": "当期发生额"
+        },
+        {
+          "name": "截止余额"
+        },
+        {
+          "name": "环比"
+        },
+        {
+          "name": "同比"
+        }
+      ]
     },
-    yAxis: {},
-    series: [
-      {
-        name: '销量',
-        type: 'bar',
-        data: [5, -20, 36, 10, 10, 20],
-        markLine: {
-          data: [
-            {
-              name: 'Y 轴值为 5 的最小值',
-              yAxis: 5
-            },
-            {
-              name: 'Y 轴值为 200 的最大值',
-              yAxis: 200
-            },
+    "grid": {
+      "left": "100",
+      "right": "100"
+    },
+    "toolbox": {
+      "feature": {
+        "magicType": {
+          "show": true,
+          "type": [
+            "line",
+            "bar"
           ]
+        },
+        "restore": {
+          "show": true
+        },
+        "saveAsImage": {
+          "show": true
+        }
+      }
+    },
+    "xAxis": [
+      {
+        "type": "category",
+        "data": [
+          "2020/05",
+          "2020/06",
+          "2020/07",
+          "2020/08",
+          "2020/09",
+          "2020/10",
+          "2020/11",
+          "2020/12",
+          "2021/01",
+          "2021/02",
+          "2021/03",
+          "2021/04"
+        ],
+        "axisPointer": {
+          "type": "shadow"
+        }
+      }
+    ],
+    "yAxis": [
+      {
+        "yAxisIndex": 0,
+        "type": "value",
+        "name": "当期发生额",
+        "axisLabel": {},
+        "max": 30,
+        "min": -30,
+        "interval": 10
+      },
+      {
+        "yAxisIndex": 1,
+        "type": "value",
+        "name": "截止余额",
+        "position": "right",
+        "axisLabel": {},
+        "max": 30,
+        "min": -30,
+        "interval": 10
+      },
+      {
+        "yAxisIndex": 2,
+        "type": "value",
+        "min": -36,
+        "max": 180,
+        "interval": 36,
+        "show": false
+      },
+      {
+        "yAxisIndex": 3,
+        "type": "value",
+        "min": -30,
+        "max": 30,
+        "interval": 10,
+        "show": false
+      }
+    ],
+    "series": [
+      {
+        "name": "当期发生额",
+        "type": "bar",
+        "data": [
+          [
+            "2020/05",
+            0,
+            0,
+            0,
+            "period",
+            "当期发生额",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            "2020/06",
+            0,
+            0,
+            0,
+            "period",
+            "当期发生额",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            "2020/07",
+            0,
+            0,
+            0,
+            "period",
+            "当期发生额",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            "2020/08",
+            0,
+            0,
+            0,
+            "period",
+            "当期发生额",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            "2020/09",
+            0,
+            0,
+            0,
+            "period",
+            "当期发生额",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            "2020/10",
+            0,
+            0,
+            0,
+            "period",
+            "当期发生额",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            "2020/11",
+            0,
+            0,
+            0,
+            "period",
+            "当期发生额",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            "2020/12",
+            -500,
+            -100,
+            1,
+            "period",
+            "当期发生额",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            "2021/01",
+            -3200,
+            -100,
+            1,
+            "period",
+            "当期发生额",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            "2021/02",
+            5420,
+            100,
+            1,
+            "period",
+            "当期发生额",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            "2021/03",
+            5420,
+            100,
+            1,
+            "period",
+            "当期发生额",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            "2021/04",
+            -9580,
+            -100,
+            1,
+            "period",
+            "当期发生额",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "symbol": "emptyCircle",
+        "label": {
+          "show": true
+        },
+        "labelLayout": {
+          "hideOverlap": true
+        },
+        "yAxisIndex": 0,
+        "itemStyle": {
+          "color": "#aaaaaa",
+          "opacity": 0.4
+        }
+      },
+      {
+        "name": "截止余额",
+        "type": "line",
+        "data": [
+          [
+            "2020/05",
+            10000,
+            100,
+            1,
+            "end",
+            "截止余额",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            "2020/06",
+            10000,
+            100,
+            1,
+            "end",
+            "截止余额",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            "2020/07",
+            10000,
+            100,
+            1,
+            "end",
+            "截止余额",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            "2020/08",
+            10000,
+            100,
+            1,
+            "end",
+            "截止余额",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            "2020/09",
+            10000,
+            100,
+            1,
+            "end",
+            "截止余额",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            "2020/10",
+            20000,
+            100,
+            1,
+            "end",
+            "截止余额",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            "2020/11",
+            20000,
+            100,
+            1,
+            "end",
+            "截止余额",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            "2020/12",
+            19500,
+            100,
+            1,
+            "end",
+            "截止余额",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            "2021/01",
+            16300,
+            100,
+            1,
+            "end",
+            "截止余额",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            "2021/02",
+            21720,
+            100,
+            1,
+            "end",
+            "截止余额",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            "2021/03",
+            27140,
+            100,
+            1,
+            "end",
+            "截止余额",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            "2021/04",
+            17560,
+            100,
+            1,
+            "end",
+            "截止余额",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "symbol": "emptyCircle",
+        "yAxisIndex": 1,
+        "label": {
+          "show": true
+        },
+        "labelLayout": {
+          "hideOverlap": true
+        },
+        "itemStyle": {
+          "color": "rgb(52, 56, 61)"
+        },
+        "lineStyle": {
+          "width": 2,
+          "color": "rgb(52, 56, 61)",
+          "type": "dotted"
+        }
+      },
+      {
+        "id": "chainRatio",
+        "name": "环比",
+        "type": "line",
+        "data": [
+          [
+            "2020/05",
+            0
+          ],
+          [
+            "2020/06",
+            0
+          ],
+          [
+            "2020/07",
+            0
+          ],
+          [
+            "2020/08",
+            0
+          ],
+          [
+            "2020/09",
+            0
+          ],
+          [
+            "2020/10",
+            100
+          ],
+          [
+            "2020/11",
+            0
+          ],
+          [
+            "2020/12",
+            -2.5
+          ],
+          [
+            "2021/01",
+            -16.41
+          ],
+          [
+            "2021/02",
+            33.25
+          ],
+          [
+            "2021/03",
+            24.95
+          ],
+          [
+            "2021/04",
+            -35.3
+          ]
+        ],
+        "symbol": "circle",
+        "lineStyle": {
+          "color": "rgb(0, 128, 128)",
+          "width": 1
+        },
+        "itemStyle": {
+          "color": "rgb(0, 128, 128)"
+        },
+        "label": {
+          "show": true
+        },
+        "labelLayout": {
+          "hideOverlap": true
+        },
+        "yAxisIndex": 2
+      },
+      {
+        "id": "yoyRatio",
+        "name": "同比",
+        "type": "line",
+        "data": [
+          [
+            "2020/05",
+            0
+          ],
+          [
+            "2020/06",
+            0
+          ],
+          [
+            "2020/07",
+            0
+          ],
+          [
+            "2020/08",
+            0
+          ],
+          [
+            "2020/09",
+            0
+          ],
+          [
+            "2020/10",
+            100
+          ],
+          [
+            "2020/11",
+            100
+          ],
+          [
+            "2020/12",
+            95
+          ],
+          [
+            "2021/01",
+            63
+          ],
+          [
+            "2021/02",
+            117.2
+          ],
+          [
+            "2021/03",
+            171.4
+          ],
+          [
+            "2021/04",
+            75.6
+          ]
+        ],
+        "symbol": "circle",
+        "lineStyle": {
+          "color": "#E8743B",
+          "width": 1
+        },
+        "itemStyle": {
+          "color": "#E8743B"
+        },
+        "label": {
+          "show": true
+        },
+        "labelLayout": {
+          "hideOverlap": true
+        },
+        "yAxisIndex": 3
+      },
+      {
+        "id": "Mom_Up_Warning0",
+        "name": "环比",
+        "type": "line",
+        "data": [
+          [
+            "2021/01",
+            214500,
+            100,
+            1,
+            "period",
+            "环比上浮预警值",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            10
+          ],
+          [
+            "2021/02",
+            179300,
+            100,
+            1,
+            "period",
+            "环比上浮预警值",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            10
+          ],
+          [
+            "2021/03",
+            238920,
+            100,
+            1,
+            "period",
+            "环比上浮预警值",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            10
+          ],
+          [
+            "2021/04",
+            298540,
+            100,
+            1,
+            "period",
+            "环比上浮预警值",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            10
+          ]
+        ],
+        "itemStyle": {
+          "opacity": 0
+        },
+        "lineStyle": {
+          "width": 0
+        },
+        "areaStyle": {
+          "origin": "end",
+          "color": {
+            "colorStops": [
+              {
+                "offset": 0,
+                "color": "rgb(116, 165, 210)"
+              },
+              {
+                "offset": 1,
+                "color": "rgb(192, 218, 247)"
+              }
+            ],
+            "x": 0,
+            "y": 0,
+            "x2": 0,
+            "y2": 1,
+            "type": "linear",
+            "global": false
+          }
+        },
+        "yAxisIndex": 1,
+        "markPoint": {
+          "data": [
+            {
+              "coord": [
+                "2021/01",
+                16300
+              ]
+            },
+            {
+              "coord": [
+                "2021/04",
+                17560
+              ]
+            }
+          ],
+          "label": {},
+          "symbolSize": 65,
+          "itemStyle": {
+            "color": "#B03A5B"
+          }
+        },
+        "endLabel": {
+          "show": true,
+          "rich": {
+            "style": {
+              "backgroundColor": {
+                "image": "./assets/images/top.png"
+              },
+              "width": 14,
+              "height": 14
+            }
+          },
+          "borderRadius": 3,
+          "padding": [
+            4,
+            8
+          ],
+          "backgroundColor": "rgb(110,112,121)",
+          "fontSize": 11,
+          "color": "#fff",
+          "verticalAlign": "bottom"
+        }
+      },
+      {
+        "id": "Mom_Down_Warning0",
+        "name": "环比",
+        "type": "line",
+        "data": [
+          [
+            "2021/01",
+            19500,
+            100,
+            1,
+            "period",
+            "环比下降预警值",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            "2021/02",
+            16300,
+            100,
+            1,
+            "period",
+            "环比下降预警值",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            "2021/03",
+            21720,
+            100,
+            1,
+            "period",
+            "环比下降预警值",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            "2021/04",
+            27140,
+            100,
+            1,
+            "period",
+            "环比下降预警值",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "itemStyle": {
+          "opacity": 0
+        },
+        "lineStyle": {
+          "width": 0
+        },
+        "areaStyle": {
+          "origin": "start",
+          "color": {
+            "colorStops": [
+              {
+                "offset": 0,
+                "color": "rgb(192, 218, 247)"
+              },
+              {
+                "offset": 1,
+                "color": "rgb(116, 165, 210)"
+              }
+            ],
+            "x": 0,
+            "y": 0,
+            "x2": 0,
+            "y2": 1,
+            "type": "linear",
+            "global": false
+          }
+        },
+        "yAxisIndex": 1,
+        "markPoint": {
+          "data": [
+            {
+              "coord": [
+                "2021/01",
+                16300
+              ]
+            },
+            {
+              "coord": [
+                "2021/04",
+                17560
+              ]
+            }
+          ],
+          "label": {},
+          "symbolSize": 65,
+          "itemStyle": {
+            "color": "#B03A5B"
+          }
+        },
+        "endLabel": {
+          "show": true,
+          "rich": {
+            "style": {
+              "backgroundColor": {
+                "image": "./assets/images/down.png"
+              },
+              "width": 14,
+              "height": 14
+            }
+          },
+          "borderRadius": 3,
+          "padding": [
+            4,
+            8
+          ],
+          "backgroundColor": "rgb(110,112,121)",
+          "fontSize": 11,
+          "color": "#fff",
+          "verticalAlign": "top"
+        }
+      },
+      {
+        "id": "Yoy_Up_Warning0",
+        "name": "同比",
+        "type": "line",
+        "data": [
+          [
+            "2021/01",
+            110000,
+            100,
+            1,
+            "period",
+            "同比上浮预警值",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            10
+          ],
+          [
+            "2021/02",
+            110000,
+            100,
+            1,
+            "period",
+            "同比上浮预警值",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            10
+          ],
+          [
+            "2021/03",
+            110000,
+            100,
+            1,
+            "period",
+            "同比上浮预警值",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            10
+          ],
+          [
+            "2021/04",
+            110000,
+            100,
+            1,
+            "period",
+            "同比上浮预警值",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            10
+          ]
+        ],
+        "itemStyle": {
+          "opacity": 0
+        },
+        "lineStyle": {
+          "width": 0
+        },
+        "areaStyle": {
+          "origin": "end",
+          "color": {
+            "colorStops": [
+              {
+                "offset": 0,
+                "color": "rgb(116, 165, 210)"
+              },
+              {
+                "offset": 1,
+                "color": "rgb(192, 218, 247)"
+              }
+            ],
+            "x": 0,
+            "y": 0,
+            "x2": 0,
+            "y2": 1,
+            "type": "linear",
+            "global": false
+          }
+        },
+        "yAxisIndex": 1,
+        "markPoint": {
+          "data": [],
+          "label": {},
+          "symbolSize": 65,
+          "itemStyle": {
+            "color": "#B03A5B"
+          }
+        },
+        "endLabel": {
+          "show": true,
+          "rich": {
+            "style": {
+              "backgroundColor": {
+                "image": "./assets/images/top.png"
+              },
+              "width": 14,
+              "height": 14
+            }
+          },
+          "borderRadius": 3,
+          "padding": [
+            4,
+            8
+          ],
+          "backgroundColor": "rgb(110,112,121)",
+          "fontSize": 11,
+          "color": "#fff",
+          "verticalAlign": "bottom"
+        }
+      },
+      {
+        "id": "Yoy_Down_Warning0",
+        "name": "同比",
+        "type": "line",
+        "data": [
+          [
+            "2021/01",
+            10000,
+            100,
+            1,
+            "period",
+            "同比下降预警值",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            "2021/02",
+            10000,
+            100,
+            1,
+            "period",
+            "同比下降预警值",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            "2021/03",
+            10000,
+            100,
+            1,
+            "period",
+            "同比下降预警值",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            "2021/04",
+            10000,
+            100,
+            1,
+            "period",
+            "同比下降预警值",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "itemStyle": {
+          "opacity": 0
+        },
+        "lineStyle": {
+          "width": 0
+        },
+        "areaStyle": {
+          "origin": "start",
+          "color": {
+            "colorStops": [
+              {
+                "offset": 0,
+                "color": "rgb(192, 218, 247)"
+              },
+              {
+                "offset": 1,
+                "color": "rgb(116, 165, 210)"
+              }
+            ],
+            "x": 0,
+            "y": 0,
+            "x2": 0,
+            "y2": 1,
+            "type": "linear",
+            "global": false
+          }
+        },
+        "yAxisIndex": 1,
+        "markPoint": {
+          "data": [],
+          "label": {},
+          "symbolSize": 65,
+          "itemStyle": {
+            "color": "#B03A5B"
+          }
+        },
+        "endLabel": {
+          "show": true,
+          "rich": {
+            "style": {
+              "backgroundColor": {
+                "image": "./assets/images/down.png"
+              },
+              "width": 14,
+              "height": 14
+            }
+          },
+          "borderRadius": 3,
+          "padding": [
+            4,
+            8
+          ],
+          "backgroundColor": "rgb(110,112,121)",
+          "fontSize": 11,
+          "color": "#fff",
+          "verticalAlign": "top"
         }
       }
     ]
