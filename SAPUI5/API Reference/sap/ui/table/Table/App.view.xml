@@ -2,8 +2,20 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
     xmlns:t="sap.ui.table"
+    xmlns:microchart="sap.suite.ui.microchart"
     controllerName="zms.App">
     <t:Table
+        alternateRowColors="false"
+        columnHeaderHeight="60"
+        columnHeaderVisible="true"
+        editable="true"
+        enableBusyIndicator="true"
+        enableCellFilter="true"
+        enableColumnFreeze="true"
+        enableCustomFilter="true"
+        enableGrouping="true"
+        firstVisibleRow="2"
+        fixedColumnCount="1"
         rows="{/rows}"
         selectionMode="None">
         <t:extension>
@@ -12,21 +24,59 @@
             </OverflowToolbar>
         </t:extension>
         <t:columns>
-            <t:Column>
+            <t:Column
+                width="100px">
+                <Label text="预警对象" />
                 <t:template>
-                    <Text text="{name}"/>
+                    <Text text="{name}" wrapping="false" tooltip="{name}"/>
+                </t:template>
+            </t:Column>
+            <t:Column
+                headerSpan="2">
+                <t:multiLabels>
+                    <Label text="预警阀值" textAlign="Center" width="100%"/>
+                    <Label text="上限" textAlign="Center" width="100%"/>
+                </t:multiLabels>
+                <t:template>
+                    <Text text="{max}"/>
                 </t:template>
             </t:Column>
             <t:Column>
-                <Label text="姓名"/>
+                <t:multiLabels>
+                    <Label text="预警阀值"/>
+                    <Label text="下限" textAlign="Center" width="100%"/>
+                </t:multiLabels>
                 <t:template>
-                    <Text text="{name}"/>
+                    <Text text="{min}"/>
                 </t:template>
             </t:Column>
             <t:Column>
-                <Label text="姓名"/>
+                <t:label>
+                    <Label text="预警时段"></Label>
+                </t:label>
                 <t:template>
-                    <Text text="{age}"/>
+                    <microchart:BulletMicroChart
+                        minValue="{minValue}"
+                        maxValue="{maxValue}"
+                        size="Responsive"
+                        height="18px">
+                        <microchart:actual>
+                            <microchart:BulletMicroChartData value="{Actual}"/>
+                        </microchart:actual>
+                        <microchart:thresholds>
+                            <microchart:BulletMicroChartData value="40" color="Error"/>
+                            <microchart:BulletMicroChartData value="50" color="Critical"/>
+                            <microchart:BulletMicroChartData value="100" color="Error"/>
+                        </microchart:thresholds>
+                    </microchart:BulletMicroChart>
+                </t:template>
+            </t:Column>
+            <t:Column>
+                <t:label>
+                    <Label text="操作"></Label>
+                </t:label>
+                <t:template>
+                    <Text text="操作"></Text>
                 </t:template>
             </t:Column>
         </t:columns>
