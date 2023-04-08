@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combo box</title>
+
+    <script 
+        id="sap-ui-bootstrap"
+        type="text/javascript"
+        src="/SDK/sapui5-rt-1.77.2/resources/sap-ui-core.js"
+        data-sap-ui-theme='sap_fiori_3'
+        data-sap-ui-libs='sap.m'
+        data-sap-ui-compatVersion="edge">
+    </script>
+
+    <script id="view1" type="sapui5/xmlview">
+        <core:View
+            controllerName="my.own.controller"
+            xmlns="sap.m"
+            xmlns:l="sap.ui.layout"
+            xmlns:core="sap.ui.core">
+            <Page>
+                <content>
+                    <ComboBox
+                        items="{
+                            path: '/CountriesCollection',
+                            sorter: { path: 'text' }
+                        }"
+                        selectedKey="">
+                        <core:Item key="{key}" text="{text}" />
+                    </ComboBox>
+                </content>
+            </Page>
+        </core:View>
+    </script>
+
+    <script>
+        sap.ui.controller('my.own.controller', {})
+
+        var data = {
+            CountriesCollection: [
+                {
+                    key: '', text: '0',
+                },
+                {
+                    key: 1, text: '1',
+                },
+                {
+                    key: 2, text: '2',
+                },
+            ]
+        }
+
+        var myView = sap.ui.xmlview({
+            viewContent: jQuery('#view1').html()
+        })
+
+        var oModel = new sap.ui.model.json.JSONModel(data)
+
+        myView.setModel(oModel)
+
+        var app = new sap.m.App('myApp')
+        app.addPage(myView)
+        app.placeAt('content')
+    </script>
+</head>
+<body>
+    <div id='content'></div>
+</body>
+</html>
