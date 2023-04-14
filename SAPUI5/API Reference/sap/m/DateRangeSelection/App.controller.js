@@ -41,13 +41,13 @@ sap.ui.define([
             console.log(oControlEvent.getSource())
         },
         handleChange: function (oControlEvent) {
-            console.log(oControlEvent)
+            // console.log(oControlEvent)
             // console.log(oControlEvent.getParameters())
-            console.log(oControlEvent.getSource())
-            console.log(oControlEvent.getSource().toString())
-            console.log(Object.keys(oControlEvent.getSource()))
+            // console.log(oControlEvent.getSource())
+            // console.log(oControlEvent.getSource().toString())
+            // console.log(Object.keys(oControlEvent.getSource()))
             console.log(oControlEvent.getSource().getBindingContext())
-            console.log(oControlEvent.getSource().getBindingInfo())
+            // console.log(oControlEvent.getSource().getBindingInfo())
             var x = [
                 "bAllowTextSelection",
                 "mEventRegistry",

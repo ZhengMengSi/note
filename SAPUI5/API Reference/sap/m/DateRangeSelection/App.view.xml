@@ -7,11 +7,9 @@
             <t:Column>
                 <t:template>
                     <DateRangeSelection 
-                        delimiter="{delimiterDRS1}" 
                         dateValue="{dateValueDRS1}" 
-                        secondDateValue="{secondDateValueDRS1}" 
-                        displayFormat="{dateFormatDRS1}"
-                        change="handleChange"/>
+                        secondDateValue="{secondDateValueDRS1}"
+                        change=".handleChange"/>
                 </t:template>
             </t:Column>
         </t:columns>
