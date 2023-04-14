@@ -1,3 +1,5 @@
 const dayjs = require('dayjs')
-let data = '2020-02-01T00:00:00.000+0800'
-console.log(dayjs(data.slice(0, 10)).format('YYYY-M'));
+const isBetween = require('dayjs/plugin/isBetween')
+let data = '2021-02'
+dayjs.extend(isBetween)
+console.log(dayjs(data).isBetween('2021-02', '2021-02', null, '[]'));
