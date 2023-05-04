@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>ECharts</title>
+    <!-- 引入刚刚下载的 ECharts 文件 -->
+    <script src="./SDK/echarts-5.4.1/echarts.js"></script>
+</head>
+
+<body>
+    <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        var data = [
+            {
+                name: '偿债能力',
+                itemStyle: {
+                    color: '#ACC6DF'
+                },
+                children: [
+                    {
+                        name: 'Black Tea',
+                        value: 1,
+                        itemStyle: {
+                            color: '#975e6d'
+                        }
+                    },
+                    {
+                        name: 'Black Tea1',
+                        value: 1,
+                        itemStyle: {
+                            color: '#975e6d'
+                        }
+                    },
+                ]
+            },
+            {
+                name: '财务效益',
+                itemStyle: {
+                    color: '#598DC0'
+                },
+                children: [
+                    {
+                        name: 'Black Tea',
+                        value: 1,
+                        itemStyle: {
+                            color: '#975e6d'
+                        }
+                    },
+                    {
+                        name: 'Black Tea1',
+                        value: 1,
+                        itemStyle: {
+                            color: '#975e6d'
+                        }
+                    },
+                ]
+            },
+            {
+                name: '资金运营',
+                itemStyle: {
+                    color: '#0654A0'
+                },
+                children: [
+                    {
+                        name: 'Black Tea',
+                        value: 1,
+                        itemStyle: {
+                            color: '#975e6d'
+                        }
+                    },
+                    {
+                        name: 'Black Tea1',
+                        value: 1,
+                        itemStyle: {
+                            color: '#975e6d'
+                        }
+                    },
+                ]
+            },
+            {
+                name: '发展能力',
+                itemStyle: {
+                    color: '#728DA7'
+                },
+                children: [
+                    {
+                        name: 'Black Tea',
+                        value: 1,
+                        itemStyle: {
+                            color: '#975e6d'
+                        }
+                    },
+                    {
+                        name: 'Black Tea1',
+                        value: 1,
+                        itemStyle: {
+                            color: '#975e6d'
+                        }
+                    },
+                ]
+            },
+        ];
+        var bgColorArr = ['#ACC6DF', '#598DC0', '#0654A0', '#728DA7']
+        data.forEach(item => {
+            item.children.forEach((child, index) => {
+                child.itemStyle.color = bgColorArr[index % 4]
+            })
+        })
+        option = {
+            series: {
+                type: 'sunburst',
+                startAngle: 135,
+                nodeClick: false,
+                data: data,
+                radius: [0, '95%'],
+                emphasis: {
+                    focus: 'ancestor'
+                },
+                levels: [
+                    {},
+                    {
+                        r0: '25%',
+                        r: '65%',
+                        itemStyle: {
+                            borderWidth: 2
+                        },
+                        label: {
+                            rotate: 'tangential',
+                            color: '#fff',
+                            fontSize: 14
+                        }
+                    },
+                    {
+                        r0: '65%',
+                        r: '70%',
+                        label: {
+                            position: 'outside',
+                            padding: 3,
+                            silent: false
+                        },
+                    }
+                ],
+            }
+        };
+
+        myChart.setOption(option);
+
+        myChart.on('click', function (params) {
+            console.log(params);
+            // 只有最外层可点击
+            if (params.data.children === undefined) {
+                console.log('最外层被点击了');
+            }
+        });
+
+        myChart.dispatchAction({
+            type: 'highlight',
+            name: 'Black Tea1'
+        });
+
+        setTimeout(function () {
+            console.log(1);
+            myChart.dispatchAction({
+                type: 'downplay',
+                name: 'Black Tea1'
+            });
+        }, 4000)
+    </script>
+</body>
+
+</html>

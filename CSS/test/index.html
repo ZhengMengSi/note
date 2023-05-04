@@ -1,40 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <meta
-            name="viewport"
-            content="
-    width=device-width,  // 设置viewport的宽等于屏幕宽
-    initial-scale=1.0,  // 初始缩放为1
-    maximum-scale=1.0,
-    user-scalable=no,  // 不允许用户手动缩放
-    viewport-fit=cover // 缩放以填充满屏幕
-    "
-    >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <style>
-        #box {
-            padding: 10px 0;
-            position: relative;
+        div {
+            height: 15px;
+            width: 15px;
+            background: purple;
+            transition: 10s;
         }
-        #box::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            height: 1px;
-            background: #d9d9d9;
-            transform: scaleY(0.5);
-            transform-origin: 0 0;
+
+        div:hover {
+            display: none;
         }
     </style>
 </head>
+
 <body>
     <div id="box"></div>
-
-    <script>
-        console.log(window.devicePixelRatio)
-    </script>
 </body>
+
 </html>
