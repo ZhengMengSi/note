@@ -5,11 +5,16 @@
     <title>Title</title>
 </head>
 <body>
-<div id="box" style="width: 500px;height: 500px;"></div>
+<div id="box" style="width: 500px;height: 500px;border: 1px solid #000;overflow:hidden;"></div>
+
 
 <style>
     .a {
         padding: 100px;
+    }
+    .dark {
+        /*background-color: #000 !important;*/
+        color: blue;
     }
 </style>
 <script src="/SDK/echarts-5.1.0/echarts.js"></script>
@@ -17,22 +22,35 @@
     var e = echarts.init(document.getElementById('box'))
     e.setOption({
         tooltip: {
+            // 是否显示提示框组件，默认显示，包括提示框浮层和坐标轴指示器
+            show: true,
+            // 触发类型，默认数据项触发，适用于饼图等无类目轴，像柱状图等类目轴设置为axis
             trigger: 'axis',
             axisPointer: {
-                type: 'cross',
-                crossStyle: {
-                    color: "#999",
-                },
+                type: 'line',
+                axis: 'auto',
+                // snap: true,
             },
-            enterable: true,
-            formatter: function (params) {
-                debugger
-            }
+            showContent: true,
+            alwaysShowContent: false,
+            triggerOn: 'mousemove|click',
+            showDelay: 0,
+            hideDelay: 0,
+            enterable: false,
+            renderMode: 'html',
+            confine: true,
+            appendToBody: true,
+            className: 'dark',
+            transitionDuration: 0.4,
+            // position: [10, 10],
+            // formatter: function (params, ticket, callback) {
+            //     console.log(arguments)
+            // }
         },
         xAxis: {
-            axisPointer: {
-                type: 'shadow'
-            },
+            // axisPointer: {
+            //     type: 'shadow'
+            // },
             data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
         },
         yAxis: [
@@ -54,6 +72,126 @@
                 data: [5, -20, 36, 10, 10, 20],
             },
             {
+                name: '销量',
+                type: 'bar',
+                data: [5, -20, 36, 10, 10, 21],
+            },
+            {
+                name: '销量',
+                type: 'bar',
+                data: [5, -20, 36, 10, 10, 20],
+            },
+            {
+                name: '销量',
+                type: 'bar',
+                data: [5, -20, 36, 10, 10, 20],
+            },
+            {
+                name: '销量',
+                type: 'bar',
+                data: [5, -20, 36, 10, 10, 20],
+            },
+            {
+                name: '销量',
+                type: 'bar',
+                data: [5, -20, 36, 10, 10, 20],
+            },
+            {
+                name: '销量',
+                type: 'bar',
+                data: [5, -20, 36, 10, 10, 20],
+            },
+            {
+                name: '销量',
+                type: 'bar',
+                data: [5, -20, 36, 10, 10, 20],
+            },
+            {
+                name: '销量',
+                type: 'bar',
+                data: [5, -20, 36, 10, 10, 20],
+            },
+            {
+                name: '销量',
+                type: 'bar',
+                data: [5, -20, 36, 10, 10, 20],
+            },
+            {
+                name: '销量',
+                type: 'bar',
+                data: [5, -20, 36, 10, 10, 20],
+            },
+            {
+                name: '销量',
+                type: 'bar',
+                data: [5, -20, 36, 10, 10, 20],
+            },
+            {
+                name: '销量',
+                type: 'bar',
+                data: [5, -20, 36, 10, 10, 20],
+            },
+            {
+                name: '销量',
+                type: 'bar',
+                data: [5, -20, 36, 10, 10, 20],
+            },
+            {
+                name: '销量',
+                type: 'bar',
+                data: [5, -20, 36, 10, 10, 20],
+            },
+            {
+                name: '销量',
+                type: 'bar',
+                data: [5, -20, 36, 10, 10, 20],
+            },
+            {
+                name: '销量',
+                type: 'bar',
+                data: [5, -20, 36, 10, 10, 20],
+            },
+            {
+                name: '销量',
+                type: 'bar',
+                data: [5, -20, 36, 10, 10, 20],
+            },
+            {
+                name: '销量',
+                type: 'bar',
+                data: [5, -20, 36, 10, 10, 20],
+            },
+            {
+                name: '销量',
+                type: 'bar',
+                data: [5, -20, 36, 10, 10, 20],
+            },
+            {
+                name: '销量',
+                type: 'bar',
+                data: [5, -20, 36, 10, 10, 20],
+            },
+            {
+                name: '销量',
+                type: 'bar',
+                data: [5, -20, 36, 10, 10, 20],
+            },
+            {
+                name: '销量',
+                type: 'bar',
+                data: [5, -20, 36, 10, 10, 20],
+            },
+            {
+                name: '销量',
+                type: 'bar',
+                data: [5, -20, 36, 10, 10, 20],
+            },
+            {
+                name: '销量',
+                type: 'bar',
+                data: [5, -20, 36, 10, 10, 20],
+            },
+            {
                 name: '库存',
                 type: 'bar',
                 data: [50, -200, 360, 100, 100, 200],
@@ -61,6 +199,7 @@
             },
         ]
     })
+    console.log(e.getWidth())
 </script>
 </body>
 </html>

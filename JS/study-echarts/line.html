@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="box" style="width: 500px;height: 500px;border: 1px solid #000;overflow:hidden;"></div>
+
+    <!-- <script src="./SDK/echarts-5.4.1/echarts.js"></script> -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.4.2/echarts.js"></script>
+    <script>
+        var e = echarts.init(document.getElementById('box'))
+        var option = {
+            "tooltip": {
+                "trigger": "axis",
+                "axisPointer": {
+                    "type": "cross",
+                    "crossStyle": {
+                        "color": "#999"
+                    }
+                },
+                "enterable": true,
+                "extraCssText": "padding:0;border-color:#d9e3ed",
+                "className": "trendToopTip"
+            },
+            "legend": {
+                "left": "40",
+                "bottom": "10",
+                "type": "scroll",
+                "selected": {
+                    "total": true,
+                    "chain": true,
+                    "same": false
+                }
+            },
+            "grid": {
+                "left": "100",
+                "right": "100"
+            },
+            "xAxis": [
+                {
+                    "type": "category",
+                    "data": [
+                        "2019-01",
+                        "2019-02",
+                        "2019-03",
+                        "2019-04",
+                        "2019-05",
+                        "2019-06",
+                        "2019-07",
+                        "2019-08",
+                        "2019-09",
+                        "2019-10",
+                        "2019-11",
+                        "2019-12",
+                        "2020-01",
+                        "2020-02",
+                        "2020-03",
+                        "2020-04",
+                        "2020-05",
+                        "2020-06",
+                        "2020-07",
+                        "2020-08",
+                        "2020-09",
+                        "2020-10",
+                        "2020-11",
+                        "2020-12",
+                        "2021-01",
+                        "2021-02",
+                        "2021-03",
+                        "2021-04"
+                    ],
+                    "axisPointer": {
+                        "type": "shadow"
+                    }
+                }
+            ],
+            "yAxis": [
+                {
+                    "type": "value",
+                    "name": "资产负债率(%)",
+                    "axisLabel": {}
+                }
+            ],
+            "series": [
+                {
+                    "name": "total",
+                    "type": "line",
+                    "data": [
+                        {
+                            "type": "total",
+                            "name": "2019-01",
+                            "value": [
+                                "2019-01",
+                                117.61
+                            ],
+                            "_value": 117.61
+                        },
+                        {
+                            "type": "total",
+                            "name": "2019-02",
+                            "value": [
+                                "2019-02",
+                                118.81
+                            ],
+                            "_value": 118.81
+                        },
+                        {
+                            "type": "total",
+                            "name": "2019-03",
+                            "value": [
+                                "2019-03",
+                                122.52
+                            ],
+                            "_value": 122.52
+                        },
+                        {
+                            "type": "total",
+                            "name": "2019-04",
+                            "value": [
+                                "2019-04",
+                                127.78
+                            ],
+                            "_value": 127.78
+                        },
+                        {
+                            "type": "total",
+                            "name": "2019-05",
+                            "value": [
+                                "2019-05",
+                                125.6
+                            ],
+                            "_value": 125.6
+                        },
+                        {
+                            "type": "total",
+                            "name": "2019-06",
+                            "value": [
+                                "2019-06",
+                                128.95
+                            ],
+                            "_value": 128.95
+                        },
+                        {
+                            "type": "total",
+                            "name": "2019-07",
+                            "value": [
+                                "2019-07",
+                                132.97
+                            ],
+                            "_value": 132.97
+                        },
+                        {
+                            "type": "total",
+                            "name": "2019-08",
+                            "value": [
+                                "2019-08",
+                                144.85
+                            ],
+                            "_value": 144.85
+                        },
+                        {
+                            "type": "total",
+                            "name": "2019-09",
+                            "value": [
+                                "2019-09",
+                                153.15
+                            ],
+                            "_value": 153.15
+                        },
+                        {
+                            "type": "total",
+                            "name": "2019-10",
+                            "value": [
+                                "2019-10",
+                                159.53
+                            ],
+                            "_value": 159.53
+                        },
+                        {
+                            "type": "total",
+                            "name": "2019-11",
+                            "value": [
+                                "2019-11",
+                                171.46
+                            ],
+                            "_value": 171.46
+                        },
+                        {
+                            "type": "total",
+                            "name": "2019-12",
+                            "value": [
+                                "2019-12",
+                                203.02
+                            ],
+                            "_value": 203.02
+                        },
+                        {
+                            "type": "total",
+                            "name": "2020-01",
+                            "value": [
+                                "2020-01",
+                                420.23
+                            ],
+                            "_value": 420.23
+                        },
+                        {
+                            "type": "total",
+                            "name": "2020-02",
+                            "value": [
+                                "2020-02",
+                                535.2
+                            ],
+                            "_value": 535.2
+                        },
+                        {
+                            "type": "total",
+                            "name": "2020-03",
+                            "value": [
+                                "2020-03",
+                                593.16
+                            ],
+                            "_value": 593.16
+                        },
+                        {
+                            "type": "total",
+                            "name": "2020-04",
+                            "value": [
+                                "2020-04",
+                                204.48
+                            ],
+                            "_value": 204.48
+                        },
+                        {
+                            "type": "total",
+                            "name": "2020-05",
+                            "value": [
+                                "2020-05",
+                                204.26
+                            ],
+                            "_value": 204.26
+                        },
+                        {
+                            "type": "total",
+                            "name": "2020-06",
+                            "value": [
+                                "2020-06",
+                                203.43
+                            ],
+                            "_value": 203.43
+                        },
+                        {
+                            "type": "total",
+                            "name": "2020-07",
+                            "value": [
+                                "2020-07",
+                                171.7
+                            ],
+                            "_value": 171.7
+                        },
+                        {
+                            "type": "total",
+                            "name": "2020-08",
+                            "value": [
+                                "2020-08",
+                                212.39
+                            ],
+                            "_value": 212.39
+                        },
+                        {
+                            "type": "total",
+                            "name": "2020-09",
+                            "value": [
+                                "2020-09",
+                                209.76
+                            ],
+                            "_value": 209.76
+                        },
+                        {
+                            "type": "total",
+                            "name": "2020-10",
+                            "value": [
+                                "2020-10",
+                                204.49
+                            ],
+                            "_value": 204.49
+                        },
+                        {
+                            "type": "total",
+                            "name": "2020-11",
+                            "value": [
+                                "2020-11",
+                                204.46
+                            ],
+                            "_value": 204.46
+                        },
+                        {
+                            "type": "total",
+                            "name": "2020-12",
+                            "value": [
+                                "2020-12",
+                                201.5
+                            ],
+                            "_value": 201.5
+                        },
+                        {
+                            "type": "total",
+                            "name": "2021-01",
+                            "value": [
+                                "2021-01",
+                                199.98
+                            ],
+                            "_value": 199.98
+                        },
+                        {
+                            "type": "total",
+                            "name": "2021-02",
+                            "value": [
+                                "2021-02",
+                                200.55
+                            ],
+                            "_value": 200.55
+                        },
+                        {
+                            "type": "total",
+                            "name": "2021-03",
+                            "value": [
+                                "2021-03",
+                                200.99
+                            ],
+                            "_value": 200.99
+                        },
+                        {
+                            "type": "total",
+                            "name": "2021-04",
+                            "value": [
+                                "2021-04",
+                                200.8
+                            ],
+                            "_value": 200.8,
+                        }
+                    ],
+                    "symbol": "emptyCircle",
+                    "label": {
+                        "show": true
+                    },
+                    "labelLayout": {
+                        "hideOverlap": true
+                    },
+                    "itemStyle": {
+                        "color": "rgb(52, 56, 61)"
+                    },
+                    "lineStyle": {
+                        "width": 2,
+                        "color": "rgb(52, 56, 61)",
+                        "type": "dotted"
+                    }
+                }
+            ],
+            "dataZoom": [
+                {
+                    "type": "slider",
+                    "height": 10,
+                    "bottom": 40,
+                    "startValue": 16,
+                    "endValue": 27,
+                    "brushSelect": false,
+                    "zoomLock": true
+                }
+            ]
+        }
+        e.setOption(option)
+
+
+        var dataLen = option.series[0].data.length
+
+        e.dispatchAction({
+            type: 'highlight',
+            seriesIndex: 0,
+            dataIndex: dataLen -1
+        })
+
+        e.dispatchAction({
+            type: 'showTip',
+            seriesIndex: 0,
+            dataIndex: dataLen -1
+        })
+    </script>
+</body>
+
+</html>

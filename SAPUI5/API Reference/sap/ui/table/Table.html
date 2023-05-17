@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .h100 section {
+            height: 400px;
+        }
+    </style>
+    <script
+        src="/SDK/sapui5-rt-1.108.0/resources/sap-ui-core.js"
+        id="sap-ui-bootstrap"
+        data-sap-ui-libs="sap.ui.table,sap.ui.core,sap.m"
+        data-sap-ui-theme="sap_belize"
+        data-sap-ui-xx-bindingSyntax="complex"
+    ></script>
+    <!-- <script src="//demo.remote-click.com/sapui5/1.77.0/resources/sap/ui/thirdparty/mobify-carousel.js"></script> -->
+    <script>
+        jQuery.sap.require("sap.ui.core.format.NumberFormat");
+
+        sap.ui.getCore().attachInit(function () {
+            var oModel = new sap.ui.model.json.JSONModel({
+                products: [
+                    {name: "Product 1", price: 1100},
+                    {name: "Product 2", price: 2200},
+                    {name: "Product 3", price: 3300},
+                    {name: "Product 4", price: 4400},
+                    {name: "Product 5", price: 5500},
+                    {name: "Product 5", price: 5500},
+                    {name: "Product 5", price: 5500},
+                    {name: "Product 5", price: 5500},
+                    {name: "Product 5", price: 5500},
+                    {name: "Product 5", price: 5500},
+                ]
+            })
+
+            var oTable = new sap.ui.table.Table({
+                // alternateRowColors: true,
+                // columnHeaderHeight: 100,
+                // columnHeaderVisible: false,
+                // editable: true,
+                // enableBusyIndicator: false,
+                // enableCellFilter: true, // TODO
+                // enableColumnFreeze: true,
+                // enableColumnReordering: false, // TODO
+                // enableCustomFilter: true,
+                visibleRowCount: 7,
+                // fixedBottomRowCount: 1,
+                columns: [
+                    new sap.ui.table.Column({
+                        label: 'Product Name',
+                        template: new sap.m.Text().bindProperty('text', 'name'),
+                        sortProperty: 'name',
+                        filterProperty: 'name',
+                    }),
+                    // new sap.ui.table.Column({
+                    //     label: 'Price',
+                    //     template: new sap.m.Text().bindProperty('text', 'price'),
+                    //     sortProperty: 'price',
+                    //     filterProperty: 'price',
+                    //     filterOperator: 'EQ'
+                    // }),
+                ]
+            })
+
+            var oText = new sap.m.Text().bindText({
+                path: 'price',
+                formatter: formatterPrice
+            })
+
+            function formatterPrice(value) {
+                var oFormat = sap.ui.core.format.NumberFormat.getCurrencyInstance({
+                    style: 'standard',
+                    decimals: 2,
+                    showScale: false,
+                    groupingEnabled: true,
+                    groupingSize: 3
+                });
+                return oFormat.format(value);
+            }
+
+            var oColumn = new sap.ui.table.Column({
+                label: 'Price',
+                // template: new sap.m.Text().bindProperty('text', 'price'),
+                template: oText,
+                sortProperty: 'price',
+                filterProperty: 'price',
+                filterOperator: 'EQ'
+            })
+            oTable.addColumn(oColumn)
+
+            oTable.setModel(oModel)
+            oTable.bindRows('/products')
+            // oTable.setBusy(true)
+
+            oTable.attachSort(function (oEvent) {
+                return 1
+            });
+
+            var oPage = new sap.m.Page({
+                title: "SAPUI5 Table Demo",
+                content: [oTable]
+            })
+            oPage.addStyleClass('h100')
+            oPage.placeAt('content')
+        })
+    </script>
+</head>
+<body class="sapUiBody" id="content"></body>
+
+</body>
+</html>
