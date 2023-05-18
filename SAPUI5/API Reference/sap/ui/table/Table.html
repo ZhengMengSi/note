@@ -9,13 +9,12 @@
         }
     </style>
     <script
-        src="/SDK/sapui5-rt-1.108.0/resources/sap-ui-core.js"
+        src="https://sapui5.hana.ondemand.com/1.113.0/resources/sap-ui-core.js"
         id="sap-ui-bootstrap"
         data-sap-ui-libs="sap.ui.table,sap.ui.core,sap.m"
         data-sap-ui-theme="sap_belize"
         data-sap-ui-xx-bindingSyntax="complex"
     ></script>
-    <!-- <script src="//demo.remote-click.com/sapui5/1.77.0/resources/sap/ui/thirdparty/mobify-carousel.js"></script> -->
     <script>
         jQuery.sap.require("sap.ui.core.format.NumberFormat");
 
@@ -27,11 +26,11 @@
                     {name: "Product 3", price: 3300},
                     {name: "Product 4", price: 4400},
                     {name: "Product 5", price: 5500},
-                    {name: "Product 5", price: 5500},
-                    {name: "Product 5", price: 5500},
-                    {name: "Product 5", price: 5500},
-                    {name: "Product 5", price: 5500},
-                    {name: "Product 5", price: 5500},
+                    {name: "Product 6", price: 5500},
+                    {name: "Product 7", price: 5500},
+                    {name: "Product 8", price: 5500},
+                    {name: "Product 9", price: 5500},
+                    {name: "Product 10", price: 5500},
                 ]
             })
 
@@ -45,6 +44,14 @@
                 // enableColumnFreeze: true,
                 // enableColumnReordering: false, // TODO
                 // enableCustomFilter: true,
+                // enableSelectAll: false,
+                // firstVisibleRow: 8,
+                // fixedBottomRowCount: 1,
+                // fixedColumnCount: 1,
+                // fixedRowCount: 1,
+                // selectedIndex: 1,
+                selectionBehavior: 'RowOnly',
+                selectionMode: 'Single',
                 visibleRowCount: 7,
                 // fixedBottomRowCount: 1,
                 columns: [
@@ -61,7 +68,22 @@
                     //     filterProperty: 'price',
                     //     filterOperator: 'EQ'
                     // }),
-                ]
+                ],
+                beforeOpenContextMenu: function (oControlEvent) {
+                    console.log(oControlEvent);
+                },
+                busyStateChanged: function (oControlEvent) {
+                    console.log(oControlEvent);
+                    console.log(oControlEvent.getSource());
+                    console.log(oControlEvent.getParameters());
+                },
+                rowSelectionChange: function (oControlEvent) {
+                    debugger
+                    console.log(oControlEvent.getParameters());
+                    console.log(oControlEvent.getSource());
+                    console.log(oControlEvent.getSource().getSelectedIndices());
+                    // getSelectedIndices
+                },
             })
 
             var oText = new sap.m.Text().bindText({
@@ -97,7 +119,7 @@
             oTable.attachSort(function (oEvent) {
                 return 1
             });
-
+            
             var oPage = new sap.m.Page({
                 title: "SAPUI5 Table Demo",
                 content: [oTable]
