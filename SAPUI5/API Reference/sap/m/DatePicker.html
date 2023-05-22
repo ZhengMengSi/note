@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+        src="http://demo.remote-click.com/sapui5/1.77.0/resources/sap-ui-core.js"
+        id="sap-ui-bootstrap"
+        data-sap-ui-libs="sap.m"
+    ></script>
+    <style>
+        .h100 section {
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+
+    <script>
+        /******************************************* Methods *******************************************/
+        // addSpecialDate
+        // attachAfterValueHelpClose
+        // attachAfterValueHelpOpen
+        // attachNavigate
+        // detachSpecialDates
+        // detachAfterValueHelpClose
+        // detachAfterValueHelpOpen
+        // detachNavigate
+        // fireChange
+        // getDateValue
+        // setMinDate
+
+        sap.ui.getCore().attachInit(function () {
+            var oDatePicker = new sap.m.DatePicker({
+                placeholder: '开始时间',
+                displayFormat: 'yyyy/MM',
+            })
+            var date = new Date()
+            oDatePicker.setMinDate(date)
+            var oPage = new sap.m.Page({
+                title: '日期选择器标题',
+                content: [oDatePicker]
+            })
+            oPage.addStyleClass('h100')
+            oPage.placeAt('box')
+        })
+    </script>
+</body>
+</html>

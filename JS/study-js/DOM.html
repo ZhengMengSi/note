@@ -6,13 +6,44 @@
 </head>
 <body>
     <div id="d1">
-        <!--zys-->
+        ddd
         zms
-    </div><div id="d2">111</div>
+        <div id="d2">
+            111
+            <div id="d3"></div>
+        </div>
+        <!--zys-->
+    </div>
+    <div id="d4"></div>
+
     <script>
+        /************************************************* Property *************************************************/
+
+        /************************************************* Methods *************************************************/
+        // Node.prototype.appendChild()
+        // Node.prototype.hasChildNodes()
+        // Node.prototype.cloneNode()
+        // Node.prototype.insertBefore()
+        // Node.prototype.removeChild()
+        // Node.prototype.replaceChild()
+        // Node.prototype.contains()
+        // Node.prototype.compareDocumentPosition()
+        // Node.prototype.isEqualNode()
+        // Node.prorotype.isSameNode()
+        // Node.prorotype.normalize()
+        // 
+
+
         let d1 = document.getElementById('d1')
         let d2 = document.getElementById('d2')
-        console.log(document.childNodes)
+        let d3 = document.getElementById('d3')
+        let d4 = document.getElementById('d4')
+
+        d4.appendChild(document.createTextNode('1 '))
+        d4.appendChild(document.createTextNode('2 '))
+        console.log(d4.childNodes);
+        d4.normalize()
+        console.log(d4.childNodes);
     </script>
 </body>
 </html>
