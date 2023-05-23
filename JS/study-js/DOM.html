@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>d4</title>
 </head>
 <body>
     <div id="d1">
@@ -15,11 +15,13 @@
         <!--zys-->
     </div>
     <div id="d4"></div>
+    <img id="xx">
 
     <script>
         /************************************************* Property *************************************************/
 
         /************************************************* Methods *************************************************/
+        // Node
         // Node.prototype.appendChild()
         // Node.prototype.hasChildNodes()
         // Node.prototype.cloneNode()
@@ -31,7 +33,52 @@
         // Node.prototype.isEqualNode()
         // Node.prorotype.isSameNode()
         // Node.prorotype.normalize()
-        // 
+        // Node.prototype.getRootNode()
+        // NodeList
+        // NodeList.prorotype.length
+        // NodeList.prototype.forEach()
+        // NodeList.prototype.item()
+        // NodeList.prototype.keys()
+        // NodeList.prototype.values()
+        // NodeList.prototype.entries()
+        // HTMLCollection
+        // HTMLCollection.prototype.length
+        // HTMLCollection.prototype.item()
+        // HTMLCollection.prototype.namedItem()
+        // ParentNode
+        // ParentNode.children
+        // ParentNode.firstElementChild
+        // ParentNode.lastElementChild
+        // ParentNode.childElementCount
+        // ParentNode.append()
+        // ParentNode.prepend()
+        // ChildNode
+        // ChildNode.remove()
+        // ChildNode.before()
+        // ChildNode.after()
+        // ChildNode.replaceWith()
+        // Document
+        // 快捷方式属性
+        // document.defaultView
+        // document.doctype
+        // document.documentElement
+        // document.head
+        // document.body
+        // document.scrollingElement
+        // document.activeElement
+        // document.fullscreenElement
+        // 节点集合属性
+        // document.links
+        // document.forms
+        // document.images
+        // document.embed
+        // document.plugins
+        // 文档静态信息属性
+        // document.documentURI
+        // document.URL
+
+
+
 
 
         let d1 = document.getElementById('d1')
@@ -39,11 +86,7 @@
         let d3 = document.getElementById('d3')
         let d4 = document.getElementById('d4')
 
-        d4.appendChild(document.createTextNode('1 '))
-        d4.appendChild(document.createTextNode('2 '))
-        console.log(d4.childNodes);
-        d4.normalize()
-        console.log(d4.childNodes);
+        console.log(document.referrer)
     </script>
 </body>
 </html>
