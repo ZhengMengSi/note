@@ -34,6 +34,13 @@
                 ]
             })
 
+            var headerText3 = new sap.m.Text({
+                text: '3'
+            })
+            var headerText4 = new sap.m.Text({
+                text: '4'
+            })
+
             var oTable = new sap.ui.table.Table({
                 // alternateRowColors: true,
                 // columnHeaderHeight: 100,
@@ -56,7 +63,8 @@
                 // fixedBottomRowCount: 1,
                 columns: [
                     new sap.ui.table.Column({
-                        label: 'Product Name',
+                        // label: 'Product Name',
+                        multiLabels: [headerText3],
                         template: new sap.m.Text().bindProperty('text', 'name'),
                         sortProperty: 'name',
                         filterProperty: 'name',
@@ -78,7 +86,6 @@
                     console.log(oControlEvent.getParameters());
                 },
                 rowSelectionChange: function (oControlEvent) {
-                    debugger
                     console.log(oControlEvent.getParameters());
                     console.log(oControlEvent.getSource());
                     console.log(oControlEvent.getSource().getSelectedIndices());
@@ -102,13 +109,36 @@
                 return oFormat.format(value);
             }
 
+
+            var headerText1 = new sap.m.Text({
+                text: '1'
+            })
+            var headerText2 = new sap.m.Text({
+                text: '2'
+            })
             var oColumn = new sap.ui.table.Column({
-                label: 'Price',
-                // template: new sap.m.Text().bindProperty('text', 'price'),
-                template: oText,
-                sortProperty: 'price',
+                // autoResizable: false,
+                // defaultFilterOperator: '',
+                // filtered: true,
+                filterOperator: 'EQ',
                 filterProperty: 'price',
-                filterOperator: 'EQ'
+                // filterType: '',
+                // filterValue: '',
+                // grouped: false,
+                // hAlign: sap.ui.core.HorizontalAlign.Begin,
+                // headerSpan: 12,
+                // minWidth: 0,
+                // name: '',
+                // resizable: true,
+                // showFilterMenuEntry: false,
+                // showSortMenuEntry: true,
+                // sorted: false,
+                // sortOrder: sap.ui.table.SortOrder.Descending,
+                sortProperty: 'price',
+                // label: 'Price',
+                // template: new sap.m.Text().bindProperty('text', 'price'),
+                multiLabels: [headerText1, headerText2],
+                template: oText,
             })
             oTable.addColumn(oColumn)
 
