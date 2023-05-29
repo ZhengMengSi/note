@@ -9848,7 +9848,6 @@ var getAlertSettingsList = {
 	}
 }
 
-
 // 财务指标集合
 var getFinancialIndicatorList = {
 	"result": 1,
@@ -10488,9 +10487,112 @@ var getFinancialIndicatorList = {
 	]
 }
 
+// 分组
+var getGroupList = {
+    "result": 1,
+    "code": null,
+    "msg": "",
+    "data": {
+        "groupRelationDtos": [
+            {
+                "versionNo": 1,
+                "delFlg": 0,
+                "description": null,
+                "extendField": null,
+                "creator": "SYSTEM",
+                "creatorName": "SYSTEM",
+                "createTime": "2022-02-22T13:29:15.000+0800",
+                "modifier": "SYSTEM",
+                "modifierName": "SYSTEM",
+                "modifyTime": "2022-02-22T13:29:18.000+0800",
+                "id": 1,
+                "number": "A",
+                "name": "九品组",
+                "accountCode": "G90001",
+                "sort": 1,
+                "enterpriseCode": "G90001059,G90001001,G90001060"
+            },
+            {
+                "versionNo": 1,
+                "delFlg": 0,
+                "description": null,
+                "extendField": null,
+                "creator": "SYSTEM",
+                "creatorName": "SYSTEM",
+                "createTime": "2022-02-22T13:29:15.000+0800",
+                "modifier": "SYSTEM",
+                "modifierName": "SYSTEM",
+                "modifyTime": "2022-02-22T13:29:18.000+0800",
+                "id": 2,
+                "number": "B",
+                "name": "APPLE组",
+                "accountCode": "G90001",
+                "sort": 2,
+                "enterpriseCode": "G90001060"
+            },
+            {
+                "versionNo": 1,
+                "delFlg": 0,
+                "description": null,
+                "extendField": null,
+                "creator": "SYSTEM",
+                "creatorName": "SYSTEM",
+                "createTime": "2022-02-22T13:29:15.000+0800",
+                "modifier": "SYSTEM",
+                "modifierName": "SYSTEM",
+                "modifyTime": "2022-02-22T13:29:18.000+0800",
+                "id": 3,
+                "number": "C",
+                "name": "PANDA组",
+                "accountCode": "G90001",
+                "sort": 3,
+                "enterpriseCode": "G90001057,G90001058"
+            },
+            {
+                "versionNo": 1,
+                "delFlg": 0,
+                "description": null,
+                "extendField": null,
+                "creator": "SYSTEM",
+                "creatorName": "SYSTEM",
+                "createTime": "2022-02-22T13:29:15.000+0800",
+                "modifier": "SYSTEM",
+                "modifierName": "SYSTEM",
+                "modifyTime": "2022-02-22T13:29:18.000+0800",
+                "id": 4,
+                "number": "D",
+                "name": "K3组",
+                "accountCode": "G90001",
+                "sort": 4,
+                "enterpriseCode": "G90001060,G90001057"
+            },
+            {
+                "versionNo": 1,
+                "delFlg": 0,
+                "description": null,
+                "extendField": null,
+                "creator": "333",
+                "creatorName": "448173768@qq.com",
+                "createTime": "2022-03-02T15:18:55.000+0800",
+                "modifier": "333",
+                "modifierName": "448173768@qq.com",
+                "modifyTime": "2022-03-02T15:18:55.000+0800",
+                "id": 5,
+                "number": "E",
+                "name": "Ulala",
+                "accountCode": "G90001",
+                "sort": 5,
+                "enterpriseCode": "G90001059"
+            }
+        ],
+        "enterpriseGroup": null
+    }
+}
+
 module.exports = {
 	getFinancialIndicatorList,
 	getAlertSettingsList,
+	getGroupList,
 }
 
 
