@@ -5,20 +5,18 @@
     <title>d4</title>
 </head>
 <body>
-    <div id="d1">
-        <div id="d2">111</div>
-        <!-- <img id="xx" src="https://static.runoob.com/images/demo/demo1.jpg"> -->
+    <div id="d1" name="d1" contenteditable>
+        <div id="d2"></div>
     </div>
 
-
     <script>
-        var event = document.createEvent('Event')
-        event.initEvent('zms', true, true)
-        document.addEventListener('zms', function (e) {
-            console.log(e.type)
-        })
-        document.dispatchEvent(event)
-
+        var div = document.querySelector('#d1')
+        var s = div.attributes
+        
+        for (let index = 0; index < s.length; index++) {
+            const element = s[index];
+            console.log(`${element.name}-${element.value}`)
+        }
     </script>
 </body>
 
