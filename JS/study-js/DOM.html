@@ -12,9 +12,13 @@
 
 
     <script>
-        let d1 = document.getElementsByTagName('*')
+        var event = document.createEvent('Event')
+        event.initEvent('zms', true, true)
+        document.addEventListener('zms', function (e) {
+            console.log(e.type)
+        })
+        document.dispatchEvent(event)
 
-        console.log(d1)
     </script>
 </body>
 
