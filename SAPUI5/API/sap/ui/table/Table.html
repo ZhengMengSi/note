@@ -41,6 +41,9 @@
         // getEidtable
 
 
+        var sapUiBootstrap = document.getElementById('sap-ui-bootstrap')
+        console.log(sapUiBootstrap.attributes[0].nodeValue);
+
         jQuery.sap.require("sap.ui.core.format.NumberFormat");
 
         sap.ui.getCore().attachInit(function () {
@@ -175,7 +178,7 @@
                 return 1
             });
             
-            console.log(oTable.getColumns()[0].getMultiLabels()[0].addStyleClass('zms'));
+            // console.log(oTable.getColumns()[0].getMultiLabels()[0].addStyleClass('zms'));
 
             var oPage = new sap.m.Page({
                 title: "SAPUI5 Table Demo",
