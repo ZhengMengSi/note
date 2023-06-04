@@ -4,25 +4,28 @@
     <meta charset="UTF-8">
     <title>d4</title>
     <style>
+        body {
+            margin: 0;
+        }
         #d1 {
             width: 2900px;
+        }
+        ul {
+            background-color: red;
+            height: 100rem;
         }
     </style>
 </head>
 <body>
-    <div id="d1" name="d1" contenteditable class="ii oo u" data-timestamp="15689203"
-        data-iom="iii"
-        data-i="i"
-        data-abc-dom="dom"
-        data-abc-89="89"
-        style="color: red;">
-        <div id="d2">2</div>
-    </div>
+    <ul style="padding-left: 20px !important; width: 300px;margin-left: 100px;">
+        <li>1</li>
+    </ul>
+    <div>123</div>
 
     <script>
-        var d1 = document.querySelector('#d1')
-        var d2 = document.querySelector('#d2')
-        var d5 = document.querySelector('#d5')
+        var ul = document.querySelector('ul')
+        ul.style.fontSize = '40px'
+        console.log(window.getComputedStyle(ul).cssText)
     </script>
 </body>
 
