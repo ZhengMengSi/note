@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>d4</title>
-    <style>
+    <style title="ii">
+        /* @import url(https://c.disquscdn.com/next/embed/styles/lounge.dbc47866f009f9d6f1556cd58214d9a3.css); */
         body {
             margin: 0;
         }
+
         #d1 {
             width: 2900px;
         }
+
         ul {
             background-color: red;
             height: 100rem;
         }
     </style>
+    <!-- <link rel="stylesheet" href="https://c.disquscdn.com/next/embed/styles/lounge.dbc47866f009f9d6f1556cd58214d9a3.css"> -->
 </head>
+
 <body>
-    <ul style="padding-left: 20px !important; width: 300px;margin-left: 100px;">
-        <li>1</li>
+    <ul>
+        <li id="t">1</li>
+        <li id="y">2</li>
     </ul>
-    <div>123</div>
 
     <script>
         var ul = document.querySelector('ul')
-        ul.style.fontSize = '40px'
-        console.log(window.getComputedStyle(ul).cssText)
+        ul.addEventListener('click', function (event) {
+            console.log(event.target.id)
+        }, false)  
     </script>
 </body>
 
