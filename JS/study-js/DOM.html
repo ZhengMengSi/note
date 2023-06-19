@@ -4,35 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <title>d4</title>
-    <style title="ii">
-        /* @import url(https://c.disquscdn.com/next/embed/styles/lounge.dbc47866f009f9d6f1556cd58214d9a3.css); */
-        body {
-            margin: 0;
-        }
-
-        #d1 {
-            width: 2900px;
-        }
-
-        ul {
-            background-color: red;
-            height: 100rem;
-        }
-    </style>
-    <!-- <link rel="stylesheet" href="https://c.disquscdn.com/next/embed/styles/lounge.dbc47866f009f9d6f1556cd58214d9a3.css"> -->
 </head>
 
 <body>
-    <ul>
-        <li id="t">1</li>
-        <li id="y">2</li>
-    </ul>
+    <div><p>Hello</p></div>
+
 
     <script>
-        var ul = document.querySelector('ul')
-        ul.addEventListener('click', function (event) {
-            console.log(event.target.id)
-        }, false)  
+        // 父监听
+        var div = document.querySelector('div')
+        function callback(event) {
+            console.log(3)
+            // var tag = event.currentTarget.tagName
+            // console.log('Tag: ', tag)
+        }
+        div.addEventListener('click', callback, false)
+
+
+        // 子触发
+        var p = document.querySelector('p')
+        
+        p.addEventListener('click', function (event) {
+
+            // event.stopPropagation()
+            // event.stopImmediatePropagation()
+            console.log(event.cancelable)
+        }, false)
+
+        /* p.addEventListener('click', function (event) {
+            // event.stopPropagation()
+            console.log(2)
+        }, false) */
+
+        var click = new Event('click', {
+            bubbles: true,
+            cancelable: false
+        })
+        p.dispatchEvent(click)
+        
     </script>
 </body>
 
