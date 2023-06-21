@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+  <script src="https://unpkg.com/dayjs@1.8.21/plugin/weekOfYear.js"></script>
+  <script src="https://unpkg.com/dayjs@1.8.21/locale/zh-cn"></script>
+  <script>
+    dayjs.extend(window.dayjs_plugin_weekOfYear)
+    dayjs.locale('zh-cn')
+
+    console.log(dayjs('2023-6-11').week())
+    console.log(dayjs('2023-6-17').week())
+    console.log(dayjs('2023-6-18').week())
+  </script>
+</body>
+</html>

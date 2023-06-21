@@ -4,44 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <title>d4</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log(document.body.innerHTML)
+        })
+    </script>
 </head>
 
 <body>
-    <div><p>Hello</p></div>
+    <img src="https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2886331572.webp" alt="图">
+    <a href="javascript: new Date().toLocaleTimeString();">点击</a>
+    <a href="javascript: console.log(new Date().toLocaleTimeString())">点击</a>
 
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
+    <script type="application/javascript">
+        var img = document.querySelector('img')
 
-    <script>
-        // 父监听
-        var div = document.querySelector('div')
-        function callback(event) {
-            console.log(3)
-            // var tag = event.currentTarget.tagName
-            // console.log('Tag: ', tag)
+        img.onloadstart = function () {
+            console.log('图片开始加载')
         }
-        div.addEventListener('click', callback, false)
 
+        img.onerror = function () {
+            console.log('image load error')
+        }
 
-        // 子触发
-        var p = document.querySelector('p')
-        
-        p.addEventListener('click', function (event) {
+        img.onshow = function () {
+            console.log(2222)
+        }
 
-            // event.stopPropagation()
-            // event.stopImmediatePropagation()
-            console.log(event.cancelable)
-        }, false)
+        // JavaScript runtime error
+        window.onerror = function (message, source, lineno, colno, error) {
+            console.log(1)
+        }
 
-        /* p.addEventListener('click', function (event) {
-            // event.stopPropagation()
-            console.log(2)
-        }, false) */
+        window.onload = function () {
+            console.log('网页所有外部资源全部加载完成')
+        }
 
-        var click = new Event('click', {
-            bubbles: true,
-            cancelable: false
-        })
-        p.dispatchEvent(click)
-        
+        window.oncontextmenu = function () {
+            // return false
+        }
     </script>
 </body>
 
