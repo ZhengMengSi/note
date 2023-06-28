@@ -1,2 +1,6 @@
-var arr = ['1', '2', '3'].map(parseInt)
-console.log(arr)
+var tmp=12
+if (true) {
+  tmp =1212
+  let tmp
+}
+
