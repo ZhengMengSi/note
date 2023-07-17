@@ -1,6 +1,0 @@
-<mvc:View
-    controllerName="uu.controller.App"
-    xmlns="sap.m"
-    xmlns:mvc="sap.ui.core.mvc">
-    <Text text="涛涛涛涛" id="ttt"></Text>
-</mvc:View>

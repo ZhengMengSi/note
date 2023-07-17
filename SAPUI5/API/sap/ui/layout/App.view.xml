@@ -1,7 +1,0 @@
-<mvc:View
-  xmlns:mvc="sap.ui.core.mvc"
-  xmlns:l="sap.ui.layout">
-  <l:Grid>
-
-  </l:Grid>
-</mvc:View>
