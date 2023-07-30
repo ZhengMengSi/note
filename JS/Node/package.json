@@ -1,0 +1,17 @@
+{
+  "name": "Node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "matchString.js",
+  "dependencies": {
+    "mysql": "^2.18.1",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
