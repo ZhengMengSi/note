@@ -1,14 +1,10 @@
-public class HelloWorld {
-    int x;
-
+class HelloChina {
     public static void main(String[] args) {
-        HelloWorld d = new HelloWorld();
-        d.x = 5;
-        show(d);
-        System.out.println(d.x);
-    }
-
-    public static void show(HelloWorld d) {
-        d.x = 6;
+        byte b1 = 12;
+        byte b2 = 127;
+        // byte b3 = 128;
+        // int i1 = 1111111111111111111111111111111111111111111;
+        // long i1 = 1111111111111111111111111111111111111111111L;
+        long i2 = 9223372036854775807L;
     }
 }
