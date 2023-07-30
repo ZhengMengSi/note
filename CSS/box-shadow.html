@@ -7,32 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #box {
-            position: relative;
-            display: inline-block;
-            width: 0;
-            height: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-            border-bottom: 50px solid #107E3E;
-        }
-
-        #box::after {
-            position: absolute;
-            content: '';
-            display: inline-block;
-            width: 0;
-            height: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-            border-bottom: 50px solid #fff;
-            margin-right: 2px;
+        ul .xx:nth-last-child(1) {
+            border: 1px solid #000;
         }
     </style>
 </head>
 
 <body>
-    <div id="box"></div>
+<ul>
+    <li class="xx">1</li>
+    <li class="xx">2</li>
+    <li class="">3</li>
+</ul>  
 </body>
 
 </html>

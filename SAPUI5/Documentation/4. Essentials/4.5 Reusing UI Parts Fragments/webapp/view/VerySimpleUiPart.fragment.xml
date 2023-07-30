@@ -1,4 +1,0 @@
-<Button
-    xmlns="sap.m"
-    id="btnInFragment"
-    text="Hello World"/>

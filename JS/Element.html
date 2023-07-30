@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <style>
+        .red td {
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <el-table :data="arr" ref="ta" :height="200" :row-class-name="rowM" @cell-mouse-enter="dd" @cell-mouse-leave="jj">
+            <el-table-column label="x" prop="x"></el-table-column>
+        </el-table>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#box',
+            data: {
+                arr: [
+                    {
+                        x: 1
+                    },
+                    {
+                        x: 2
+                    },
+                    {
+                        x: 3
+                    },
+                    {
+                        x: 4
+                    },
+                    {
+                        x: 5
+                    },
+                    {
+                        x: 1
+                    },
+                    {
+                        x: 1
+                    },
+                    {
+                        x: 1
+                    },
+                    {
+                        x: 1
+                    },
+                    {
+                        x: 1
+                    },
+                    {
+                        x: 1
+                    },
+                    {
+                        x: 1
+                    },
+                    {
+                        x: 1
+                    },
+                    {
+                        x: 1
+                    },
+                    {
+                        x: 1
+                    },
+                    {
+                        x: 1
+                    },
+                    {
+                        x: 1
+                    },
+                    {
+                        x: 1
+                    },
+                    {
+                        x: 1
+                    },
+                    {
+                        x: 1
+                    },
+                    {
+                        x: 1
+                    },
+                    {
+                        x: 1
+                    },
+                    {
+                        x: 1
+                    },
+                    {
+                        x: 1
+                    },
+                    {
+                        x: 1
+                    },
+                    {
+                        x: 1
+                    },
+                    {
+                        x: 1
+                    },
+                    {
+                        x: 1
+                    },
+                    {
+                        x: 1
+                    },
+                ]
+            },
+            mounted: function () {
+                var that = this
+                setTimeout(function () {
+                    var scrollElement = that.$refs.ta.$el.querySelector('.el-table__body-wrapper')
+                    var location = that.$refs.ta.$el.querySelectorAll('.el-table__row')[3].offsetTop
+                    scrollElement.scrollTop = location
+                })
+            },
+            methods: {
+                rowM: function ({row, rowIndex}) {
+                    if (rowIndex === 3) {
+                        return 'red';
+                    }
+                },
+                dd: function (row, column, cell, event) {
+                    if (row.x === 4) {
+                        var n = event.currentTarget.parentElement.className.replace("red"," ")
+                        event.currentTarget.parentElement.setAttribute('class', n)
+                    }
+                },
+                jj: function (row, column, cell, event) {
+                    if (row.x === 4) {
+                        var n = event.currentTarget.parentElement.className.concat(" red")
+                        event.currentTarget.parentElement.setAttribute('class', n)
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>

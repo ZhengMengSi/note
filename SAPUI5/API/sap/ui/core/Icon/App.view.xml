@@ -1,6 +1,0 @@
-<mvc:View
-    xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.ui.core">
-    <Icon
-        src="sap-icon://edit"></Icon>
-</mvc:View>
