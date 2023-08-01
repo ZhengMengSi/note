@@ -5,9 +5,9 @@
   "main": "matchString.js",
   "dependencies": {
     "mysql": "^2.18.1",
+    "node-xlsx": "^0.23.0",
     "xlsx": "^0.18.5"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
