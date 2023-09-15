@@ -10,4 +10,7 @@
             description="Hello {/recipient/name}"
             valueLiveUpdate="true"
             width="60%"/>
+    <HBox id="xx">
+        <Text text="111"></Text>
+    </HBox>
 </mvc:View>

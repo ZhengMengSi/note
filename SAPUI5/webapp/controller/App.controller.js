@@ -11,6 +11,15 @@ sap.ui.define([
             var sMsg = oBundle.getText("helloMsg", [sRecipient]);
             // show message
             MessageToast.show(sMsg);
+        },
+        onInit: function () {
+            var that = this;
+            setInterval(() => {
+                this.getView().byId('xx').addItem(new sap.m.Text({
+                    text: '55'
+                }))
+            }, 500)
+
         }
     });
 });
