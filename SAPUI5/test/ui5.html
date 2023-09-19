@@ -1,15 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
+<!DOCTYPE HTML>
+<html>
 
-<script
-  src="https://ui5.sap.com/1.115.0/resources/sap-ui-core.js"></script>
-<script !src="">
-  debugger
-</script>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
+  <title>UI5 Demo</title>
+  <script id="sap-ui-bootstrap" type="text/javascript"
+    src="//demo.remote-click.com/sapui5/1.77.0/resources/sap-ui-core.js" data-sap-ui-libs="sap.m"
+    data-sap-ui-theme="sap_belize" data-sap-ui-compatVersion="edge" data-sap-ui-preload="async" data-sap-ui-async="true"
+    data-sap-ui-resourceroots='{
+            "demo": "./"
+        }'>
+        </script>
+</head>
+
+<body class="sapUiBody" id="content">
+
+
+
+  <script>
+    sap.ui.getCore().attachInit(function () {
+
+      sap.ui.require(["sap/ui/unified/FileUploader"], function (FileUploader) {
+        new sap.m.HBox({
+          items: [
+            new FileUploader({
+              id: 'xx'
+            }).addStyleClass('yy'),
+            new sap.m.Button({
+              text: '打开',
+              press: function () {
+                var u = sap.ui.getCore().byId("xx");
+                u.attachBrowserEvent('click', function () {
+                  console.log(1);
+                })
+                u.fireEvent('click')
+              }
+            })
+          ]
+        }).placeAt("content");
+
+        
+      });
+    });
+  </script>
 </body>
+
 </html>
