@@ -1,0 +1,7 @@
+/*
+* ! SAPUI5
+
+		(c) Copyright 2009-2020 SAP SE. All rights reserved
+	
+*/
+sap.ui.define(['./FlexUtil','sap/ui/fl/apply/api/FlexRuntimeInfoAPI','sap/base/Log'],function(F,a,L){"use strict";var S={applyExternalState:function(c,s){return new Promise(function(r,b){var v=this.checkXStateInterface(c);if(!v){b("The control needs to implement IxState");}S.retrieveExternalState(c).then(function(C){var d=C.hasOwnProperty("sort");var f=C.hasOwnProperty("filter");var e=[];if(d){e=e.concat(this.createSortChanges(c,s.sort,C.sort));}if(f){e=e.concat(this.createConditionChanges(c,s.filter,C.filter));}r(F.handleChanges(e));}.bind(this),b);}.bind(this));},createSortChanges:function(c,n,p){var s=function(o){return o.name+o.descending;};var b=F.getArrayDeltaChanges(p,n,s,c,"removeSort","addSort","moveSort");return b;},createConditionChanges:function(c,n,p){var C=[];for(var f in n){var P=c.hasProperty(f);if(!P){L.warning("property '"+f+"' not supported");continue;}C=C.concat(F.getConditionDeltaChanges(f,n[f],p[f],c));}return C;},retrieveExternalState:function(c){return new Promise(function(r,b){var v=this.checkXStateInterface(c);if(!v){b("The control needs to implement then interface IxState.");}c.waitForInitialization().then(function(){a.waitForChanges({element:c}).then(function(){r(c.getCurrentState());});});}.bind(this));},checkXStateInterface:function(c){if(!c){return false;}if(!a.isFlexSupported({element:c})){return false;}if(!c.isA("sap.ui.mdc.IxState")){return false;}return true;}};return S;});

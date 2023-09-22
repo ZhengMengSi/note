@@ -1,0 +1,132 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": "AnnotationHelper-dbg.js",
+			"size": 16555,
+			"isDebug": true
+		},
+		{
+			"name": "AnnotationHelper.js",
+			"size": 7421
+		},
+		{
+			"name": "Component-dbg.js",
+			"size": 3917,
+			"isDebug": true
+		},
+		{
+			"name": "Component.js",
+			"size": 1740
+		},
+		{
+			"name": "ObjectPage.view.xml",
+			"size": 7806
+		},
+		{
+			"name": "ObjectPageController-dbg.controller.js",
+			"size": 22570,
+			"isDebug": true
+		},
+		{
+			"name": "ObjectPageController.controller.js",
+			"size": 8858
+		},
+		{
+			"name": "manifest.json",
+			"size": 2413
+		},
+		{
+			"name": "view/fragments/Actions.fragment.xml",
+			"size": 4464
+		},
+		{
+			"name": "view/fragments/EditableHeaderContact.fragment.xml",
+			"size": 837
+		},
+		{
+			"name": "view/fragments/EditableHeaderFacet.fragment.xml",
+			"size": 3516
+		},
+		{
+			"name": "view/fragments/Facet.fragment.xml",
+			"size": 2219
+		},
+		{
+			"name": "view/fragments/FooterContent.fragment.xml",
+			"size": 4106
+		},
+		{
+			"name": "view/fragments/FormActionButtons.fragment.xml",
+			"size": 3353
+		},
+		{
+			"name": "view/fragments/FormActions.fragment.xml",
+			"size": 970
+		},
+		{
+			"name": "view/fragments/FormAndContact.fragment.xml",
+			"size": 865
+		},
+		{
+			"name": "view/fragments/HeaderContent.fragment.xml",
+			"size": 1495
+		},
+		{
+			"name": "view/fragments/HeaderDataPoint.fragment.xml",
+			"size": 995
+		},
+		{
+			"name": "view/fragments/HeaderDataPointContent.fragment.xml",
+			"size": 1515
+		},
+		{
+			"name": "view/fragments/HeaderExpandedAndSnappedContent.fragment.xml",
+			"size": 504
+		},
+		{
+			"name": "view/fragments/HeaderFacet.fragment.xml",
+			"size": 3559
+		},
+		{
+			"name": "view/fragments/HeaderImage.fragment.xml",
+			"size": 813
+		},
+		{
+			"name": "view/fragments/HeaderProgressIndicator.fragment.xml",
+			"size": 1844
+		},
+		{
+			"name": "view/fragments/HeaderRatingIndicator.fragment.xml",
+			"size": 1770
+		},
+		{
+			"name": "view/fragments/ObjectPageBlocksAndMoreBlocks.fragment.xml",
+			"size": 1502
+		},
+		{
+			"name": "view/fragments/ObjectPageForm.fragment.xml",
+			"size": 1019
+		},
+		{
+			"name": "view/fragments/ObjectPageHeaderForm.fragment.xml",
+			"size": 1881
+		},
+		{
+			"name": "view/fragments/RelatedApps.fragment.xml",
+			"size": 716
+		},
+		{
+			"name": "view/fragments/Section.fragment.xml",
+			"size": 3874
+		},
+		{
+			"name": "view/fragments/SubSectionContent.fragment.xml",
+			"size": 1573
+		},
+		{
+			"name": "view/fragments/TitleAndSubtitle.fragment.xml",
+			"size": 765
+		}
+	]
+}

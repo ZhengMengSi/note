@@ -1,0 +1,124 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"size": 64,
+			"theme": "base"
+		},
+		{
+			"name": "AnalyticalTable.less",
+			"size": 1140,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "Cell.less",
+			"size": 10933,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "CreationRow.less",
+			"size": 2146,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "DragDrop.less",
+			"size": 5498,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "Grouping.less",
+			"size": 8041,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "Row.less",
+			"size": 2100,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "RowAction.less",
+			"size": 1403,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "RowHighlight.less",
+			"size": 2077,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "RowSelection.less",
+			"size": 4320,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "Scrolling.less",
+			"size": 14502,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "Table.less",
+			"size": 13424,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "css-variables.css",
+			"size": 14724,
+			"theme": "base"
+		},
+		{
+			"name": "css-variables.source.less",
+			"size": 77910,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "library-RTL.css",
+			"size": 109554,
+			"theme": "base"
+		},
+		{
+			"name": "library-parameters.json",
+			"size": 6419,
+			"theme": "base"
+		},
+		{
+			"name": "library-skeleton-RTL.css",
+			"size": 112969,
+			"theme": "base"
+		},
+		{
+			"name": "library-skeleton.css",
+			"size": 113077,
+			"theme": "base"
+		},
+		{
+			"name": "library.css",
+			"size": 109660,
+			"theme": "base"
+		},
+		{
+			"name": "library.less",
+			"size": 71185,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "library.source.less",
+			"size": 5060,
+			"designtime": true,
+			"theme": "base"
+		}
+	]
+}

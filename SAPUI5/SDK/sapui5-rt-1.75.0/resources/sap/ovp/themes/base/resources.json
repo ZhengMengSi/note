@@ -1,0 +1,124 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"size": 64,
+			"theme": "base"
+		},
+		{
+			"name": "BarListCard.less",
+			"size": 3490,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "Card.less",
+			"size": 24158,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "DashboardLayout.less",
+			"size": 6998,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "EasyScanLayout.less",
+			"size": 1771,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "LinkListCard.less",
+			"size": 6719,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ListCard.less",
+			"size": 4970,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "Map.less",
+			"size": 845,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "OVPApp.less",
+			"size": 3834,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ObjectStream.less",
+			"size": 5089,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "SettingsDialog.less",
+			"size": 771,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "StackPlaceHolder.less",
+			"size": 581,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "css-variables.css",
+			"size": 719,
+			"theme": "base"
+		},
+		{
+			"name": "css-variables.source.less",
+			"size": 59904,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "library-RTL.css",
+			"size": 51036,
+			"theme": "base"
+		},
+		{
+			"name": "library-parameters.json",
+			"size": 238,
+			"theme": "base"
+		},
+		{
+			"name": "library-skeleton-RTL.css",
+			"size": 52383,
+			"theme": "base"
+		},
+		{
+			"name": "library-skeleton.css",
+			"size": 52366,
+			"theme": "base"
+		},
+		{
+			"name": "library.css",
+			"size": 51019,
+			"theme": "base"
+		},
+		{
+			"name": "library.less",
+			"size": 60201,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "library.source.less",
+			"size": 418,
+			"designtime": true,
+			"theme": "base"
+		}
+	]
+}

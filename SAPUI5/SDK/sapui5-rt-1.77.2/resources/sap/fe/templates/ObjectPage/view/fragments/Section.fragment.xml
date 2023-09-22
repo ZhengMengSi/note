@@ -1,0 +1,74 @@
+<core:FragmentDefinition
+	xmlns:uxap="sap.uxap"
+	xmlns:core="sap.ui.core"
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+	xmlns:fpm="sap.fe.fpm"
+	template:require="{
+		fpm: 'sap/fe/core/fpm/fpm',
+		MODEL: 'sap/ui/model/odata/v4/AnnotationHelper',
+		COMMON: 'sap/fe/macros/CommonHelper'
+	}"
+>
+	<!--
+	For HeaderFacets, we add a section to the OP which is only visible in edit mode.
+	It has one section with one subsection for all of the header facets, block for each facet.
+	-->
+	<template:if test="{= ${metaPath>/currentPath}.set('@com.sap.vocabularies.UI.v1.HeaderFacets') }" />
+	<template:if test="{= ${viewData>/editableHeaderContent} &amp;&amp; ${entityType>@com.sap.vocabularies.UI.v1.HeaderFacets} }">
+		<uxap:ObjectPageSection
+			title="{sap.fe.i18n>OBJECT_PAGE_HEADER_SECTION}"
+			visible="{= ${ui>/editable} === 'Editable' }"
+			titleUppercase="false"
+		>
+			<uxap:subSections>
+				<uxap:ObjectPageSubSection>
+					<core:Fragment fragmentName="sap.fe.templates.ObjectPage.view.fragments.EditableHeaderFacet" type="XML" />
+				</uxap:ObjectPageSubSection>
+			</uxap:subSections>
+		</uxap:ObjectPageSection>
+	</template:if>
+	<template:if test="{= ${metaPath>/currentPath}.set('../') }" />
+	<template:if test="{= ${metaPath>/currentPath}.set('/') }" />
+	<template:if test="{= ${metaPath>/currentPath}.set('@com.sap.vocabularies.UI.v1.Facets') }" />
+	<template:with path="entityType>@FE.sections" var="sections">
+		<template:repeat list="{sections>}" var="section">
+			<uxap:ObjectPageSection
+				id="{section>controlId}"
+				title="{section>title}"
+				showTitle="{section>showTitle}"
+				titleUppercase="false"
+				visible="{section>visible}"
+			>
+				<uxap:subSections>
+					<template:repeat list="{section>subSections}" var="subSection">
+						<uxap:ObjectPageSubSection id="{subSection>controlId}" title="{subSection>title}" visible="{subSection>visible}">
+							<uxap:customData>
+								<core:CustomData key="strategyForVisibilityChange" value="lazyLoading" />
+							</uxap:customData>
+							<template:if test="{= ${subSection>type} === 'XMLFragment'}">
+								<template:then>
+									<fpm:CustomSection
+										entitySet="{entitySet>}"
+										section="{subSection>}"
+										editMode="{ui>/editable}"
+										fragmentName="{subSection>name}"
+										fragmentType="XML"
+									/>
+								</template:then>
+								<template:elseif test="{= ${subSection>type} === 'Annotation'}">
+									<!-- Standard section hierarchy -->
+									<!-- Switch context to metamodel facet annotation -->
+									<template:with path="subSection>@FE.annotationRef" var="facet">
+										<core:Fragment fragmentName="sap.fe.templates.ObjectPage.view.fragments.ObjectPageBlocksAndMoreBlocks" type="XML" />
+									</template:with>
+								</template:elseif>
+								<template:else>
+								</template:else>
+							</template:if>
+						</uxap:ObjectPageSubSection>
+					</template:repeat>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+		</template:repeat>
+	</template:with>
+</core:FragmentDefinition>

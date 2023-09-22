@@ -1,0 +1,3 @@
+// Copyright (c) 2009-2022 SAP SE, All Rights Reserved
+sap.ui.define(["sap/ushell/services/ShellNavigation","sap/ushell/appRuntime/ui5/AppRuntimeService"],function(e,t){"use strict";function s(s,i,a){e.call(this,s,i,a);this.toExternal=function(e,s,i){t.sendMessageToOuterShell("sap.ushell.services.ShellNavigation.toExternal",{oArgs:e,bWriteHistory:i})};this.toAppHash=function(e,s){t.sendMessageToOuterShell("sap.ushell.services.ShellNavigation.toExternal",{sAppHash:e,bWriteHistory:s})}}s.prototype=e.prototype;s.hasNoAdapter=e.hasNoAdapter;return s},true);
+//# sourceMappingURL=ShellNavigation.js.map

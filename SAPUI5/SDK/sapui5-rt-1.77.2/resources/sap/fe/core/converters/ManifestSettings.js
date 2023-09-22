@@ -1,0 +1,1 @@
+sap.ui.define([],function(){"use strict";var _={};var P;(function(P){P["Before"]="Before";P["After"]="After";})(P||(P={}));_.Placement=P;var S;(function(S){S["Annotation"]="Annotation";S["XMLFragment"]="XMLFragment";S["Default"]="Default";})(S||(S={}));_.SectionType=S;return _;});

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>ui/launchpad/AnchorItem</name>
+    <derived/>
+    <documentation>Add your documentation for the newui/launchpad/AnchorItem</documentation>
+    <baseType>sap.ui.core/Control</baseType>
+    <properties>
+        <property name="title" type="sap.ui.core/string" group="Misc"/>
+        <property name="selected" type="sap.ui.core/boolean" defaultValue="false" group="Misc"/>
+        <property name="groupId" type="sap.ui.core/string" group="Misc"/>
+        <property name="defaultGroup" type="sap.ui.core/boolean" defaultValue="false" group="Misc"/>
+        <property name="writeHelpId" type="sap.ui.core/boolean" defaultValue="false" group="Misc">
+            <documentation>if set to true a specific css class will be written into the dom</documentation>
+        </property>
+        <property name="index" type="sap.ui.core/int" group="Misc"/>
+        <property name="visible" type="sap.ui.core/boolean" group="Misc"/>
+        <property name="isGroupVisible" type="sap.ui.core/boolean" defaultValue="true" group="Misc"/>
+        <property name="isGroupRendered" type="sap.ui.core/boolean" defaultValue="false" group="Misc"/>
+        <property name="isGroupDisabled" type="sap.ui.core/boolean" defaultValue="false" group="Misc"/>
+        <property name="locked" type="sap.ui.core/boolean" defaultValue="false" group="Misc"/>
+    </properties>
+    <events>
+        <event name="press" allowPreventDefault="false"/>
+        <event name="afterRendering" allowPreventDefault="false"/>
+    </events>
+</control>

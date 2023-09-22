@@ -1,0 +1,116 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"size": 64,
+			"theme": "base"
+		},
+		{
+			"name": "AstExpression.less",
+			"size": 5240,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "DecisionTable.less",
+			"size": 1519,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "DecisionTableCell.less",
+			"size": 575,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "DecisionTableSettings.less",
+			"size": 1144,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ExpressionAdvanced.less",
+			"size": 391,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "ExpressionBasic.less",
+			"size": 62,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "RuleBuilder.less",
+			"size": 23,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "TextRule.less",
+			"size": 731,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "css-variables.css",
+			"size": 116,
+			"theme": "base"
+		},
+		{
+			"name": "css-variables.source.less",
+			"size": 74355,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "img-RTL/curlyunderline.gif",
+			"size": 809,
+			"theme": "base"
+		},
+		{
+			"name": "img/curlyunderline.gif",
+			"size": 815,
+			"theme": "base"
+		},
+		{
+			"name": "library-RTL.css",
+			"size": 7350,
+			"theme": "base"
+		},
+		{
+			"name": "library-parameters.json",
+			"size": 2,
+			"theme": "base"
+		},
+		{
+			"name": "library-skeleton-RTL.css",
+			"size": 7307,
+			"theme": "base"
+		},
+		{
+			"name": "library-skeleton.css",
+			"size": 7299,
+			"theme": "base"
+		},
+		{
+			"name": "library.css",
+			"size": 7342,
+			"theme": "base"
+		},
+		{
+			"name": "library.less",
+			"size": 10728,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "library.source.less",
+			"size": 641,
+			"designtime": true,
+			"theme": "base"
+		}
+	]
+}

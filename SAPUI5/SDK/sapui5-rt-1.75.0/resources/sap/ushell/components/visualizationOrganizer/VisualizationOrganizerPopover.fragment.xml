@@ -1,0 +1,49 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Popover
+        id="sapUshellVisualizationOrganizerPopover"
+        class="sapContrastPlus"
+        placement="VerticalPreferredBottom"
+        showHeader="false"
+        titleAlignment="Center">
+        <content>
+            <HBox justifyContent="Center">
+                <items>
+                    <Text
+                        id="sapUshellVisualizationOrganizerTitle"
+                        class="sapUiTinyMarginTop"
+                        text="{i18n>VisualizationOrganizer.Title}"/>
+                </items>
+            </HBox>
+            <SearchField
+                id="sapUshellVisualizationOrganizerSearch"
+                class="sapUiTinyMarginBeginEnd"
+                tooltip="{i18n>VisualizationOrganizer.SearchField.Tooltip}"
+                search="._onSearch"
+                width="auto"/>
+            <List
+                id="sapUshellVisualizationOrganizerSpacesList"
+                mode="MultiSelect"
+                items="{/spaces}"
+                noDataText="VisualizationOrganizer.SpacesList.NoDataText"
+                showSeparators="None">
+                <items>
+                    <StandardListItem
+                        title="{title}"
+                        type="{= ${pages}.length > 1 ? 'Navigation' : 'Active'}"
+                        selected="{= ${/pinnedSpaces}.has(com.sap.ushell:ushell-lib:jar:1.75.0)}"
+                        press="._spacePressed" />
+                </items>
+            </List>
+        </content>
+        <footer>
+            <Bar>
+                <contentRight>
+                    <Button
+                        id="sapUshellVisualizationOrganizerCloseButton"
+                        text="{i18n>closeBtn}"
+                        press=".close" />
+                </contentRight>
+            </Bar>
+        </footer>
+    </Popover>
+</core:FragmentDefinition>

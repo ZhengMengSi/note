@@ -1,0 +1,378 @@
+<?xml version="1.0" ?>
+<library  version="2.0" name="sap.ui.generic.app">
+  <module name="sap/ui/generic/app/AppComponent.js" size="933" compressedSize="242">
+    <requires>
+      <module name="sap/suite/ui/generic/template/lib/AppComponent.js"/>
+      <module name="ui5loader-autoconfig.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/generic/app/ApplicationController.js" size="34619" compressedSize="12220">
+    <description>SAPUI5&#xA;&#xA;(c) Copyright 2009-2020 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/base/Log.js"/>
+      <module name="sap/ui/generic/app/transaction/BaseController.js"/>
+      <module name="sap/ui/generic/app/transaction/TransactionController.js"/>
+      <module name="sap/ui/generic/app/util/ModelUtil.js"/>
+      <module name="sap/ui/thirdparty/jquery.js"/>
+      <module name="ui5loader-autoconfig.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/generic/app/designtime/library-preload.designtime.js" size="546">
+    <requires>
+      <module name="ui5loader-autoconfig.js"/>
+    </requires>
+    <includes>
+      <module name="sap/ui/generic/app/designtime/navigation/service/NavigationHandler.designtime.js"/>
+    </includes>
+  </module>
+  <module name="sap/ui/generic/app/designtime/navigation/service/NavigationHandler.designtime.js" size="1363" compressedSize="335">
+    <description>Provides the Design Time Metadata for the sap.ui.generic.app.navigation.service.NavigationHandler control.</description>
+    <requires>
+      <module name="ui5loader-autoconfig.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/generic/app/fragments/MessageDialog.fragment.xml" size="1196">
+    <requires>
+      <module name="sap/m/Bar.js"/>
+      <module name="sap/m/Button.js"/>
+      <module name="sap/m/Dialog.js"/>
+      <module name="sap/m/MessageItem.js"/>
+      <module name="sap/m/MessageView.js"/>
+      <module name="sap/m/Text.js"/>
+      <module name="sap/ui/core/Fragment.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/generic/app/library-h2-preload.js" size="5340">
+    <requires>
+      <module name="sap/base/Log.js"/>
+      <module name="sap/base/assert.js"/>
+      <module name="sap/base/strings/formatMessage.js"/>
+      <module name="sap/m/Bar.js"/>
+      <module name="sap/m/Button.js"/>
+      <module name="sap/m/Dialog.js"/>
+      <module name="sap/m/MessageBox.js"/>
+      <module name="sap/m/MessageItem.js"/>
+      <module name="sap/m/MessageToast.js"/>
+      <module name="sap/m/MessageView.js"/>
+      <module name="sap/m/Text.js"/>
+      <module name="sap/m/VBox.js"/>
+      <module name="sap/suite/ui/generic/template/lib/AppComponent.js"/>
+      <module name="sap/ui/base/EventProvider.js"/>
+      <module name="sap/ui/base/ManagedObject.js"/>
+      <module name="sap/ui/base/Object.js"/>
+      <module name="sap/ui/comp/smartfield/SmartField.js"/>
+      <module name="sap/ui/comp/smartfield/SmartLabel.js"/>
+      <module name="sap/ui/core/Fragment.js"/>
+      <module name="sap/ui/core/UIComponent.js"/>
+      <module name="sap/ui/core/ValueState.js"/>
+      <module name="sap/ui/core/library.js"/>
+      <module name="sap/ui/core/routing/HashChanger.js"/>
+      <module name="sap/ui/core/syncStyleClass.js"/>
+      <module name="sap/ui/layout/form/SimpleForm.js"/>
+      <module name="sap/ui/model/Filter.js"/>
+      <module name="sap/ui/model/FilterOperator.js"/>
+      <module name="sap/ui/model/json/JSONModel.js"/>
+      <module name="sap/ui/model/resource/ResourceModel.js"/>
+      <module name="sap/ui/thirdparty/jquery.js"/>
+      <module name="ui5loader-autoconfig.js"/>
+    </requires>
+    <includes>
+      <module name="sap/ui/generic/app/library.js"/>
+      <module name="sap/ui/generic/app/manifest.json"/>
+      <module name="sap/ui/generic/app/AppComponent.js"/>
+      <module name="sap/ui/generic/app/ApplicationController.js"/>
+      <module name="sap/ui/generic/app/designtime/navigation/service/NavigationHandler.designtime.js"/>
+      <module name="sap/ui/generic/app/fragments/MessageDialog.fragment.xml"/>
+      <module name="sap/ui/generic/app/navigation/service/NavError.js"/>
+      <module name="sap/ui/generic/app/navigation/service/NavigationHandler.js"/>
+      <module name="sap/ui/generic/app/navigation/service/PresentationVariant.js"/>
+      <module name="sap/ui/generic/app/navigation/service/SelectionVariant.js"/>
+      <module name="sap/ui/generic/app/transaction/BaseController.js"/>
+      <module name="sap/ui/generic/app/transaction/DraftContext.js"/>
+      <module name="sap/ui/generic/app/transaction/DraftController.js"/>
+      <module name="sap/ui/generic/app/transaction/TransactionController.js"/>
+      <module name="sap/ui/generic/app/util/ActionUtil.js"/>
+      <module name="sap/ui/generic/app/util/DraftUtil.js"/>
+      <module name="sap/ui/generic/app/util/MessageUtil.js"/>
+      <module name="sap/ui/generic/app/util/ModelUtil.js"/>
+      <module name="sap/ui/generic/app/util/Queue.js"/>
+    </includes>
+  </module>
+  <module name="sap/ui/generic/app/library-preload.js" size="95235">
+    <requires>
+      <module name="sap/base/Log.js"/>
+      <module name="sap/base/assert.js"/>
+      <module name="sap/base/strings/formatMessage.js"/>
+      <module name="sap/m/Bar.js"/>
+      <module name="sap/m/Button.js"/>
+      <module name="sap/m/Dialog.js"/>
+      <module name="sap/m/MessageBox.js"/>
+      <module name="sap/m/MessageItem.js"/>
+      <module name="sap/m/MessageToast.js"/>
+      <module name="sap/m/MessageView.js"/>
+      <module name="sap/m/Text.js"/>
+      <module name="sap/m/VBox.js"/>
+      <module name="sap/suite/ui/generic/template/lib/AppComponent.js"/>
+      <module name="sap/ui/base/EventProvider.js"/>
+      <module name="sap/ui/base/ManagedObject.js"/>
+      <module name="sap/ui/base/Object.js"/>
+      <module name="sap/ui/comp/smartfield/SmartField.js"/>
+      <module name="sap/ui/comp/smartfield/SmartLabel.js"/>
+      <module name="sap/ui/core/Fragment.js"/>
+      <module name="sap/ui/core/UIComponent.js"/>
+      <module name="sap/ui/core/ValueState.js"/>
+      <module name="sap/ui/core/library.js"/>
+      <module name="sap/ui/core/routing/HashChanger.js"/>
+      <module name="sap/ui/core/syncStyleClass.js"/>
+      <module name="sap/ui/layout/form/SimpleForm.js"/>
+      <module name="sap/ui/model/Filter.js"/>
+      <module name="sap/ui/model/FilterOperator.js"/>
+      <module name="sap/ui/model/json/JSONModel.js"/>
+      <module name="sap/ui/model/resource/ResourceModel.js"/>
+      <module name="sap/ui/thirdparty/jquery.js"/>
+      <module name="ui5loader-autoconfig.js"/>
+    </requires>
+    <includes>
+      <module name="sap/ui/generic/app/AppComponent.js"/>
+      <module name="sap/ui/generic/app/ApplicationController.js"/>
+      <module name="sap/ui/generic/app/fragments/MessageDialog.fragment.xml"/>
+      <module name="sap/ui/generic/app/library.js"/>
+      <module name="sap/ui/generic/app/manifest.json"/>
+      <module name="sap/ui/generic/app/navigation/service/NavError.js"/>
+      <module name="sap/ui/generic/app/navigation/service/NavigationHandler.js"/>
+      <module name="sap/ui/generic/app/navigation/service/PresentationVariant.js"/>
+      <module name="sap/ui/generic/app/navigation/service/SelectionVariant.js"/>
+      <module name="sap/ui/generic/app/transaction/BaseController.js"/>
+      <module name="sap/ui/generic/app/transaction/DraftContext.js"/>
+      <module name="sap/ui/generic/app/transaction/DraftController.js"/>
+      <module name="sap/ui/generic/app/transaction/TransactionController.js"/>
+      <module name="sap/ui/generic/app/util/ActionUtil.js"/>
+      <module name="sap/ui/generic/app/util/DraftUtil.js"/>
+      <module name="sap/ui/generic/app/util/MessageUtil.js"/>
+      <module name="sap/ui/generic/app/util/ModelUtil.js"/>
+      <module name="sap/ui/generic/app/util/Queue.js"/>
+    </includes>
+  </module>
+  <module name="sap/ui/generic/app/library.js" size="4254" compressedSize="985">
+    <description>Initialization Code and shared classes of library sap.ui.generic.app.</description>
+    <requires>
+      <module name="sap/ui/core/library.js"/>
+      <module name="ui5loader-autoconfig.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/generic/app/manifest.json" size="1549">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle.properties" size="1104">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_ar.properties" size="1562">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_bg.properties" size="1902">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_ca.properties" size="1066">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_cs.properties" size="1120">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_da.properties" size="1031">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_de.properties" size="1058">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_el.properties" size="1881">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_en.properties" size="1011">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_en_US_sappsd.properties" size="2369">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_en_US_saptrc.properties" size="1285">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_es.properties" size="1088">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_et.properties" size="1037">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_fi.properties" size="1049">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_fr.properties" size="1102">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_hi.properties" size="1778">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_hr.properties" size="1049">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_hu.properties" size="1169">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_it.properties" size="1079">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_iw.properties" size="1554">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_ja.properties" size="1267">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_kk.properties" size="1773">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_ko.properties" size="1230">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_lt.properties" size="1072">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_lv.properties" size="1124">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_ms.properties" size="1030">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_nl.properties" size="1033">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_no.properties" size="1031">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_pl.properties" size="1072">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_pt.properties" size="1082">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_ro.properties" size="1111">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_ru.properties" size="1961">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_sh.properties" size="1052">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_sk.properties" size="1080">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_sl.properties" size="1046">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_sv.properties" size="1038">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_th.properties" size="1829">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_tr.properties" size="1075">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_uk.properties" size="1869">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_vi.properties" size="1282">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_zh_CN.properties" size="1110">
+  </module>
+  <module name="sap/ui/generic/app/messagebundle_zh_TW.properties" size="1099">
+  </module>
+  <module name="sap/ui/generic/app/navigation/service/NavError.js" size="1169" compressedSize="419">
+    <description>! SAPUI5&#xA;&#xA;(c) Copyright 2009-2020 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/ui/base/Object.js"/>
+      <module name="ui5loader-autoconfig.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/generic/app/navigation/service/NavigationHandler.js" size="88626" compressedSize="23004">
+    <description>! @copyright@</description>
+    <requires>
+      <module name="sap/base/Log.js"/>
+      <module name="sap/base/assert.js"/>
+      <module name="sap/ui/base/Object.js"/>
+      <module name="sap/ui/core/UIComponent.js"/>
+      <module name="sap/ui/core/routing/HashChanger.js"/>
+      <module name="sap/ui/generic/app/library.js"/>
+      <module name="sap/ui/generic/app/navigation/service/NavError.js"/>
+      <module name="sap/ui/generic/app/navigation/service/SelectionVariant.js"/>
+      <module name="sap/ui/model/resource/ResourceModel.js"/>
+      <module name="sap/ui/thirdparty/jquery.js"/>
+      <module name="ui5loader-autoconfig.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/generic/app/navigation/service/PresentationVariant.js" size="11342" compressedSize="3411">
+    <description>! @copyright@</description>
+    <requires>
+      <module name="sap/base/Log.js"/>
+      <module name="sap/ui/base/Object.js"/>
+      <module name="sap/ui/generic/app/navigation/service/NavError.js"/>
+      <module name="sap/ui/thirdparty/jquery.js"/>
+      <module name="ui5loader-autoconfig.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/generic/app/navigation/service/SelectionVariant.js" size="32123" compressedSize="7762">
+    <description>! @copyright@</description>
+    <requires>
+      <module name="sap/base/Log.js"/>
+      <module name="sap/ui/base/Object.js"/>
+      <module name="sap/ui/generic/app/navigation/service/NavError.js"/>
+      <module name="sap/ui/thirdparty/jquery.js"/>
+      <module name="ui5loader-autoconfig.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/generic/app/transaction/BaseController.js" size="39792" compressedSize="11523">
+    <description>SAPUI5&#xA;&#xA;(c) Copyright 2009-2020 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/base/Log.js"/>
+      <module name="sap/ui/base/EventProvider.js"/>
+      <module name="sap/ui/generic/app/util/DraftUtil.js"/>
+      <module name="sap/ui/generic/app/util/ModelUtil.js"/>
+      <module name="sap/ui/generic/app/util/Queue.js"/>
+      <module name="ui5loader-autoconfig.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/generic/app/transaction/DraftContext.js" size="13457" compressedSize="4238">
+    <description>SAPUI5&#xA;&#xA;(c) Copyright 2009-2020 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/ui/base/Object.js"/>
+      <module name="sap/ui/generic/app/util/ModelUtil.js"/>
+      <module name="ui5loader-autoconfig.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/generic/app/transaction/DraftController.js" size="23525" compressedSize="8198">
+    <description>SAPUI5&#xA;&#xA;(c) Copyright 2009-2020 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/base/Log.js"/>
+      <module name="sap/ui/generic/app/transaction/BaseController.js"/>
+      <module name="sap/ui/generic/app/transaction/DraftContext.js"/>
+      <module name="sap/ui/thirdparty/jquery.js"/>
+      <module name="ui5loader-autoconfig.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/generic/app/transaction/TransactionController.js" size="12176" compressedSize="3877">
+    <description>SAPUI5&#xA;&#xA;(c) Copyright 2009-2020 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/ui/generic/app/transaction/BaseController.js"/>
+      <module name="sap/ui/generic/app/transaction/DraftController.js"/>
+      <module name="sap/ui/generic/app/util/ModelUtil.js"/>
+      <module name="sap/ui/thirdparty/jquery.js"/>
+      <module name="ui5loader-autoconfig.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/generic/app/util/ActionUtil.js" size="21242" compressedSize="8830">
+    <requires>
+      <module name="sap/base/Log.js"/>
+      <module name="sap/base/strings/formatMessage.js"/>
+      <module name="sap/m/Dialog.js"/>
+      <module name="sap/m/MessageBox.js"/>
+      <module name="sap/m/Text.js"/>
+      <module name="sap/m/VBox.js"/>
+      <module name="sap/ui/base/ManagedObject.js"/>
+      <module name="sap/ui/comp/smartfield/SmartField.js"/>
+      <module name="sap/ui/comp/smartfield/SmartLabel.js"/>
+      <module name="sap/ui/generic/app/util/ModelUtil.js"/>
+      <module name="sap/ui/layout/form/SimpleForm.js"/>
+      <module name="sap/ui/thirdparty/jquery.js"/>
+      <module name="ui5loader-autoconfig.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/generic/app/util/DraftUtil.js" size="1582" compressedSize="378">
+    <description>SAPUI5&#xA;&#xA;(c) Copyright 2009-2020 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="ui5loader-autoconfig.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/generic/app/util/MessageUtil.js" size="15530" compressedSize="4515">
+    <requires>
+      <module name="sap/m/MessageToast.js"/>
+      <module name="sap/ui/core/ValueState.js"/>
+      <module name="sap/ui/core/syncStyleClass.js"/>
+      <module name="sap/ui/model/Filter.js"/>
+      <module name="sap/ui/model/FilterOperator.js"/>
+      <module name="sap/ui/model/json/JSONModel.js"/>
+      <module name="ui5loader-autoconfig.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/generic/app/util/ModelUtil.js" size="2594" compressedSize="919">
+    <description>SAPUI5&#xA;&#xA;(c) Copyright 2009-2020 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="ui5loader-autoconfig.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/generic/app/util/Queue.js" size="4582" compressedSize="1865">
+    <description>SAPUI5&#xA;&#xA;(c) Copyright 2009-2020 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/ui/thirdparty/jquery.js"/>
+      <module name="ui5loader-autoconfig.js"/>
+    </requires>
+  </module>
+</library>

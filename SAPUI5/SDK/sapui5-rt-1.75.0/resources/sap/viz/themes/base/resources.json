@@ -1,0 +1,64 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".theming",
+			"size": 64,
+			"theme": "base"
+		},
+		{
+			"name": "css-variables.css",
+			"size": 2056,
+			"theme": "base"
+		},
+		{
+			"name": "css-variables.source.less",
+			"size": 61210,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "library-RTL.css",
+			"size": 20506,
+			"theme": "base"
+		},
+		{
+			"name": "library-parameters.json",
+			"size": 802,
+			"theme": "base"
+		},
+		{
+			"name": "library-skeleton-RTL.css",
+			"size": 21343,
+			"theme": "base"
+		},
+		{
+			"name": "library-skeleton.css",
+			"size": 21325,
+			"theme": "base"
+		},
+		{
+			"name": "library.css",
+			"size": 20488,
+			"theme": "base"
+		},
+		{
+			"name": "library.less",
+			"size": 26662,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "library.source.less",
+			"size": 144,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "shared.less",
+			"size": 26300,
+			"designtime": true,
+			"theme": "base"
+		}
+	]
+}

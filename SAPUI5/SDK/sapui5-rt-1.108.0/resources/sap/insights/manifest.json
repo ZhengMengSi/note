@@ -1,0 +1,66 @@
+{
+  "_version": "1.21.0",
+  "sap.app": {
+    "id": "sap.insights",
+    "type": "library",
+    "embeds": [],
+    "applicationVersion": {
+      "version": "1.108.0"
+    },
+    "title": "SAP UI library: sap.insights",
+    "description": "SAP UI library: sap.insights",
+    "ach": "CA-FLP-EXT-INS",
+    "resources": "resources.json",
+    "offline": true
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "supportedThemes": [
+      "base"
+    ]
+  },
+  "sap.ui5": {
+    "dependencies": {
+      "minUI5Version": "1.108",
+      "libs": {
+        "sap.ui.core": {
+          "minVersion": "1.108.0"
+        },
+        "sap.viz": {
+          "minVersion": "1.108.0",
+          "lazy": true
+        },
+        "sap.m": {
+          "minVersion": "1.108.0",
+          "lazy": true
+        },
+        "sap.ui.integration": {
+          "minVersion": "1.108.0",
+          "lazy": true
+        },
+        "sap.f": {
+          "minVersion": "1.108.0",
+          "lazy": true
+        },
+        "sap.ui.layout": {
+          "minVersion": "1.108.0",
+          "lazy": true
+        }
+      }
+    },
+    "library": {
+      "i18n": {
+        "bundleUrl": "messagebundle.properties",
+        "supportedLocales": [
+          ""
+        ]
+      },
+      "content": {
+        "controls": [],
+        "elements": [],
+        "types": [],
+        "interfaces": []
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+sap.ui.define(["./FEBuilder", "sap/ui/test/OpaBuilder", "sap/fe/test/Utils", "sap/fe/macros/filter/EditState"], function(
+	FEBuilder,
+	OpaBuilder,
+	Utils,
+	EditState
+) {
+	"use strict";
+
+	var FilterBarBuilder = function() {
+		return FEBuilder.apply(this, arguments);
+	};
+
+	FilterBarBuilder.create = function(oOpaInstance) {
+		return new FilterBarBuilder(oOpaInstance);
+	};
+
+	FilterBarBuilder.prototype = Object.create(FEBuilder.prototype);
+
+	FilterBarBuilder.prototype.hasEditingStatus = function(oEditState, mState) {
+		var fnEditStateMatcher = OpaBuilder.Matchers.resourceBundle("label", "sap.fe.macros", "filterbar.EDITING_STATUS");
+		if (mState && "visible" in mState && mState.visible === false) {
+			return this.has(function(oFilterBar) {
+				return !oFilterBar.getFilterItems().some(OpaBuilder.Matchers.match(fnEditStateMatcher));
+			});
+		}
+
+		var aFilterItemsMatchers = [fnEditStateMatcher];
+		if (oEditState) {
+			aFilterItemsMatchers.push(
+				OpaBuilder.Matchers.hasAggregation("contentEdit", OpaBuilder.Matchers.properties("selectedKey", oEditState.id))
+			);
+		}
+		if (mState && Object.keys(mState).length) {
+			aFilterItemsMatchers.push(FEBuilder.Matchers.states(mState));
+		}
+
+		return this.hasAggregation("filterItems", aFilterItemsMatchers);
+	};
+
+	FilterBarBuilder.prototype.doChangeEditingStatus = function(vEditState) {
+		var fnEditStateMatcher = OpaBuilder.Matchers.resourceBundle("label", "sap.fe.macros", "filterbar.EDITING_STATUS");
+		return this.doOnAggregation("filterItems", fnEditStateMatcher, OpaBuilder.Actions.doEnterText(vEditState.display));
+	};
+
+	return FilterBarBuilder;
+});

@@ -1,0 +1,9 @@
+{
+"version":3,
+"file":"sap/ushell/components/shell/MenuBar/Component-h2-preload.js",
+"sourceroot":".",
+"sources":["Component-dbg.js","manifest.json"],
+"names":["UIComponent","JSONModel","Config","oMenuModel","oComponentContainer","oMenuService","bIsEnabled","aMenuEntries"],
+"mappings":";;AACA,gBAAa,iDAAC,CACV,0BACA,8BACA,mBACJ,EAAG,QAAS,CAACA,CAAW,CAAEC,CAAS,CAAEC,CAAM,CAAE,CACzC,aAEA,OAAOF,CAAW,wDAAyD,CACvE,KAAM,QAAS,EAAG,CAEdA,CAAW,2BAA4B,WACvC,IAAIG,CAAW,CAAE,IAAIF,CAAS,GAC9B,cAAcE,CAAU,CAAE,QAC1B,IAAIC,CAAmB,CAEvB,4CACI,cAAe,CAACC,CAAY,CAAE,CAC1BA,CAAY,8BAA+B,CAACC,CAAU,CAAE,CACpD,EAAG,CAACA,CAAU,CAAE,CACZF,CAAoB,CAAE,mDAC1B,CACA,OAAOC,CAAY,kBACvB,EACA,cAAe,CAACE,CAAY,CAAE,CAC1B,EAAG,CAACH,CAAmB,CAAE,CACrBD,CAAU,iBAAkBI,CAAY,EACxCH,CAAmB,oBACvB,CACA,EAAG,CAACF,CAAM,2DAA4D,CAClEE,CAAmB,mBACvB,CACJ,cACJ,cACR,CACJ,GACJ;;;;;;;;;;",
+"x_com_sap_openui5_sections":[74,838,916,1480]
+}

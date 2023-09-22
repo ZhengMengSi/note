@@ -1,0 +1,1183 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".library",
+			"size": 895
+		},
+		{
+			"name": ".theming",
+			"size": 75
+		},
+		{
+			"name": "core-ext-light-0.js",
+			"size": 1429594
+		},
+		{
+			"name": "core-ext-light-0.js.map",
+			"size": 1102776,
+			"isDebug": true
+		},
+		{
+			"name": "core-ext-light-1.js",
+			"size": 1437530
+		},
+		{
+			"name": "core-ext-light-1.js.map",
+			"size": 1576372,
+			"isDebug": true
+		},
+		{
+			"name": "core-ext-light-2.js",
+			"size": 1402288
+		},
+		{
+			"name": "core-ext-light-2.js.map",
+			"size": 1484817,
+			"isDebug": true
+		},
+		{
+			"name": "core-ext-light-3.js",
+			"size": 1432050
+		},
+		{
+			"name": "core-ext-light-3.js.map",
+			"size": 1614083,
+			"isDebug": true
+		},
+		{
+			"name": "core-ext-light-dbg.js",
+			"module": "sap/fiori/core-ext-light-dbg.js",
+			"size": 98,
+			"format": "raw",
+			"isDebug": true
+		},
+		{
+			"name": "core-min-0-dbg.js",
+			"size": 307908,
+			"isDebug": true
+		},
+		{
+			"name": "core-min-0.js",
+			"size": 860437
+		},
+		{
+			"name": "core-min-0.js.map",
+			"size": 1133187,
+			"isDebug": true
+		},
+		{
+			"name": "core-min-1.js",
+			"size": 845774
+		},
+		{
+			"name": "core-min-1.js.map",
+			"size": 987206,
+			"isDebug": true
+		},
+		{
+			"name": "core-min-2.js",
+			"size": 846644
+		},
+		{
+			"name": "core-min-2.js.map",
+			"size": 969166,
+			"isDebug": true
+		},
+		{
+			"name": "core-min-3.js",
+			"size": 843743
+		},
+		{
+			"name": "core-min-3.js.map",
+			"size": 1181496,
+			"isDebug": true
+		},
+		{
+			"name": "core-min-dbg.js",
+			"size": 307906,
+			"isDebug": true
+		},
+		{
+			"name": "core-min.js",
+			"size": 3395918
+		},
+		{
+			"name": "core-min.js.map",
+			"size": 4283444,
+			"isDebug": true
+		},
+		{
+			"name": "flp-controls-dbg.js",
+			"module": "sap/fiori/flp-controls-dbg.js",
+			"size": 98,
+			"format": "raw",
+			"isDebug": true
+		},
+		{
+			"name": "flp-controls.js",
+			"size": 246116
+		},
+		{
+			"name": "flp-controls.js.map",
+			"size": 229500,
+			"isDebug": true
+		},
+		{
+			"name": "indicator-tiles.js",
+			"size": 571705
+		},
+		{
+			"name": "indicator-tiles.js.map",
+			"size": 577914,
+			"isDebug": true
+		},
+		{
+			"name": "library-dbg.js",
+			"module": "sap/fiori/library.js",
+			"size": 1254,
+			"isDebug": true,
+			"required": [
+				"jquery.sap.global.js",
+				"jquery.sap.resources.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/library.js"
+			],
+			"dynRequired": true
+		},
+		{
+			"name": "library-h2-preload.js",
+			"module": "sap/fiori/library-h2-preload.js",
+			"size": 1740,
+			"merged": true,
+			"required": [
+				"jquery.sap.global.js",
+				"jquery.sap.resources.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/library.js"
+			],
+			"dynRequired": true,
+			"included": [
+				"sap/fiori/library.js",
+				"sap/fiori/manifest.json",
+				"sap/fiori/core-ext-light-dbg.js",
+				"sap/fiori/flp-controls-dbg.js"
+			]
+		},
+		{
+			"name": "library-h2-preload.js.map",
+			"size": 690,
+			"isDebug": true
+		},
+		{
+			"name": "library-preload.js",
+			"module": "sap/fiori/library-preload.js",
+			"size": 1617,
+			"merged": true,
+			"required": [
+				"jquery.sap.global.js",
+				"jquery.sap.resources.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/library.js"
+			],
+			"dynRequired": true,
+			"included": [
+				"sap/fiori/flp-controls-dbg.js",
+				"sap/fiori/library.js",
+				"sap/fiori/manifest.json"
+			]
+		},
+		{
+			"name": "library-preload.js.map",
+			"size": 718,
+			"isDebug": true
+		},
+		{
+			"name": "library.dependencies.xml",
+			"size": 1954,
+			"designtime": true
+		},
+		{
+			"name": "library.js",
+			"module": "sap/fiori/library.js",
+			"size": 598,
+			"required": [
+				"jquery.sap.global.js",
+				"jquery.sap.resources.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/library.js"
+			],
+			"dynRequired": true
+		},
+		{
+			"name": "manifest.json",
+			"module": "sap/fiori/manifest.json",
+			"size": 1094
+		},
+		{
+			"name": "messagebundle-preload.js",
+			"size": 98216
+		},
+		{
+			"name": "messagebundle-preload.js.map",
+			"size": 529,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_ar.js",
+			"size": 273173
+		},
+		{
+			"name": "messagebundle-preload_ar.js.map",
+			"size": 686,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_bg.js",
+			"size": 249474
+		},
+		{
+			"name": "messagebundle-preload_bg.js.map",
+			"size": 598,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_ca.js",
+			"size": 191792
+		},
+		{
+			"name": "messagebundle-preload_ca.js.map",
+			"size": 598,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_cs.js",
+			"size": 208005
+		},
+		{
+			"name": "messagebundle-preload_cs.js.map",
+			"size": 598,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_da.js",
+			"size": 179356
+		},
+		{
+			"name": "messagebundle-preload_da.js.map",
+			"size": 598,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_de.js",
+			"size": 191558
+		},
+		{
+			"name": "messagebundle-preload_de.js.map",
+			"size": 686,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_el.js",
+			"size": 245682
+		},
+		{
+			"name": "messagebundle-preload_el.js.map",
+			"size": 642,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_en.js",
+			"size": 308397
+		},
+		{
+			"name": "messagebundle-preload_en.js.map",
+			"size": 994,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_en_US_sappsd.js",
+			"size": 191658
+		},
+		{
+			"name": "messagebundle-preload_en_US_sappsd.js.map",
+			"size": 623,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_en_US_saptrc.js",
+			"size": 144297
+		},
+		{
+			"name": "messagebundle-preload_en_US_saptrc.js.map",
+			"size": 623,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_es.js",
+			"size": 335520
+		},
+		{
+			"name": "messagebundle-preload_es.js.map",
+			"size": 950,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_et.js",
+			"size": 181119
+		},
+		{
+			"name": "messagebundle-preload_et.js.map",
+			"size": 598,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_fi.js",
+			"size": 188307
+		},
+		{
+			"name": "messagebundle-preload_fi.js.map",
+			"size": 598,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_fr.js",
+			"size": 230376
+		},
+		{
+			"name": "messagebundle-preload_fr.js.map",
+			"size": 774,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_hi.js",
+			"size": 280093
+		},
+		{
+			"name": "messagebundle-preload_hi.js.map",
+			"size": 598,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_hr.js",
+			"size": 187898
+		},
+		{
+			"name": "messagebundle-preload_hr.js.map",
+			"size": 598,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_hu.js",
+			"size": 190489
+		},
+		{
+			"name": "messagebundle-preload_hu.js.map",
+			"size": 598,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_it.js",
+			"size": 187727
+		},
+		{
+			"name": "messagebundle-preload_it.js.map",
+			"size": 642,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_iw.js",
+			"size": 225670
+		},
+		{
+			"name": "messagebundle-preload_iw.js.map",
+			"size": 598,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_ja.js",
+			"size": 205794
+		},
+		{
+			"name": "messagebundle-preload_ja.js.map",
+			"size": 596,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_kk.js",
+			"size": 236527
+		},
+		{
+			"name": "messagebundle-preload_kk.js.map",
+			"size": 598,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_ko.js",
+			"size": 189661
+		},
+		{
+			"name": "messagebundle-preload_ko.js.map",
+			"size": 596,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_lt.js",
+			"size": 211880
+		},
+		{
+			"name": "messagebundle-preload_lt.js.map",
+			"size": 598,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_lv.js",
+			"size": 201858
+		},
+		{
+			"name": "messagebundle-preload_lv.js.map",
+			"size": 598,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_ms.js",
+			"size": 168973
+		},
+		{
+			"name": "messagebundle-preload_ms.js.map",
+			"size": 596,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_nl.js",
+			"size": 182216
+		},
+		{
+			"name": "messagebundle-preload_nl.js.map",
+			"size": 642,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_no.js",
+			"size": 100288
+		},
+		{
+			"name": "messagebundle-preload_no.js.map",
+			"size": 550,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_pl.js",
+			"size": 198790
+		},
+		{
+			"name": "messagebundle-preload_pl.js.map",
+			"size": 598,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_pt.js",
+			"size": 213876
+		},
+		{
+			"name": "messagebundle-preload_pt.js.map",
+			"size": 642,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_ro.js",
+			"size": 196282
+		},
+		{
+			"name": "messagebundle-preload_ro.js.map",
+			"size": 598,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_ru.js",
+			"size": 267151
+		},
+		{
+			"name": "messagebundle-preload_ru.js.map",
+			"size": 642,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_sh.js",
+			"size": 103767
+		},
+		{
+			"name": "messagebundle-preload_sh.js.map",
+			"size": 551,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_sk.js",
+			"size": 205719
+		},
+		{
+			"name": "messagebundle-preload_sk.js.map",
+			"size": 598,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_sl.js",
+			"size": 204236
+		},
+		{
+			"name": "messagebundle-preload_sl.js.map",
+			"size": 598,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_sv.js",
+			"size": 182824
+		},
+		{
+			"name": "messagebundle-preload_sv.js.map",
+			"size": 598,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_th.js",
+			"size": 280302
+		},
+		{
+			"name": "messagebundle-preload_th.js.map",
+			"size": 598,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_tr.js",
+			"size": 186560
+		},
+		{
+			"name": "messagebundle-preload_tr.js.map",
+			"size": 598,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_uk.js",
+			"size": 262944
+		},
+		{
+			"name": "messagebundle-preload_uk.js.map",
+			"size": 598,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_vi.js",
+			"size": 201659
+		},
+		{
+			"name": "messagebundle-preload_vi.js.map",
+			"size": 598,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_zh_CN.js",
+			"size": 170038
+		},
+		{
+			"name": "messagebundle-preload_zh_CN.js.map",
+			"size": 614,
+			"isDebug": true
+		},
+		{
+			"name": "messagebundle-preload_zh_TW.js",
+			"size": 172574
+		},
+		{
+			"name": "messagebundle-preload_zh_TW.js.map",
+			"size": 614,
+			"isDebug": true
+		},
+		{
+			"name": "resources.json",
+			"size": 1344
+		},
+		{
+			"name": "themes/base/.theming",
+			"size": 64,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/css-variables.css",
+			"size": 117052,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/css-variables.source.less",
+			"size": 137751,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library-RTL.css",
+			"size": 1011536,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library-parameters.json",
+			"size": 66819,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library-skeleton-RTL.css",
+			"size": 1001723,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library-skeleton.css",
+			"size": 1000965,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library.css",
+			"size": 1010776,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library.less",
+			"size": 456,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library.source.less",
+			"size": 433,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/sap_belize/.theming",
+			"size": 650,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/css-variables.css",
+			"size": 205996,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/css-variables.source.less",
+			"size": 193658,
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/library-RTL.css",
+			"size": 1975087,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/library-parameters.json",
+			"size": 120489,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/library-skeleton-RTL.css",
+			"size": 1967041,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/library-skeleton.css",
+			"size": 1966112,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/library.css",
+			"size": 1974156,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/library.less",
+			"size": 486,
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize/library.source.less",
+			"size": 463,
+			"designtime": true,
+			"theme": "sap_belize"
+		},
+		{
+			"name": "themes/sap_belize_hcb/.theming",
+			"size": 93,
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcb/css-variables.css",
+			"size": 123729,
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcb/css-variables.source.less",
+			"size": 145687,
+			"designtime": true,
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcb/library-RTL.css",
+			"size": 1189536,
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcb/library-parameters.json",
+			"size": 69799,
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcb/library-skeleton-RTL.css",
+			"size": 1198845,
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcb/library-skeleton.css",
+			"size": 1198005,
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcb/library.css",
+			"size": 1188694,
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcb/library.less",
+			"size": 506,
+			"designtime": true,
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcb/library.source.less",
+			"size": 483,
+			"designtime": true,
+			"theme": "sap_belize_hcb"
+		},
+		{
+			"name": "themes/sap_belize_hcw/.theming",
+			"size": 93,
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_hcw/css-variables.css",
+			"size": 123826,
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_hcw/css-variables.source.less",
+			"size": 145597,
+			"designtime": true,
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_hcw/library-RTL.css",
+			"size": 1189145,
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_hcw/library-parameters.json",
+			"size": 69887,
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_hcw/library-skeleton-RTL.css",
+			"size": 1197600,
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_hcw/library-skeleton.css",
+			"size": 1196759,
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_hcw/library.css",
+			"size": 1188302,
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_hcw/library.less",
+			"size": 506,
+			"designtime": true,
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_hcw/library.source.less",
+			"size": 483,
+			"designtime": true,
+			"theme": "sap_belize_hcw"
+		},
+		{
+			"name": "themes/sap_belize_plus/.theming",
+			"size": 611,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_belize_plus/css-variables.css",
+			"size": 206004,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_belize_plus/css-variables.source.less",
+			"size": 193658,
+			"designtime": true,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_belize_plus/library-RTL.css",
+			"size": 2008492,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_belize_plus/library-parameters.json",
+			"size": 120493,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_belize_plus/library-skeleton-RTL.css",
+			"size": 2000340,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_belize_plus/library-skeleton.css",
+			"size": 1999411,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_belize_plus/library.css",
+			"size": 2007561,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_belize_plus/library.less",
+			"size": 511,
+			"designtime": true,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_belize_plus/library.source.less",
+			"size": 488,
+			"designtime": true,
+			"theme": "sap_belize_plus"
+		},
+		{
+			"name": "themes/sap_bluecrystal/.theming",
+			"size": 137,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/css-variables.css",
+			"size": 142471,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/css-variables.source.less",
+			"size": 166915,
+			"designtime": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library-RTL.css",
+			"size": 1179767,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library-parameters.json",
+			"size": 82523,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library-skeleton-RTL.css",
+			"size": 1171423,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library-skeleton.css",
+			"size": 1170582,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library.css",
+			"size": 1178925,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library.less",
+			"size": 511,
+			"designtime": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_bluecrystal/library.source.less",
+			"size": 488,
+			"designtime": true,
+			"theme": "sap_bluecrystal"
+		},
+		{
+			"name": "themes/sap_fiori_3/.theming",
+			"size": 90,
+			"theme": "sap_fiori_3"
+		},
+		{
+			"name": "themes/sap_fiori_3/css-variables.css",
+			"size": 165363,
+			"theme": "sap_fiori_3"
+		},
+		{
+			"name": "themes/sap_fiori_3/css-variables.source.less",
+			"size": 202391,
+			"designtime": true,
+			"theme": "sap_fiori_3"
+		},
+		{
+			"name": "themes/sap_fiori_3/library-RTL.css",
+			"size": 1458729,
+			"theme": "sap_fiori_3"
+		},
+		{
+			"name": "themes/sap_fiori_3/library-parameters.json",
+			"size": 90629,
+			"theme": "sap_fiori_3"
+		},
+		{
+			"name": "themes/sap_fiori_3/library-skeleton-RTL.css",
+			"size": 1444533,
+			"theme": "sap_fiori_3"
+		},
+		{
+			"name": "themes/sap_fiori_3/library-skeleton.css",
+			"size": 1443497,
+			"theme": "sap_fiori_3"
+		},
+		{
+			"name": "themes/sap_fiori_3/library.css",
+			"size": 1457691,
+			"theme": "sap_fiori_3"
+		},
+		{
+			"name": "themes/sap_fiori_3/library.less",
+			"size": 491,
+			"designtime": true,
+			"theme": "sap_fiori_3"
+		},
+		{
+			"name": "themes/sap_fiori_3/library.source.less",
+			"size": 468,
+			"designtime": true,
+			"theme": "sap_fiori_3"
+		},
+		{
+			"name": "themes/sap_fiori_3_dark/.theming",
+			"size": 95,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "themes/sap_fiori_3_dark/css-variables.css",
+			"size": 165648,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "themes/sap_fiori_3_dark/css-variables.source.less",
+			"size": 202321,
+			"designtime": true,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "themes/sap_fiori_3_dark/library-RTL.css",
+			"size": 1469486,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "themes/sap_fiori_3_dark/library-parameters.json",
+			"size": 90956,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "themes/sap_fiori_3_dark/library-skeleton-RTL.css",
+			"size": 1454867,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "themes/sap_fiori_3_dark/library-skeleton.css",
+			"size": 1453832,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "themes/sap_fiori_3_dark/library.css",
+			"size": 1468449,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "themes/sap_fiori_3_dark/library.less",
+			"size": 516,
+			"designtime": true,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "themes/sap_fiori_3_dark/library.source.less",
+			"size": 493,
+			"designtime": true,
+			"theme": "sap_fiori_3_dark"
+		},
+		{
+			"name": "themes/sap_fiori_3_hcb/.theming",
+			"size": 94,
+			"theme": "sap_fiori_3_hcb"
+		},
+		{
+			"name": "themes/sap_fiori_3_hcb/css-variables.css",
+			"size": 129886,
+			"theme": "sap_fiori_3_hcb"
+		},
+		{
+			"name": "themes/sap_fiori_3_hcb/css-variables.source.less",
+			"size": 154223,
+			"designtime": true,
+			"theme": "sap_fiori_3_hcb"
+		},
+		{
+			"name": "themes/sap_fiori_3_hcb/library-RTL.css",
+			"size": 1207417,
+			"theme": "sap_fiori_3_hcb"
+		},
+		{
+			"name": "themes/sap_fiori_3_hcb/library-parameters.json",
+			"size": 74376,
+			"theme": "sap_fiori_3_hcb"
+		},
+		{
+			"name": "themes/sap_fiori_3_hcb/library-skeleton-RTL.css",
+			"size": 1210564,
+			"theme": "sap_fiori_3_hcb"
+		},
+		{
+			"name": "themes/sap_fiori_3_hcb/library-skeleton.css",
+			"size": 1209724,
+			"theme": "sap_fiori_3_hcb"
+		},
+		{
+			"name": "themes/sap_fiori_3_hcb/library.css",
+			"size": 1206575,
+			"theme": "sap_fiori_3_hcb"
+		},
+		{
+			"name": "themes/sap_fiori_3_hcb/library.less",
+			"size": 511,
+			"designtime": true,
+			"theme": "sap_fiori_3_hcb"
+		},
+		{
+			"name": "themes/sap_fiori_3_hcb/library.source.less",
+			"size": 488,
+			"designtime": true,
+			"theme": "sap_fiori_3_hcb"
+		},
+		{
+			"name": "themes/sap_fiori_3_hcw/.theming",
+			"size": 94,
+			"theme": "sap_fiori_3_hcw"
+		},
+		{
+			"name": "themes/sap_fiori_3_hcw/css-variables.css",
+			"size": 129924,
+			"theme": "sap_fiori_3_hcw"
+		},
+		{
+			"name": "themes/sap_fiori_3_hcw/css-variables.source.less",
+			"size": 154156,
+			"designtime": true,
+			"theme": "sap_fiori_3_hcw"
+		},
+		{
+			"name": "themes/sap_fiori_3_hcw/library-RTL.css",
+			"size": 1207420,
+			"theme": "sap_fiori_3_hcw"
+		},
+		{
+			"name": "themes/sap_fiori_3_hcw/library-parameters.json",
+			"size": 74423,
+			"theme": "sap_fiori_3_hcw"
+		},
+		{
+			"name": "themes/sap_fiori_3_hcw/library-skeleton-RTL.css",
+			"size": 1210094,
+			"theme": "sap_fiori_3_hcw"
+		},
+		{
+			"name": "themes/sap_fiori_3_hcw/library-skeleton.css",
+			"size": 1209253,
+			"theme": "sap_fiori_3_hcw"
+		},
+		{
+			"name": "themes/sap_fiori_3_hcw/library.css",
+			"size": 1206577,
+			"theme": "sap_fiori_3_hcw"
+		},
+		{
+			"name": "themes/sap_fiori_3_hcw/library.less",
+			"size": 511,
+			"designtime": true,
+			"theme": "sap_fiori_3_hcw"
+		},
+		{
+			"name": "themes/sap_fiori_3_hcw/library.source.less",
+			"size": 488,
+			"designtime": true,
+			"theme": "sap_fiori_3_hcw"
+		},
+		{
+			"name": "themes/sap_hcb/.theming",
+			"size": 128,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/css-variables.css",
+			"size": 125150,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/css-variables.source.less",
+			"size": 139005,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/library-RTL.css",
+			"size": 1152042,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/library-parameters.json",
+			"size": 70803,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/library-skeleton-RTL.css",
+			"size": 1159754,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/library-skeleton.css",
+			"size": 1158922,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/library.css",
+			"size": 1151208,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/library.less",
+			"size": 471,
+			"designtime": true,
+			"theme": "sap_hcb"
+		},
+		{
+			"name": "themes/sap_hcb/library.source.less",
+			"size": 448,
+			"designtime": true,
+			"theme": "sap_hcb"
+		}
+	]
+}

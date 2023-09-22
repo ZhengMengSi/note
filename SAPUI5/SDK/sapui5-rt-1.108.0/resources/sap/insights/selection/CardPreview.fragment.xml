@@ -1,0 +1,39 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.f"
+    xmlns:w="sap.ui.integration.widgets">
+    <FlexBox id="idCardsPreviewFlex" height="100%" direction="Column" class="sapUiTinyMarginBegin">
+        <ScrollContainer id="idCardsPreviewContainer" vertical="true" horizontal="false" height="100%">
+            <VBox id="idPreviewTitleVBox" height="100%" width="100%">
+                <Title id="previewTitle" text="{i18n>preview}" titleStyle="H4" class="sapUiSmallMargin" />
+                <VBox id="idCardsPreviewVBox" alignItems="Center" justifyContent="Center">
+                    <w:Card id="previewCard" manifest="{view>descriptorContent}" width="16rem" height="23.5rem" visible="{= ${view>/cards/length} === 0 ? false : true}" host="previewHost" manifestReady=".setCopyVisible(${view>descriptorContent})"/>
+                </VBox>
+                <FlexBox id="smartForm" class="sapUiTinyMarginTop" justifyContent="Center" direction="Column"/>
+                <HBox id="otherSectionHBox" direction="Column">
+                    <VBox id="otherSectionTitleVBox" width="100%">
+                        <Title id="otherSectionTitle" text="Others" titleStyle="H5" class="sapUiSmallMargin" />
+                    </VBox>
+                    <l:Grid
+                        id="parentAppLinkGrid"
+                        width="100%"
+                        vSpacing="0"
+                        hSpacing="1"
+                        position="Left"
+                        defaultSpan="XL6 L6 M4 S6"
+                        defaultIndent="XL0 L0 M0 S0">
+                        <VBox id="parentAppLabelVBox" width="100%" alignItems="End" class="sapUiSmallMarginEnd">
+                            <Label id="parentAppLabel" text="{i18n>parentApp}" />
+                        </VBox>
+                        <VBox id="parentAppLinkVBox" width="100%">
+                            <Link id="parentAppLink" text="{view>/parentAppTitle}" wrapping="true" press=".navigateToParentApp"/>
+                        </VBox>
+                    </l:Grid>
+                </HBox>
+            </VBox>
+            <VBox>
+            </VBox>
+        </ScrollContainer>
+    </FlexBox>
+</core:FragmentDefinition>

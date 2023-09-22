@@ -1,0 +1,129 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <ViewSettingsDialog
+        id="viewSettingsDialog"
+        sortDescending="true"
+        confirm=".handleDialogConfirm"
+        cancel=".handleCancel"
+        resetFilters=".handleResetFilters">
+        <sortItems>
+            <ViewSettingsItem id="IDSort" text="{i18n>Column.PageID}" key="id" />
+            <ViewSettingsItem id="DescriptionSort" text="{i18n>Column.PageDescription}" key="description" />
+            <ViewSettingsItem id="TitleSort" text="{i18n>Column.PageTitle}" key="title" />
+            <ViewSettingsItem id="AssignmentSort" text="{i18n>Column.PageAssignmentStatus}" key="editAllowed" />
+            <ViewSettingsItem id="PackageSort" text="{i18n>Column.PagePackage}" key="devclass" />
+            <ViewSettingsItem id="WorkbenchRequestSort" text="{i18n>Column.PageWorkbenchRequest}" key="transportId" />
+            <ViewSettingsItem id="CreatedBySort" text="{i18n>Column.PageCreatedBy}" key="createdByFullname" />
+            <ViewSettingsItem id="CreatedOnSort" text="{i18n>Column.PageCreatedOn}" key="createdOn" />
+            <ViewSettingsItem id="ChangedBySort" text="{i18n>Column.PageChangedBy}" key="modifiedByFullname" />
+            <ViewSettingsItem id="ChangedOnSort" text="{i18n>Column.PageChangedOn}" key="modifiedOn" selected="true" />
+        </sortItems>
+        <filterItems>
+            <ViewSettingsFilterItem
+                id="AssignmentFilter"
+                text="{i18n>Column.PageAssignmentStatus}"
+                key="editAllowed"
+                multiSelect="false"
+                items="{
+                    path: 'uniqueValues>/editAllowed',
+                    key: 'id'
+                }">
+                <items>
+                    <ViewSettingsItem
+                        text="{= ${uniqueValues>key} ? ${i18n>Message.StatusAssigned} : ${i18n>Message.NotAssigned} }"
+                        key="editAllowed___EQ___{uniqueValues>key}" />
+                </items>
+            </ViewSettingsFilterItem>
+            <ViewSettingsFilterItem
+                id="PackageFilter"
+                text="{i18n>Column.PagePackage}"
+                key="devclass"
+                multiSelect="false"
+                items="{
+                    path: 'uniqueValues>/devclass',
+                    key: 'id'
+                }">
+                <items>
+                    <ViewSettingsItem
+                        text="{uniqueValues>key}"
+                        key="devclass___EQ___{uniqueValues>key}" />
+                </items>
+            </ViewSettingsFilterItem>
+            <ViewSettingsFilterItem
+                id="WorkbenchRequestFilter"
+                text="{i18n>Column.PageWorkbenchRequest}"
+                key="transportId"
+                multiSelect="false"
+                items="{
+                    path: 'uniqueValues>/transportId',
+                    key: 'id'
+                }">
+                <items>
+                    <ViewSettingsItem
+                        text="{= ${uniqueValues>key} ? ${uniqueValues>key} : ${i18n>Message.NoWorkbenchRequestAssigned} }"
+                        key="transportId___EQ___{uniqueValues>key}" />
+                </items>
+            </ViewSettingsFilterItem>
+            <ViewSettingsFilterItem
+                id="CreatedByFilter"
+                text="{i18n>Column.PageCreatedBy}"
+                key="createdByFullname"
+                multiSelect="false"
+                items="{
+                    path: 'uniqueValues>/createdByFullname',
+                    key: 'id'
+                }">
+                <items>
+                    <ViewSettingsItem
+                        text="{uniqueValues>key}"
+                        key="createdByFullname___EQ___{uniqueValues>key}" />
+                </items>
+            </ViewSettingsFilterItem>
+            <ViewSettingsCustomItem
+                id="CreatedOnFilter"
+                text="{i18n>Column.PageCreatedOn}"
+                key="createdOn">
+                <customControl>
+                    <DateRangeSelection
+                        id="CreatedOnDateRangeSelection"
+                        change=".handleDateRangeSelectionChanged" />
+                </customControl>
+            </ViewSettingsCustomItem>
+            <ViewSettingsFilterItem
+                id="ChangedByFilter"
+                text="{i18n>Column.PageChangedBy}"
+                key="modifiedByFullname"
+                multiSelect="false"
+                items="{
+                    path: 'uniqueValues>/modifiedByFullname',
+                    key: 'id'
+                }">
+                <items>
+                    <ViewSettingsItem
+                        text="{uniqueValues>key}"
+                        key="modifiedByFullname___EQ___{uniqueValues>key}" />
+                </items>
+            </ViewSettingsFilterItem>
+            <ViewSettingsCustomItem
+                id="ChangedOnFilter"
+                text="{i18n>Column.PageChangedOn}"
+                key="modifiedOn">
+                <customControl>
+                    <DateRangeSelection
+                        id="ChangedOnDateRangeSelection"
+                        change=".handleDateRangeSelectionChanged" />
+                </customControl>
+            </ViewSettingsCustomItem>
+        </filterItems>
+        <groupItems>
+            <ViewSettingsItem id="AssignmentGroup" text="{i18n>Column.PageAssignmentStatus}" key="editAllowed" />
+            <ViewSettingsItem id="PackageGroup" text="{i18n>Column.PagePackage}" key="devclass" />
+            <ViewSettingsItem id="WorkbenchRequestGroup" text="{i18n>Column.PageWorkbenchRequest}" key="transportId" />
+            <ViewSettingsItem id="CreatedByGroup" text="{i18n>Column.PageCreatedBy}" key="createdByFullname" />
+            <ViewSettingsItem id="CreatedOnGroup" text="{i18n>Column.PageCreatedOn}" key="createdOn" />
+            <ViewSettingsItem id="ChangedByGroup" text="{i18n>Column.PageChangedBy}" key="modifiedByFullname" />
+            <ViewSettingsItem id="ChangedOnGroup" text="{i18n>Column.PageChangedOn}" key="modifiedOn" />
+        </groupItems>
+    </ViewSettingsDialog>
+</core:FragmentDefinition>

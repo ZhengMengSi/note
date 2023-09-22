@@ -1,0 +1,723 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": ".library",
+			"size": 1550
+		},
+		{
+			"name": ".theming",
+			"size": 76
+		},
+		{
+			"name": "CardExtension-dbg.js",
+			"module": "sap/insights/CardExtension.js",
+			"size": 42440,
+			"isDebug": true,
+			"required": [
+				"sap/base/Log.js",
+				"sap/fe/navigation/NavError.js",
+				"sap/fe/navigation/SelectionVariant.js",
+				"sap/insights/utils/UrlGenerateHelper.js",
+				"sap/m/DynamicDateUtil.js",
+				"sap/m/ValueColor.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/ValueState.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/format/NumberFormat.js",
+				"sap/ui/integration/Extension.js",
+				"sap/ui/integration/util/Utils.js"
+			],
+			"condRequired": [
+				"sap/insights/OVPChartFormatter.js"
+			]
+		},
+		{
+			"name": "CardExtension.js",
+			"module": "sap/insights/CardExtension.js",
+			"size": 13501,
+			"required": [
+				"sap/base/Log.js",
+				"sap/fe/navigation/NavError.js",
+				"sap/fe/navigation/SelectionVariant.js",
+				"sap/insights/utils/UrlGenerateHelper.js",
+				"sap/m/DynamicDateUtil.js",
+				"sap/m/ValueColor.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/ValueState.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/format/NumberFormat.js",
+				"sap/ui/integration/Extension.js",
+				"sap/ui/integration/util/Utils.js"
+			],
+			"condRequired": [
+				"sap/insights/OVPChartFormatter.js"
+			]
+		},
+		{
+			"name": "CardExtension.js.map",
+			"size": 21063,
+			"isDebug": true
+		},
+		{
+			"name": "CardHelper-dbg.js",
+			"module": "sap/insights/CardHelper.js",
+			"size": 25762,
+			"isDebug": true,
+			"required": [
+				"sap/base/Log.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "CardHelper.js",
+			"module": "sap/insights/CardHelper.js",
+			"size": 10357,
+			"required": [
+				"sap/base/Log.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "CardHelper.js.map",
+			"size": 11951,
+			"isDebug": true
+		},
+		{
+			"name": "OVPChartFormatter-dbg.js",
+			"module": "sap/insights/OVPChartFormatter.js",
+			"size": 4870,
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/format/NumberFormat.js",
+				"sap/viz/library.js",
+				"sap/viz/ui5/api/env/Format.js",
+				"sap/viz/ui5/format/ChartFormatter.js"
+			]
+		},
+		{
+			"name": "OVPChartFormatter.js",
+			"module": "sap/insights/OVPChartFormatter.js",
+			"size": 1945,
+			"required": [
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/format/NumberFormat.js",
+				"sap/viz/library.js",
+				"sap/viz/ui5/api/env/Format.js",
+				"sap/viz/ui5/format/ChartFormatter.js"
+			]
+		},
+		{
+			"name": "OVPChartFormatter.js.map",
+			"size": 2824,
+			"isDebug": true
+		},
+		{
+			"name": "base/Base-dbg.controller.js",
+			"module": "sap/insights/base/Base.controller.js",
+			"size": 41639,
+			"isDebug": true,
+			"required": [
+				"sap/fe/navigation/SelectionVariant.js",
+				"sap/insights/utils/AppConstants.js",
+				"sap/insights/utils/MetadataAnalyser.js",
+				"sap/insights/utils/SelectionVariantHelper.js",
+				"sap/insights/utils/UrlGenerateHelper.js",
+				"sap/insights/utils/oDataModelProvider.js",
+				"sap/m/DynamicDateUtil.js",
+				"sap/m/Token.js",
+				"sap/ui/comp/util/DateTimeUtil.js",
+				"sap/ui/core/CustomData.js",
+				"sap/ui/core/IconPool.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/model/json/JSONModel.js"
+			],
+			"condRequired": [
+				"sap/m/Text.js",
+				"sap/m/Title.js",
+				"sap/m/Toolbar.js",
+				"sap/ui/comp/smartform/Group.js",
+				"sap/ui/comp/smartform/GroupElement.js",
+				"sap/ui/comp/smartform/Layout.js",
+				"sap/ui/comp/smartform/SmartForm.js",
+				"sap/ui/comp/smartmultiinput/SmartMultiInput.js"
+			]
+		},
+		{
+			"name": "base/Base.controller.js",
+			"module": "sap/insights/base/Base.controller.js",
+			"size": 16393,
+			"required": [
+				"sap/fe/navigation/SelectionVariant.js",
+				"sap/insights/utils/AppConstants.js",
+				"sap/insights/utils/MetadataAnalyser.js",
+				"sap/insights/utils/SelectionVariantHelper.js",
+				"sap/insights/utils/UrlGenerateHelper.js",
+				"sap/insights/utils/oDataModelProvider.js",
+				"sap/m/DynamicDateUtil.js",
+				"sap/m/Token.js",
+				"sap/ui/comp/util/DateTimeUtil.js",
+				"sap/ui/core/CustomData.js",
+				"sap/ui/core/IconPool.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/model/json/JSONModel.js"
+			],
+			"condRequired": [
+				"sap/m/Text.js",
+				"sap/m/Title.js",
+				"sap/m/Toolbar.js",
+				"sap/ui/comp/smartform/Group.js",
+				"sap/ui/comp/smartform/GroupElement.js",
+				"sap/ui/comp/smartform/Layout.js",
+				"sap/ui/comp/smartform/SmartForm.js",
+				"sap/ui/comp/smartmultiinput/SmartMultiInput.js"
+			]
+		},
+		{
+			"name": "base/Base.controller.js.map",
+			"size": 23407,
+			"isDebug": true
+		},
+		{
+			"name": "copy/Copy-dbg.controller.js",
+			"module": "sap/insights/copy/Copy.controller.js",
+			"size": 6445,
+			"isDebug": true,
+			"required": [
+				"sap/base/Log.js",
+				"sap/insights/CardHelper.js",
+				"sap/insights/base/Base.controller.js",
+				"sap/m/MessageToast.js",
+				"sap/ui/model/json/JSONModel.js",
+				"sap/ui/model/resource/ResourceModel.js"
+			]
+		},
+		{
+			"name": "copy/Copy.controller.js",
+			"module": "sap/insights/copy/Copy.controller.js",
+			"size": 4220,
+			"required": [
+				"sap/base/Log.js",
+				"sap/insights/CardHelper.js",
+				"sap/insights/base/Base.controller.js",
+				"sap/m/MessageToast.js",
+				"sap/ui/model/json/JSONModel.js",
+				"sap/ui/model/resource/ResourceModel.js"
+			]
+		},
+		{
+			"name": "copy/Copy.controller.js.map",
+			"size": 4990,
+			"isDebug": true
+		},
+		{
+			"name": "copy/Copy.view.xml",
+			"module": "sap/insights/copy/Copy.view.xml",
+			"size": 3469,
+			"required": [
+				"sap/insights/copy/Copy.controller.js",
+				"sap/m/Button.js",
+				"sap/m/DynamicDateRange.js",
+				"sap/m/FlexBox.js",
+				"sap/m/HBox.js",
+				"sap/m/Input.js",
+				"sap/m/Label.js",
+				"sap/m/Link.js",
+				"sap/m/Page.js",
+				"sap/m/Title.js",
+				"sap/m/VBox.js",
+				"sap/ui/integration/widgets/Card.js",
+				"sap/ui/layout/form/SimpleForm.js"
+			]
+		},
+		{
+			"name": "library-dbg.js",
+			"module": "sap/insights/library.js",
+			"size": 669,
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/Core.js",
+				"sap/ui/core/library.js"
+			]
+		},
+		{
+			"name": "library-preload.js",
+			"module": "sap/insights/library-preload.js",
+			"size": 85126,
+			"merged": true,
+			"required": [
+				"sap/base/Log.js",
+				"sap/base/security/encodeURL.js",
+				"sap/base/util/UriParameters.js",
+				"sap/f/IllustratedMessage.js",
+				"sap/fe/navigation/NavError.js",
+				"sap/fe/navigation/SelectionVariant.js",
+				"sap/m/Button.js",
+				"sap/m/CheckBox.js",
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/Dialog.js",
+				"sap/m/DynamicDateRange.js",
+				"sap/m/DynamicDateUtil.js",
+				"sap/m/FlexBox.js",
+				"sap/m/HBox.js",
+				"sap/m/Input.js",
+				"sap/m/Label.js",
+				"sap/m/Link.js",
+				"sap/m/MessageBox.js",
+				"sap/m/MessageStrip.js",
+				"sap/m/MessageToast.js",
+				"sap/m/NavContainer.js",
+				"sap/m/ObjectIdentifier.js",
+				"sap/m/Page.js",
+				"sap/m/ScrollContainer.js",
+				"sap/m/SearchField.js",
+				"sap/m/Switch.js",
+				"sap/m/Table.js",
+				"sap/m/Text.js",
+				"sap/m/Title.js",
+				"sap/m/Token.js",
+				"sap/m/VBox.js",
+				"sap/m/ValueColor.js",
+				"sap/ui/comp/util/DateTimeUtil.js",
+				"sap/ui/core/Core.js",
+				"sap/ui/core/CustomData.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/Icon.js",
+				"sap/ui/core/IconPool.js",
+				"sap/ui/core/ValueState.js",
+				"sap/ui/core/dnd/DragInfo.js",
+				"sap/ui/core/dnd/DropInfo.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/format/NumberFormat.js",
+				"sap/ui/core/library.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ui/integration/Extension.js",
+				"sap/ui/integration/util/Utils.js",
+				"sap/ui/integration/widgets/Card.js",
+				"sap/ui/layout/Grid.js",
+				"sap/ui/layout/form/SimpleForm.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js",
+				"sap/ui/model/json/JSONModel.js",
+				"sap/ui/model/odata/v2/ODataModel.js",
+				"sap/ui/model/resource/ResourceModel.js",
+				"sap/viz/library.js",
+				"sap/viz/ui5/api/env/Format.js",
+				"sap/viz/ui5/format/ChartFormatter.js"
+			],
+			"condRequired": [
+				"sap/m/Toolbar.js",
+				"sap/ui/comp/smartform/Group.js",
+				"sap/ui/comp/smartform/GroupElement.js",
+				"sap/ui/comp/smartform/Layout.js",
+				"sap/ui/comp/smartform/SmartForm.js",
+				"sap/ui/comp/smartmultiinput/SmartMultiInput.js"
+			],
+			"included": [
+				"sap/insights/CardExtension.js",
+				"sap/insights/CardHelper.js",
+				"sap/insights/OVPChartFormatter.js",
+				"sap/insights/base/Base.controller.js",
+				"sap/insights/copy/Copy.controller.js",
+				"sap/insights/library.js",
+				"sap/insights/preview/Preview.controller.js",
+				"sap/insights/selection/Selection.controller.js",
+				"sap/insights/utils/AppConstants.js",
+				"sap/insights/utils/MetadataAnalyser.js",
+				"sap/insights/utils/SelectionVariantHelper.js",
+				"sap/insights/utils/UrlGenerateHelper.js",
+				"sap/insights/utils/oDataModelProvider.js",
+				"sap/insights/copy/Copy.view.xml",
+				"sap/insights/manifest.json",
+				"sap/insights/preview/Preview.view.xml",
+				"sap/insights/selection/CardList.fragment.xml",
+				"sap/insights/selection/CardPreview.fragment.xml",
+				"sap/insights/selection/Selection.fragment.xml",
+				"sap/insights/selection/Selection.view.xml",
+				"sap/insights/selection/SelectionDialog.view.xml"
+			]
+		},
+		{
+			"name": "library-preload.js.map",
+			"size": 99431,
+			"isDebug": true
+		},
+		{
+			"name": "library.js",
+			"module": "sap/insights/library.js",
+			"size": 410,
+			"required": [
+				"sap/ui/core/Core.js",
+				"sap/ui/core/library.js"
+			]
+		},
+		{
+			"name": "library.js.map",
+			"size": 434,
+			"isDebug": true
+		},
+		{
+			"name": "manifest.json",
+			"module": "sap/insights/manifest.json",
+			"size": 1351
+		},
+		{
+			"name": "messagebundle.properties",
+			"module": "sap/insights/messagebundle.properties",
+			"size": 3182
+		},
+		{
+			"name": "preview/Preview-dbg.controller.js",
+			"module": "sap/insights/preview/Preview.controller.js",
+			"size": 5768,
+			"isDebug": true,
+			"required": [
+				"sap/insights/CardHelper.js",
+				"sap/m/MessageToast.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/model/json/JSONModel.js",
+				"sap/ui/model/resource/ResourceModel.js"
+			]
+		},
+		{
+			"name": "preview/Preview.controller.js",
+			"module": "sap/insights/preview/Preview.controller.js",
+			"size": 3132,
+			"required": [
+				"sap/insights/CardHelper.js",
+				"sap/m/MessageToast.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/model/json/JSONModel.js",
+				"sap/ui/model/resource/ResourceModel.js"
+			]
+		},
+		{
+			"name": "preview/Preview.controller.js.map",
+			"size": 3437,
+			"isDebug": true
+		},
+		{
+			"name": "preview/Preview.view.xml",
+			"module": "sap/insights/preview/Preview.view.xml",
+			"size": 2018,
+			"required": [
+				"sap/insights/preview/Preview.controller.js",
+				"sap/m/Button.js",
+				"sap/m/Dialog.js",
+				"sap/m/Input.js",
+				"sap/m/Label.js",
+				"sap/m/MessageStrip.js",
+				"sap/m/Switch.js",
+				"sap/m/VBox.js",
+				"sap/ui/integration/widgets/Card.js"
+			]
+		},
+		{
+			"name": "resources.json",
+			"size": 18564
+		},
+		{
+			"name": "selection/CardList.fragment.xml",
+			"module": "sap/insights/selection/CardList.fragment.xml",
+			"size": 5321,
+			"required": [
+				"sap/f/IllustratedMessage.js",
+				"sap/m/Button.js",
+				"sap/m/CheckBox.js",
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/FlexBox.js",
+				"sap/m/HBox.js",
+				"sap/m/MessageStrip.js",
+				"sap/m/ObjectIdentifier.js",
+				"sap/m/Page.js",
+				"sap/m/ScrollContainer.js",
+				"sap/m/SearchField.js",
+				"sap/m/Table.js",
+				"sap/m/Text.js",
+				"sap/m/Title.js",
+				"sap/m/VBox.js",
+				"sap/ui/core/Icon.js",
+				"sap/ui/core/dnd/DragInfo.js",
+				"sap/ui/core/dnd/DropInfo.js"
+			]
+		},
+		{
+			"name": "selection/CardPreview.fragment.xml",
+			"module": "sap/insights/selection/CardPreview.fragment.xml",
+			"size": 2254,
+			"required": [
+				"sap/m/FlexBox.js",
+				"sap/m/HBox.js",
+				"sap/m/Label.js",
+				"sap/m/Link.js",
+				"sap/m/ScrollContainer.js",
+				"sap/m/Title.js",
+				"sap/m/VBox.js",
+				"sap/ui/integration/widgets/Card.js",
+				"sap/ui/layout/Grid.js"
+			]
+		},
+		{
+			"name": "selection/Selection-dbg.controller.js",
+			"module": "sap/insights/selection/Selection.controller.js",
+			"size": 17796,
+			"isDebug": true,
+			"required": [
+				"sap/base/util/UriParameters.js",
+				"sap/insights/CardHelper.js",
+				"sap/insights/base/Base.controller.js",
+				"sap/m/MessageBox.js",
+				"sap/m/MessageToast.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js",
+				"sap/ui/model/resource/ResourceModel.js"
+			]
+		},
+		{
+			"name": "selection/Selection.controller.js",
+			"module": "sap/insights/selection/Selection.controller.js",
+			"size": 8036,
+			"required": [
+				"sap/base/util/UriParameters.js",
+				"sap/insights/CardHelper.js",
+				"sap/insights/base/Base.controller.js",
+				"sap/m/MessageBox.js",
+				"sap/m/MessageToast.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js",
+				"sap/ui/model/resource/ResourceModel.js"
+			]
+		},
+		{
+			"name": "selection/Selection.controller.js.map",
+			"size": 10042,
+			"isDebug": true
+		},
+		{
+			"name": "selection/Selection.fragment.xml",
+			"module": "sap/insights/selection/Selection.fragment.xml",
+			"size": 1324,
+			"required": [
+				"sap/insights/copy/Copy.view.xml",
+				"sap/insights/selection/CardList.fragment.xml",
+				"sap/insights/selection/CardPreview.fragment.xml",
+				"sap/m/Button.js",
+				"sap/m/NavContainer.js",
+				"sap/m/Page.js",
+				"sap/m/VBox.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/mvc/XMLView.js"
+			]
+		},
+		{
+			"name": "selection/Selection.view.xml",
+			"module": "sap/insights/selection/Selection.view.xml",
+			"size": 238,
+			"required": [
+				"sap/insights/selection/Selection.controller.js",
+				"sap/insights/selection/Selection.fragment.xml",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "selection/SelectionDialog.view.xml",
+			"module": "sap/insights/selection/SelectionDialog.view.xml",
+			"size": 668,
+			"required": [
+				"sap/insights/selection/Selection.controller.js",
+				"sap/insights/selection/Selection.fragment.xml",
+				"sap/m/Button.js",
+				"sap/m/Dialog.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "themes/base/.theming",
+			"size": 64,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/base.less",
+			"size": 469,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/css_variables.css",
+			"size": 115,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/css_variables.less",
+			"size": 234,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/css_variables.source.less",
+			"size": 11,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library-RTL.css",
+			"size": 646,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library-parameters.json",
+			"module": "sap/insights/themes/base/library-parameters.json",
+			"size": 2,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library.css",
+			"size": 645,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library.less",
+			"size": 744,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library.source.less",
+			"size": 138,
+			"designtime": true,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library_skeleton-RTL.css",
+			"size": 531,
+			"theme": "base"
+		},
+		{
+			"name": "themes/base/library_skeleton.css",
+			"size": 530,
+			"theme": "base"
+		},
+		{
+			"name": "utils/AppConstants-dbg.js",
+			"module": "sap/insights/utils/AppConstants.js",
+			"size": 2270,
+			"isDebug": true
+		},
+		{
+			"name": "utils/AppConstants.js",
+			"module": "sap/insights/utils/AppConstants.js",
+			"size": 1074
+		},
+		{
+			"name": "utils/AppConstants.js.map",
+			"size": 632,
+			"isDebug": true
+		},
+		{
+			"name": "utils/MetadataAnalyser-dbg.js",
+			"module": "sap/insights/utils/MetadataAnalyser.js",
+			"size": 5605,
+			"isDebug": true
+		},
+		{
+			"name": "utils/MetadataAnalyser.js",
+			"module": "sap/insights/utils/MetadataAnalyser.js",
+			"size": 1967
+		},
+		{
+			"name": "utils/MetadataAnalyser.js.map",
+			"size": 2875,
+			"isDebug": true
+		},
+		{
+			"name": "utils/SelectionVariantHelper-dbg.js",
+			"module": "sap/insights/utils/SelectionVariantHelper.js",
+			"size": 12202,
+			"isDebug": true,
+			"required": [
+				"sap/base/security/encodeURL.js",
+				"sap/m/Token.js",
+				"sap/ui/core/CustomData.js"
+			]
+		},
+		{
+			"name": "utils/SelectionVariantHelper.js",
+			"module": "sap/insights/utils/SelectionVariantHelper.js",
+			"size": 3590,
+			"required": [
+				"sap/base/security/encodeURL.js",
+				"sap/m/Token.js",
+				"sap/ui/core/CustomData.js"
+			]
+		},
+		{
+			"name": "utils/SelectionVariantHelper.js.map",
+			"size": 6046,
+			"isDebug": true
+		},
+		{
+			"name": "utils/UrlGenerateHelper-dbg.js",
+			"module": "sap/insights/utils/UrlGenerateHelper.js",
+			"size": 16285,
+			"isDebug": true,
+			"required": [
+				"sap/fe/navigation/SelectionVariant.js",
+				"sap/insights/utils/AppConstants.js",
+				"sap/insights/utils/SelectionVariantHelper.js",
+				"sap/m/DynamicDateUtil.js",
+				"sap/ui/comp/util/DateTimeUtil.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/model/odata/v2/ODataModel.js"
+			]
+		},
+		{
+			"name": "utils/UrlGenerateHelper.js",
+			"module": "sap/insights/utils/UrlGenerateHelper.js",
+			"size": 5956,
+			"required": [
+				"sap/fe/navigation/SelectionVariant.js",
+				"sap/insights/utils/AppConstants.js",
+				"sap/insights/utils/SelectionVariantHelper.js",
+				"sap/m/DynamicDateUtil.js",
+				"sap/ui/comp/util/DateTimeUtil.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/model/odata/v2/ODataModel.js"
+			]
+		},
+		{
+			"name": "utils/UrlGenerateHelper.js.map",
+			"size": 9354,
+			"isDebug": true
+		},
+		{
+			"name": "utils/oDataModelProvider-dbg.js",
+			"module": "sap/insights/utils/oDataModelProvider.js",
+			"size": 2291,
+			"isDebug": true,
+			"required": [
+				"sap/ui/model/odata/v2/ODataModel.js"
+			]
+		},
+		{
+			"name": "utils/oDataModelProvider.js",
+			"module": "sap/insights/utils/oDataModelProvider.js",
+			"size": 999,
+			"required": [
+				"sap/ui/model/odata/v2/ODataModel.js"
+			]
+		},
+		{
+			"name": "utils/oDataModelProvider.js.map",
+			"size": 1650,
+			"isDebug": true
+		}
+	]
+}
