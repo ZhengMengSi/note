@@ -17,402 +17,293 @@
         var myChart = echarts.init(document.getElementById('main'));
 
         var option = {
+            "tooltip": {},
+            "title": {
+                "textStyle": {
+                    "fontSize": 14,
+                    "align": "center"
+                },
+                "subtextStyle": {
+                    "align": "center"
+                },
+                "sublink": "https://worldcoffeeresearch.org/work/sensory-lexicon/"
+            },
             "series": [
                 {
                     "type": "sunburst",
-                    "nodeClick": false,
                     "data": [
                         {
-                            "code": null,
-                            "name": "偿债能力",
-                            "decription": null,
-                            "itemStyle": {
-                                "color": "#ACC6DF"
-                            },
+                            id: 'hhh',
+                            "name": "已核算",
+                            "code": "accounted",
+                            "balanceEnd": -518262.93,
                             "children": [
                                 {
-                                    "code": "F10001",
-                                    "name": "资产负债率(%)",
-                                    "decription": "资产负债率=负债总额/资产总额*100%",
-                                    "child": null,
+                                    "name": "客户",
+                                    "code": "CUSTOMER_CODE",
+                                    "balanceEnd": 29975.68,
                                     "itemStyle": {
-                                        "color": "#ACC6DF"
+                                        "color": "#da0d68"
                                     },
-                                    "value": 1
+                                    "children": [
+                                        {
+                                            "name": "应收账款",
+                                            "code": "1131.01",
+                                            "balanceEnd": -51400,
+                                            "itemStyle": {
+                                                "color": "#da0d68"
+                                            },
+                                            "children": [
+                                                {
+                                                    "name": "上海致趣文化传媒有限公司",
+                                                    "code": "1015",
+                                                    "balanceEnd": -86400,
+                                                    "value": 1,
+                                                    "itemStyle": {
+                                                        "color": "#da0d68"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "杭州万国酒店管理有限公司",
+                                                    "code": "1020",
+                                                    "balanceEnd": 35000,
+                                                    "value": 1,
+                                                    "itemStyle": {
+                                                        "color": "#975e6d"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "应收账款",
+                                            "code": "1131.06",
+                                            "balanceEnd": 81375.68,
+                                            "itemStyle": {
+                                                "color": "#975e6d"
+                                            },
+                                            "children": [
+                                                {
+                                                    "name": "Localdeals",
+                                                    "code": "2001",
+                                                    "balanceEnd": 81375.68,
+                                                    "value": 1,
+                                                    "itemStyle": {
+                                                        "color": "#da0d68"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 },
                                 {
-                                    "code": "F10008",
-                                    "name": "现金比率(%)",
-                                    "decription": "现金比率=（货币资金+短期投资净额）/流动负债（不低于20%）",
-                                    "child": null,
+                                    "name": "供应商",
+                                    "code": "VENDOR_CODE",
+                                    "balanceEnd": -548238.61,
                                     "itemStyle": {
-                                        "color": "#598DC0"
+                                        "color": "#975e6d"
                                     },
-                                    "value": 1
-                                },
-                                {
-                                    "code": "F10002",
-                                    "name": "流动比率(%)",
-                                    "decription": "流动比率=流动资产/流动负债*100%",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#0654A0"
-                                    },
-                                    "value": 1
-                                },
-                                {
-                                    "code": "F10006",
-                                    "name": "速动比率(%)",
-                                    "decription": "速动比率=（流动资产-存货）/流动负债*100%",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#728DA7"
-                                    },
-                                    "value": 1
-                                },
-                                {
-                                    "code": "F10007",
-                                    "name": "经营活动现金净流量/总债务",
-                                    "decription": "现金流动负债比率=经营活动现金净流量/流动负债（比率越大，企业的短期债能力越强）",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#ACC6DF"
-                                    },
-                                    "value": 1
-                                },
-                                {
-                                    "code": "F10009",
-                                    "name": "债务保障率(%)",
-                                    "decription": "经营活动现金净流量/负债总额（比率越大，企业承担债务的能务越强）",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#598DC0"
-                                    },
-                                    "value": 1
-                                },
-                                {
-                                    "code": "F10005",
-                                    "name": "已获利息倍数(%)",
-                                    "decription": "（利润总额+利息支出）/利息支出*100%（不能低于1）",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#0654A0"
-                                    },
-                                    "value": 1
+                                    "children": [
+                                        {
+                                            "name": "应付账款",
+                                            "code": "2121.01",
+                                            "balanceEnd": -548238.61,
+                                            "itemStyle": {
+                                                "color": "#da0d68"
+                                            },
+                                            "children": [
+                                                {
+                                                    "name": "中国联合网络通信有限公司上海市分公司",
+                                                    "code": "1001",
+                                                    "balanceEnd": -11453.09,
+                                                    "value": 1,
+                                                    "itemStyle": {
+                                                        "color": "#da0d68"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "上海顺衡物流有限公司",
+                                                    "code": "1005",
+                                                    "balanceEnd": -2808,
+                                                    "value": 1,
+                                                    "itemStyle": {
+                                                        "color": "#975e6d"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "中国电信股份有限公司上海分公司",
+                                                    "code": "1006",
+                                                    "balanceEnd": -19515,
+                                                    "value": 1,
+                                                    "itemStyle": {
+                                                        "color": "#e0719c"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "上海锦能物业管理有限公司",
+                                                    "code": "1007",
+                                                    "balanceEnd": 0,
+                                                    "value": 1,
+                                                    "itemStyle": {
+                                                        "color": "#f99e1c"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "上海史坦舍商务服务有限公司",
+                                                    "code": "1008",
+                                                    "balanceEnd": 0,
+                                                    "value": 1,
+                                                    "itemStyle": {
+                                                        "color": "#ef5a78"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "上海臣峰环境工程有限公司",
+                                                    "code": "1015",
+                                                    "balanceEnd": -8568,
+                                                    "value": 1,
+                                                    "itemStyle": {
+                                                        "color": "#f7f1bd"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "上海思倍捷企业管理咨询有限公司",
+                                                    "code": "1016",
+                                                    "balanceEnd": -26282,
+                                                    "value": 1,
+                                                    "itemStyle": {
+                                                        "color": "#da1d23"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "上海锌宏",
+                                                    "code": "1017",
+                                                    "balanceEnd": 0,
+                                                    "value": 1,
+                                                    "itemStyle": {
+                                                        "color": "#dd4c51"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "上海外服(集团)有限公司",
+                                                    "code": "1020",
+                                                    "balanceEnd": -433641.98,
+                                                    "value": 1,
+                                                    "itemStyle": {
+                                                        "color": "#3e0317"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "上海格贸商贸有限公司",
+                                                    "code": "1023",
+                                                    "balanceEnd": -2980,
+                                                    "value": 1,
+                                                    "itemStyle": {
+                                                        "color": "#e62969"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "上海雅图图文制作有限公司",
+                                                    "code": "1025",
+                                                    "balanceEnd": -6370,
+                                                    "value": 1,
+                                                    "itemStyle": {
+                                                        "color": "#6569b0"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "上海雀巢饮用水有限公司",
+                                                    "code": "1034",
+                                                    "balanceEnd": 0,
+                                                    "value": 1,
+                                                    "itemStyle": {
+                                                        "color": "#ef2d36"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "首约科技（北京）有限公司天津分公司",
+                                                    "code": "1035",
+                                                    "balanceEnd": 0,
+                                                    "value": 1,
+                                                    "itemStyle": {
+                                                        "color": "#c94a44"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "上海吾本那米信息科技有限公司",
+                                                    "code": "1039",
+                                                    "balanceEnd": 0,
+                                                    "value": 1,
+                                                    "itemStyle": {
+                                                        "color": "#b53b54"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "派志（上海）人才服务有限公司",
+                                                    "code": "1040",
+                                                    "balanceEnd": -27820.54,
+                                                    "value": 1,
+                                                    "itemStyle": {
+                                                        "color": "#a5446f"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "北京桃多多",
+                                                    "code": "1042",
+                                                    "balanceEnd": -8800,
+                                                    "value": 1,
+                                                    "itemStyle": {
+                                                        "color": "#f2684b"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "支付宝（中国）网络技术有限公司",
+                                                    "code": "1043",
+                                                    "balanceEnd": 0,
+                                                    "value": 1,
+                                                    "itemStyle": {
+                                                        "color": "#e73451"
+                                                    }
+                                                },
+                                                {
+                                                    "name": "上海新柘机电设备有限公司",
+                                                    "code": "1044",
+                                                    "balanceEnd": 0,
+                                                    "value": 1,
+                                                    "itemStyle": {
+                                                        "color": "#e65656"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ]
                         },
                         {
-                            "code": null,
-                            "name": "财务效益",
-                            "decription": null,
-                            "itemStyle": {
-                                "color": "#598DC0"
-                            },
+                            "name": "未核算",
+                            "code": "notAccounted",
+                            "parent": "total",
+                            "balanceEnd": 0,
                             "children": [
                                 {
-                                    "code": "F20002",
-                                    "name": "销售净利率(%)",
-                                    "decription": "主营业务利润/主营业务收入净额*100%",
-                                    "child": null,
+                                    "name": "未分配核算对象",
+                                    "code": "notAccounted_1",
+                                    "balanceEnd": 0,
                                     "itemStyle": {
-                                        "color": "#ACC6DF"
+                                        "color": "#da0d68"
                                     },
-                                    "value": 1
-                                },
-                                {
-                                    "code": "F20006",
-                                    "name": "销售毛利率(%)",
-                                    "decription": "（主营业务收入-主营业务成本）/主营业务收入*100%",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#598DC0"
-                                    },
-                                    "value": 1
-                                },
-                                {
-                                    "code": "F20008",
-                                    "name": "销售成本率(%)",
-                                    "decription": "主营业务成本/主营业务收入*100%",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#0654A0"
-                                    },
-                                    "value": 1
-                                },
-                                {
-                                    "code": "F20009",
-                                    "name": "销售费用/营业总收入(%)",
-                                    "decription": "销售费用/营业总收入*100%",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#728DA7"
-                                    },
-                                    "value": 1
-                                },
-                                {
-                                    "code": "F20010",
-                                    "name": "管理费用/营业总收入(%)",
-                                    "decription": "管理费用/营业总收入*100%",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#ACC6DF"
-                                    },
-                                    "value": 1
-                                },
-                                {
-                                    "code": "F20011",
-                                    "name": "财务费用/营业总收入(%)",
-                                    "decription": "财务费用/营业总收入*100%",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#598DC0"
-                                    },
-                                    "value": 1
-                                },
-                                {
-                                    "code": "F20001",
-                                    "name": "净资产收益率(%)",
-                                    "decription": "净利润/平均净资产*100%",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#0654A0"
-                                    },
-                                    "value": 1
-                                },
-                                {
-                                    "code": "F20003",
-                                    "name": "总资产报酬率(%)",
-                                    "decription": "（利润总额+偿付利息所支付的现金）/平均资产总额*100%",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#728DA7"
-                                    },
-                                    "value": 1
-                                },
-                                {
-                                    "code": "F20013",
-                                    "name": "总资产净利率(%)",
-                                    "decription": "利润总额/平均资产总额*100%",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#ACC6DF"
-                                    },
-                                    "value": 1
-                                },
-                                {
-                                    "code": "F20012",
-                                    "name": "销售商品提供劳务收到的现金/营业收入",
-                                    "decription": "销售商品提供劳务收到的/主营业务收入*100%",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#598DC0"
-                                    },
-                                    "value": 1
-                                },
-                                {
-                                    "code": "F20004",
-                                    "name": "经营活动现金净流量/销售收入(%)",
-                                    "decription": "经营活动现金净流量/主营业务收入*100%",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#0654A0"
-                                    },
-                                    "value": 1
-                                },
-                                {
-                                    "code": "F20005",
-                                    "name": "成本费用利润率(%)",
-                                    "decription": "利润总额/成本费用总额*100%（成本费用总额=主营业务成本+营业费用+管理费用+财务费用）",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#728DA7"
-                                    },
-                                    "value": 1
-                                },
-                                {
-                                    "code": "F20007",
-                                    "name": "盈余现金保障倍数",
-                                    "decription": "经营现金净流量/净利润",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#ACC6DF"
-                                    },
-                                    "value": 1
-                                }
-                            ]
-                        },
-                        {
-                            "code": null,
-                            "name": "资金运营",
-                            "decription": null,
-                            "itemStyle": {
-                                "color": "#0654A0"
-                            },
-                            "children": [
-                                {
-                                    "code": "F30001",
-                                    "name": "总资产周转率（次）",
-                                    "decription": "主营业务收入/总资产平均余额",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#ACC6DF"
-                                    },
-                                    "value": 1
-                                },
-                                {
-                                    "code": "F30002",
-                                    "name": "流动资产周转率（次）",
-                                    "decription": "主营业务收入/流动资产平均余额",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#598DC0"
-                                    },
-                                    "value": 1
-                                },
-                                {
-                                    "code": "F30008",
-                                    "name": "固定资产周转率（次）",
-                                    "decription": "主营业务收入/固定资产平均余额",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#0654A0"
-                                    },
-                                    "value": 1
-                                },
-                                {
-                                    "code": "F30003",
-                                    "name": "存货周转率（次）",
-                                    "decription": "主营业务成本/平均存货净额",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#728DA7"
-                                    },
-                                    "value": 1
-                                },
-                                {
-                                    "code": "F30006",
-                                    "name": "存货周转天数（天）",
-                                    "decription": "平均存货净额/主营业务成本*360",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#ACC6DF"
-                                    },
-                                    "value": 1
-                                },
-                                {
-                                    "code": "F30004",
-                                    "name": "应收账款周转率（次）",
-                                    "decription": "主营业务收入/应收账款平均余额",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#598DC0"
-                                    },
-                                    "value": 1
-                                },
-                                {
-                                    "code": "F30007",
-                                    "name": "应收账款周转天数（天）",
-                                    "decription": "应收账款平均余额/主营业务收入*360",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#0654A0"
-                                    },
-                                    "value": 1
-                                }
-                            ]
-                        },
-                        {
-                            "code": null,
-                            "name": "发展能力",
-                            "decription": null,
-                            "itemStyle": {
-                                "color": "#728DA7"
-                            },
-                            "children": [
-                                {
-                                    "code": "F40001",
-                                    "name": "销售（营业）增长率(%)",
-                                    "decription": "本年销售（营业）增长额/上年销售（营业）收入总额 *100%",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#ACC6DF"
-                                    },
-                                    "value": 1
-                                },
-                                {
-                                    "code": "F40002",
-                                    "name": "资本积累率(%)",
-                                    "decription": "资本积累率=（期末所有者权益-期初所有者权益）/期初所有者权益*100%",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#598DC0"
-                                    },
-                                    "value": 1
-                                },
-                                {
-                                    "code": "F40003",
-                                    "name": "总资产增长率(%)",
-                                    "decription": "（年末资产总额-年初资产总额）/年初资产总额*100%",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#0654A0"
-                                    },
-                                    "value": 1
-                                },
-                                {
-                                    "code": "F40004",
-                                    "name": "三年利润平均增长率(%)",
-                                    "decription": "[开立方（年末利润总额-三年前年末利润总额）-1]*100%",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#728DA7"
-                                    },
-                                    "value": 1
-                                },
-                                {
-                                    "code": "F40005",
-                                    "name": "营业总收入同比增长率(%)(单季度)",
-                                    "decription": "（当季的P00039 - 上一年同季度的P00039）/ 上一年同季度的P00039 * 100%",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#ACC6DF"
-                                    },
-                                    "value": 1
-                                },
-                                {
-                                    "code": "F40006",
-                                    "name": "营业总收入环比增长率(%)(单季度)",
-                                    "decription": "本季销售（营业）增长额/上季销售（营业）收入总额 *100%",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#598DC0"
-                                    },
-                                    "value": 1
-                                },
-                                {
-                                    "code": "F40007",
-                                    "name": "净利润同比增长率(%)(单季度)",
-                                    "decription": "（本季利润额-上年同季利润额）/上年同季利润额 *100%",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#0654A0"
-                                    },
-                                    "value": 1
-                                },
-                                {
-                                    "code": "F40008",
-                                    "name": "净利润环比增长率(%)(单季度)",
-                                    "decription": "本季利润增长额/上季利润额 *100%",
-                                    "child": null,
-                                    "itemStyle": {
-                                        "color": "#728DA7"
-                                    },
-                                    "value": 1
+                                    "children": [
+                                        {
+                                            "code": "notAccounted_last",
+                                            "value": 0.6
+                                        }
+                                    ]
                                 }
                             ]
                         }
                     ],
+                    "selectedMode": "single",
+                    "label": {},
                     "radius": [
                         0,
                         "95%"
@@ -423,31 +314,64 @@
                     "levels": [
                         {},
                         {
-                            "r0": "15%",
-                            "r": "55%",
+                            "r0": "10%",
+                            "r": "30%",
                             "itemStyle": {
                                 "borderWidth": 2
                             },
                             "label": {
                                 "rotate": "tangential",
-                                "color": "#fff",
-                                "fontSize": 14
+                                "fontSize": 12
                             }
                         },
                         {
-                            "r0": "55%",
-                            "r": "60%",
+                            "r0": "30%",
+                            "r": "50%",
+                            "label": {
+                                "align": "right",
+                                "fontSize": 8
+                            }
+                        },
+                        {
+                            "r0": "50%",
+                            "r": "70%",
+                            "label": {
+                                "align": "right",
+                                "fontSize": 8
+                            }
+                        },
+                        {
+                            "r0": "70%",
+                            "r": "75%",
                             "label": {
                                 "position": "outside",
-                                padding: 3,
-                                silent: false
+                                "padding": 2,
+                                "silent": false,
+                                "fontSize": 8
+                            },
+                            "itemStyle": {
+                                "borderWidth": 2
                             }
                         }
-                    ],
+                    ]
                 }
             ]
         }
         myChart.setOption(option);
+
+
+        myChart.dispatchAction({ 
+            type: 'sunburstRootToNode',
+            targetNode: 'hhh'
+        })
+
+        myChart.on(
+            'select',
+            function(params) {
+                console.log(params);
+            }
+        )
+
 
         var myChart1 = echarts.init(document.getElementById('main1'));
         var data = [

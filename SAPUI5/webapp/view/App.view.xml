@@ -1,6 +1,7 @@
 <mvc:View
         controllerName="sap.ui.demo.walkthrough.controller.App"
         xmlns="sap.m"
+        xmlns:core="sap.ui.core"
         xmlns:mvc="sap.ui.core.mvc">
     <Button
             text="{i18n>showHelloButtonText}"
@@ -13,4 +14,18 @@
     <HBox id="xx">
         <Text text="111"></Text>
     </HBox>
+
+    <ComboBox
+        items="{
+            path: 'xx>/names'
+        }"
+        selectedKey="{xx>/f}"
+        change="selectionChange">
+        <core:Item
+            key="{xx>key}"
+            text="{xx>text}" />
+    </ComboBox>
+
+
+    <Text class="t" text="我我我"/>
 </mvc:View>
